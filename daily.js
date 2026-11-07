@@ -12,8 +12,8 @@ function dailyChoice(kind,date=londonDay()){
  const serial=dailyNumber(date),start=dailyNumber('2026-11-06'),day=serial-start;
  const positive=(v,n)=>((v%n)+n)%n;
  if(kind==='theme'){
-  const theme=DAILY_THEMES[positive(day,DAILY_THEMES.length)];
-  return {mode:'theme',key:`theme:${date}`,number:theme.number,title:theme.title,description:theme.description,date};
+  const theme=THEMED_PACKS[positive(day,THEMED_PACKS.length)];
+  return {mode:'theme',key:`theme:v2:${date}`,number:1,title:theme.title,description:theme.description,date,spec:theme};
  }
  const number=positive(day*7+11,PUZZLE_LIMIT)+1;
  return {mode:'classic',key:`classic:${date}`,number,title:'Classic daily',description:'Ten satisfying clues, all familiar answers.',date};
