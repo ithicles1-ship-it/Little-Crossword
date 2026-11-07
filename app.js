@@ -80,12 +80,26 @@ function load(n){
 }
 function todayLiveKey(mode,date){return `published:${mode}:${date}`}
 function todayCacheKey(mode,date){return `${mode}:${date}`}
+function pickOfflineNewsMini(date){
+ const classic=dailyChoice('classic',date);
+ const theme=dailyChoice('theme',date);
+ const reserved=new Set([...PUZZLES[classic.number-1].answers,...theme.spec.answers]);
+ const day=dailyNumber(date);
+ let choice=1,best=Infinity;
+ for(let n=1;n<=PUZZLE_LIMIT;n++){
+   if(n===classic.number)continue;
+   const answers=PUZZLES[n-1].answers;
+   const overlap=answers.filter(w=>reserved.has(w)).length;
+   // Prefer the most different news/media mini rather than the next numbered crossword.
+   const score=overlap*100+((n*29+day*11)%PUZZLE_LIMIT)/PUZZLE_LIMIT;
+   if(score<best){best=score;choice=n}
+ }
+ return choice;
+}
 function activateOffline(mode,date){
  if(mode==='news'){
-   const a=dailyChoice('classic',date);
-   let number=(a.number+10)%PUZZLE_LIMIT+1;
-   if(number===dailyChoice('theme',date).number)number=number%PUZZLE_LIMIT+1;
-   activateEdition({mode:'news',source:'offline',date,key:`offline:news:${date}`,number,
+   const number=pickOfflineNewsMini(date);
+   activateEdition({mode:'news',source:'offline',date,key:`offline:news:v2:${date}`,number,
      title:'The Newsroom',description:'Offline news-and-media mini · not based on today’s headlines'});
    setNotice('Offline Newsroom mini. Real headlines appear here only when a daily news update is published.');
    return;
@@ -291,7 +305,7 @@ function showDailyMenu(){
    const spec=mode==='news'?{title:'In the News',description:'Fresh headlines when available · offline backup'}:dailyChoice(mode);
    const btn=document.createElement('button');btn.className='puzzle-choice';
    const left=document.createElement('span');left.textContent=spec.title;
-   const right=document.createElement('small');right.textContent=completed.has(mode==='news'&&getCachedOnline('news',londonDay())?todayLiveKey(mode,londonDay()):`offline:${mode}:${londonDay()}`)?'✓ Complete':mode==='news'?(getCachedOnline('news',londonDay())?'Fresh':'Offline ready'):'Open';
+   const right=document.createElement('small');right.textContent=completed.has(mode==='news'&&getCachedOnline('news',londonDay())?todayLiveKey(mode,londonDay()):mode==='news'?`offline:news:v2:${londonDay()}`:`offline:${mode}:${londonDay()}`)?'✓ Complete':mode==='news'?(getCachedOnline('news',londonDay())?'Fresh':'Offline ready'):'Open';
    btn.append(left,right);btn.onclick=()=>loadDaily(mode);list.append(btn);
   }
   extra.append(list);
