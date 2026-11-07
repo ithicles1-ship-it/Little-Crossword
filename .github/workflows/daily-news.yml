@@ -24,13 +24,16 @@ jobs:
         with:
           python-version: '3.12'
       - name: Build today's crossword from multiple news feeds
-        run: python scripts/build_news.py
+        run: |
+          python -m py_compile scripts/build_news.py
+          python scripts/build_news.py
       - name: Publish verified edition to GitHub Pages
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           if test -f data/news.json; then
             git add data/news.json
+            if test -f data/news-history.json; then git add data/news-history.json; fi
             if ! git diff --cached --quiet; then
               git commit -m 'Publish multi-source daily news crossword'
               git pull --rebase origin main
