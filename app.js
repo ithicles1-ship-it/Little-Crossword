@@ -323,7 +323,7 @@ function showPuzzles(){
   extra.append(list);
  });
 }
-function settings(){showModal('Little Crossword','A private-use crossword with three daily editions, five Across and five Down, saved progress and offline play. Classic cycles through 24 distinct grids before a grid repeats, with no answers shared with the day’s Themed edition. Recurring Practice answers have different clue and hint wording. Themed has eight verified topic grids and eventually repeats; daily news uses real headlines when published. Tap a square twice to switch direction.',[
+function settings(){showModal('Little Crossword','Your personal mini crossword now has a 100-puzzle Classic library with 1,000 answers used once, a calendar of published daily news editions, and twelve month-themed feature crosswords. Every grid has five Across and five Down clues. Daily themed calendar slots are enabled only when a checked puzzle exists, rather than repeating old answers. Your progress is saved on this device. Tap a square twice to switch direction.',[
  ['Close',closeModal],['More options',()=>showModal('Puzzle options','Choose what you want to clear.',[
   ['Clear word',()=>{
     if(!solved){for(const k of active().cells){delete filled[k]}cell=active().cells[0];save();render(true)}
