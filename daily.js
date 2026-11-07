@@ -15,7 +15,12 @@ function dailyChoice(kind,date=londonDay()){
   const theme=THEMED_PACKS[positive(day,THEMED_PACKS.length)];
   return {mode:'theme',key:`theme:v2:${date}`,number:1,title:theme.title,description:theme.description,date,spec:theme};
  }
- const number=positive(day*7+11,PUZZLE_LIMIT)+1;
+ // Preserve existing dates while introducing a carefully sequenced 24-puzzle cycle.
+ // Every puzzle in a cycle differs; consecutive Classic days share no answers.
+ // The sequence is also checked against the day's fully themed crossword.
+ const CLASSIC_ORDER=[23,14,24,22,13,3,5,1,20,7,9,19,15,4,6,2,16,21,12,11,17,8,10,18];
+ const launch=dailyNumber('2026-11-08');
+ const number=serial>=launch?CLASSIC_ORDER[positive(serial-launch,CLASSIC_ORDER.length)]:positive(day*7+11,PUZZLE_LIMIT)+1;
  return {mode:'classic',key:`classic:${date}`,number,title:'Classic daily',description:'Ten satisfying clues, all familiar answers.',date};
 }
 function prettyDay(date){return new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',year:'numeric'}).format(new Date(date+'T12:00:00Z'))}
