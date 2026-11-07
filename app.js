@@ -323,7 +323,7 @@ function showPuzzles(){
   extra.append(list);
  });
 }
-function settings(){showModal('Little Crossword','A private-use crossword with three daily editions, five Across and five Down, saved progress and offline play. Classic draws from 24 checked minis. Themed has eight fully themed, verified grids. News clues link to multiple publishers when fresh headlines are available. Tap a square twice to switch direction.',[
+function settings(){showModal('Little Crossword','A private-use crossword with three daily editions, five Across and five Down, saved progress and offline play. Classic cycles through 24 distinct grids before a grid repeats, with no answers shared with the day’s Themed edition. Recurring Practice answers have different clue and hint wording. Themed has eight verified topic grids and eventually repeats; daily news uses real headlines when published. Tap a square twice to switch direction.',[
  ['Close',closeModal],['More options',()=>showModal('Puzzle options','Choose what you want to clear.',[
   ['Clear word',()=>{
     if(!solved){for(const k of active().cells){delete filled[k]}cell=active().cells[0];save();render(true)}
