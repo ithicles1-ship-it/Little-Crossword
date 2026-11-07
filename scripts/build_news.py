@@ -133,19 +133,61 @@ def matches(answer,items):
     out.sort(key=lambda x:(-x[0],x[1]["source"],x[1]["url"]))
     return out[:25]
 
+
+def reserved_for_today(date_str,grids):
+    """The offline Classic and Themed answer lists for this UK date."""
+    chosen=dt.date.fromisoformat(date_str)
+    theme_start=dt.date(2026,11,6)
+    day=(chosen-theme_start).days
+    theme_src=(ROOT/"themes.js").read_text(encoding="utf-8")
+    theme_packs=json.loads(re.search(r"const THEMED_PACKS=(\[.*?\]);",theme_src,re.S).group(1))
+    theme=theme_packs[day%len(theme_packs)]["answers"]
+    classic_start=dt.date(2026,11,8)
+    if chosen>=classic_start:
+        daily_src=(ROOT/"daily.js").read_text(encoding="utf-8")
+        order=json.loads(re.search(r"const CLASSIC_ORDER=(\[.*?\]);",daily_src,re.S).group(1))
+        index=order[(chosen-classic_start).days%len(order)]-1
+    else:
+        index=((day*7+11)%len(grids))
+    return set(grids[index]["answers"])|set(theme)
+
+def recent_news_answers(date_str):
+    """Avoid returning last week's News answers when topical alternatives exist."""
+    today=dt.date.fromisoformat(date_str)
+    history_path=ROOT/"data"/"news-history.json"
+    try: history=json.loads(history_path.read_text(encoding="utf-8"))
+    except (OSError,ValueError): history={}
+    try:
+        previous=json.loads((ROOT/"data"/"news.json").read_text(encoding="utf-8"))
+        if previous.get("date")!=date_str:
+            history[previous["date"]]=previous["puzzle"]["answers"]
+    except (OSError,KeyError,ValueError,TypeError):pass
+    recent=set()
+    for date,answers in history.items():
+        try:
+            delta=(today-dt.date.fromisoformat(date)).days
+            if 0<delta<=7: recent.update(answers)
+        except (TypeError,ValueError):continue
+    return recent
+
 def build(items,now):
     if not items:return None
     date=now.astimezone(ZoneInfo("Europe/London")).date().isoformat()
     grids,bank=data();options=[]
+    reserved=reserved_for_today(date,grids)
+    recent=recent_news_answers(date)
     for i,grid in enumerate(grids):
         candidates=[(j,w,matches(w,items)) for j,w in enumerate(grid["answers"])]
         candidates=[x for x in candidates if x[2]]
         if not candidates:continue
         publishers={y[1]["source"] for _,_,xx in candidates for y in xx}
         tie=(i-dt.date.fromisoformat(date).toordinal())%len(grids)
-        options.append((len(candidates),len(publishers),-tie,i,candidates))
+        words=set(grid["answers"])
+        # Never reuse another edition's answer on the same day if an alternative exists.
+        # Prefer news words not used in the last week before maximising headline matches.
+        options.append((-len(words&reserved),-len(words&recent),len(candidates),len(publishers),-tie,i,candidates))
     if not options:return None
-    _,_,_,grid_id,candidates=max(options)
+    _,_,_,_,_,grid_id,candidates=max(options)
     grid=grids[grid_id]
     clues=[bank[w][0] for w in grid["answers"]]
     hints=[bank[w][1] for w in grid["answers"]]
@@ -205,7 +247,18 @@ def main():
             print(json.dumps(result,indent=2,ensure_ascii=False))
             return 0
         path.parent.mkdir(parents=True,exist_ok=True)
+        history_path=ROOT/"data"/"news-history.json"
+        try: history=json.loads(history_path.read_text(encoding="utf-8"))
+        except (OSError,ValueError): history={}
+        if path.exists():
+            try:
+                previous=json.loads(path.read_text(encoding="utf-8"))
+                history[previous["date"]]=previous["puzzle"]["answers"]
+            except (OSError,ValueError,TypeError,KeyError):pass
+        history[today]=result["puzzle"]["answers"]
+        history={k:v for k,v in history.items() if k>=str(dt.date.fromisoformat(today)-dt.timedelta(days=90))}
         path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+        history_path.write_text(json.dumps(history,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
         print("Published",today,"with",len(result["puzzle"]["sources"]),"headline-linked clues")
         return 0
     except (OSError,ValueError,ET.ParseError,AttributeError) as e:
