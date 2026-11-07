@@ -146,7 +146,27 @@ def build_answers():
                 for pos in changed:grid[pos]=""
             return False
         return chosen if search(0) else None
+    def extend_pool():
+        # Rescue only when the frequency-verified bank cannot complete the
+        # collection. Keep the familiar vocabulary and all existing solutions.
+        # Newly admitted words are a lower priority and are checked for
+        # dictionary definitions before publishing.
+        count=0
+        for w,pos in en.lexicon.items():
+            if not re.fullmatch(r"[a-z]{4,5}",w) or w in BANNED:
+                continue
+            if not pos.startswith(("NN","VB","JJ","RB")):continue
+            upper=w.upper()
+            if upper in frequencies:continue
+            frequencies[upper]=.1
+            n=len(upper);pools[n].append(upper)
+            for j,ch in enumerate(upper):lookup[n][j][ch].add(upper)
+            count+=1
+        for n in (4,5):pools[n].sort(key=lambda w:(-value(w),w))
+        print("Added",count,"lower-priority dictionary words for remaining compact grids",flush=True)
+
     started=time.monotonic()
+    expanded=False
     for i in range(100):
         indices=list(range(len(shape_info)))
         rng=random.Random(12345+i*9973)
@@ -156,18 +176,25 @@ def build_answers():
         preferred=1 if i%3==0 else 2
         indices.sort(key=lambda idx:(sum(len(cs)==3 for _,cs in shape_info[idx][2])!=preferred,rng.random()))
         result=None
-        for attempt,shape_index in enumerate(indices):
-            shape,numbered,solve_slots=shape_info[shape_index]
-            words=fill(solve_slots,42+i*123+attempt*117, 2500 if i<30 else 7000)
-            if words:
-                answer_by_cell={(direction,tuple(cells)):word
-                    for (direction,cells),word in zip(solve_slots,words)}
-                ordered=[answer_by_cell[(direction,tuple(cells))] for direction,cells in numbered]
-                if len(set(ordered))!=10 or used.intersection(ordered):raise AssertionError("Repeated answer")
-                used.update(ordered)
-                result={"shape":shape,"answers":ordered}
-                solutions.append(result)
-                break
+        for pass_number in range(2 if not expanded else 1):
+            if pass_number==1:
+                extend_pool()
+                expanded=True
+            for attempt,shape_index in enumerate(indices):
+                shape,numbered,solve_slots=shape_info[shape_index]
+                words=fill(solve_slots,42+i*123+attempt*117,
+                           2500 if i<30 else (8500 if expanded else 7000))
+                if words:
+                    answer_by_cell={(direction,tuple(cells)):word
+                        for (direction,cells),word in zip(solve_slots,words)}
+                    ordered=[answer_by_cell[(direction,tuple(cells))] for direction,cells in numbered]
+                    if len(set(ordered))!=10 or used.intersection(ordered):
+                        raise AssertionError("Repeated answer")
+                    used.update(ordered)
+                    result={"shape":shape,"answers":ordered}
+                    solutions.append(result)
+                    break
+            if result is not None:break
         if result is None:
             raise RuntimeError("Could not create 100 distinct compact grids: stopped at "
                                +str(i)+" completed. Existing published collection is unchanged.")
