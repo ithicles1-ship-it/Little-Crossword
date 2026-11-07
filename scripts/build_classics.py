@@ -142,7 +142,11 @@ def definitions(words):
         result[word]=available
     return result
 
+CURATED_FALLBACKS=json.loads((ROOT/"data"/"classic-curated-fallbacks.json").read_text(encoding="utf-8"))
+
 def clue_pair(word,senses,old_bank):
+    if word in CURATED_FALLBACKS:
+        return CURATED_FALLBACKS[word]
     if not senses and word in old_bank:
         return old_bank[word]
     if not senses:
