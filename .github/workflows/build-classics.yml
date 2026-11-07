@@ -28,6 +28,26 @@ jobs:
         run: pip install textblob==0.18.0.post0 cmudict==1.1.3
       - name: Generate checked non-repeating answer grids and clues
         run: python scripts/build_classics.py
+      - name: Require individually approved clues before replacing the library
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          puzzles=json.loads(Path('data/classics100.json').read_text())
+          reviewed=json.loads(Path('data/classic-curated-fallbacks.json').read_text())
+          missing=sorted(set(w for p in puzzles for w in p['answers'])-set(reviewed))
+          if missing:
+              raise SystemExit(
+                  f"Editorial approval required for {len(missing)} answers; "
+                  "refusing to publish dictionary-generated clues. "
+                  "Sample: "+', '.join(missing[:15])
+              )
+          for p in puzzles:
+              for word,clue,hint in zip(p['answers'],p['clues'],p['hints']):
+                  if [clue,hint] != reviewed[word]:
+                      raise SystemExit(f"Unapproved wording for {word}")
+          print('All 1000 answer clues and hints are approved.')
+          PY
       - name: Validate every answer, clue, hint and crossing before publishing
         run: node scripts/check_v13.js
       - name: Publish updated puzzle library
