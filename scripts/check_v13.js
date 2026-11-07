@@ -6,6 +6,16 @@ const seen=new Set();
 const allClues=new Set();
 assert.equal(classic.length,100);
 classic.forEach((spec,i)=>{
+  assert.equal(spec.shape.length,5,'Classic '+(i+1)+' must have five rows');
+  assert(spec.shape.every(row=>row.length===5),'Classic '+(i+1)+' must have five columns');
+  for(let row=0;row<5;row++){
+    const stripped=spec.shape[row].replace(/^#+|#+$/g,'');
+    assert(/^\\.{3,5}$/.test(stripped),'Classic '+(i+1)+' contains a gap in a row');
+  }
+  for(let col=0;col<5;col++){
+    const column=spec.shape.map(row=>row[col]).join('').replace(/^#+|#+$/g,'');
+    assert(/^\\.{3,5}$/.test(column),'Classic '+(i+1)+' contains a gap in a column');
+  }
   const mini=generator.parseMini(spec);
   assert.equal(mini.entries.filter(x=>x.direction==='Across').length,5,'Classic '+(i+1)+' Across count');
   assert.equal(mini.entries.filter(x=>x.direction==='Down').length,5,'Classic '+(i+1)+' Down count');
