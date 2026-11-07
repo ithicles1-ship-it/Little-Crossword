@@ -1,31 +1,43 @@
 name: Update daily headline crossword
 on:
   schedule:
-    # 07:37 UTC = morning in the UK; GitHub may run scheduled jobs late.
-    - cron: '37 7 * * *'
+    - cron: '17 6 * * *'
+    - cron: '17 11 * * *'
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_news.py'
+      - '.github/workflows/daily-news.yml'
 permissions:
   contents: write
+concurrency:
+  group: publish-daily-news
+  cancel-in-progress: false
 jobs:
   news:
     runs-on: ubuntu-latest
+    timeout-minutes: 7
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build today's news edition from BBC RSS
+      - name: Build today's crossword from multiple news feeds
         run: python scripts/build_news.py
-      - name: Save updated edition for GitHub Pages
+      - name: Publish verified edition to GitHub Pages
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           if test -f data/news.json; then
             git add data/news.json
             if ! git diff --cached --quiet; then
-              git commit -m 'Update daily headline mini'
-              git push
+              git commit -m 'Publish multi-source daily news crossword'
+              git pull --rebase origin main
+              git push origin main
             else
-              echo 'No headline changes today'
+              echo 'Edition unchanged — nothing to publish'
             fi
+          else
+            echo 'No current matching headlines; offline Newsroom mini stays available'
           fi
