@@ -211,7 +211,20 @@
      title:spec.title,description:'A featured crossword for '+months[m],spec:spec.pack
    })));
    home.append(card);
-   home.append(textNode('p','home-footnote','The monthly calendar will expand when more fully themed daily puzzles are curated. We will not silently reuse unrelated answers as a new daily crossword.'));
+   const label=textNode('div','home-section-heading','DAILY RELEASE CALENDAR');home.append(label);
+   const dailyGrid=document.createElement('div');dailyGrid.className='calendar-grid';
+   ['M','T','W','T','F','S','S'].forEach(d=>dailyGrid.append(textNode('span','calendar-weekday',d)));
+   const first=(new Date(Date.UTC(year,m,1,12)).getUTCDay()+6)%7;
+   for(let i=0;i<first;i++)dailyGrid.append(textNode('span','calendar-blank',''));
+   const count=new Date(Date.UTC(year,m+1,0,12)).getUTCDate();
+   for(let n=1;n<=count;n++){
+     const b=button(String(n),'calendar-day'+(n===1?' active':''),()=>card.querySelector('.home-primary').click());
+     b.disabled=n!==1;b.title=n===1?'Play this month’s verified themed mini':'New themed mini not curated yet';
+     if(n===1&&completed.has(key))b.classList.add('complete');
+     dailyGrid.append(b);
+   }
+   home.append(dailyGrid);
+   home.append(textNode('p','home-footnote','Day 1 is available now. Other daily slots are reserved until new answer-and-clue sets have been verified; the app will not recycle the same solution and pretend it is a new day.'));
  }
  const backButton=button('←','game-home-button',exit);backButton.setAttribute('aria-label','Back to the main menu');
  root.querySelector('.top-actions')?.prepend(backButton);
