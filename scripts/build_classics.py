@@ -28,7 +28,7 @@ denisov nicholas kutuzov prince had said got get did can are has was his her him
 the who its may not will then than once been all just very also only emperor
 captain russian french mariya saint xxx www intima septa russe pseudo coli tonsil
 veldt gypsy cytst cyst cysts plasma stasis lesion lesions rubles archons
-sabre tetra gentry dowry rouble ruble liege mesentery""".split())
+sabre tetra gentry dowry rouble ruble liege mesentery didn lise""".split())
 SKIP_SENSE=("obsolete","archaic","rare","dated","historical","vulgar","offensive",
             "military jargon","abbreviation of","a surname","a given name",
             "chiefly", "an archaic")
