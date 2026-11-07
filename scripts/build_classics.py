@@ -30,6 +30,8 @@ nigga spic spick nigger chink fag faggot slut bitch porn fuck shit yyy yyyy
 strt knite wo haw wohaw litle maget gorup faier nise pra i prai
 ters wree yeard heare orney erned anye seein ash am asham fu er fuer
 staf triol unhip atune etym cyber cyber cobol nft php ftp css xml
+cials durin eies verie boite owne shewe onleh witha selle tagua inti riche entre imma
+
 avec verso versa utero niger negro monei cocao ovata wanna wanta parte
 unnnt len dost inapt rec com thy pas o paso USSR ussr cole
 
@@ -150,6 +152,8 @@ def build_answers():
             return False
         return chosen if search(0) else None
     def extend_pool():
+        import cmudict
+        pronounced=set(cmudict.words())
         # Rescue only when the frequency-verified bank cannot complete the
         # collection. Keep the familiar vocabulary and all existing solutions.
         # Newly admitted words are a lower priority and are checked for
@@ -158,7 +162,9 @@ def build_answers():
         for w,pos in en.lexicon.items():
             if not re.fullmatch(r"[a-z]{4,5}",w) or w in BANNED:
                 continue
-            if not pos.startswith(("NN","VB","JJ","RB")):continue
+            if not pos.startswith(("NN","VB","JJ","RB")) or pos.startswith("NNP"):
+                continue
+            if w not in pronounced:continue
             upper=w.upper()
             if upper in frequencies:continue
             frequencies[upper]=.1
