@@ -1,0 +1,36 @@
+name: Build 100 unique Classic crosswords
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_classics.py'
+      - '.github/workflows/build-classics.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: build-classic-library
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install vocabulary tools
+        run: pip install textblob==0.18.0.post0
+      - name: Generate checked non-repeating answer grids and clues
+        run: python scripts/build_classics.py
+      - name: Publish updated puzzle library
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/classics100.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish 100 Classic minis with 1000 unique answer words'
+            git pull --rebase origin main
+            git push origin main
+          fi
