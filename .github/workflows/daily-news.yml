@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/build_news.py'
+      - 'scripts/news_first.py'
+      - 'scripts/check_news_editorial.py'
       - '.github/workflows/daily-news.yml'
 permissions:
   contents: write
@@ -25,7 +27,8 @@ jobs:
           python-version: '3.12'
       - name: Build today's crossword from multiple news feeds
         run: |
-          python -m py_compile scripts/build_news.py
+          python -m py_compile scripts/build_news.py scripts/news_first.py scripts/check_news_editorial.py
+          python scripts/check_news_editorial.py
           python scripts/build_news.py
       - name: Publish verified edition to GitHub Pages
         run: |
