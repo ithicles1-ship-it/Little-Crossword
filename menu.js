@@ -160,6 +160,34 @@
        [['Back to calendar',closeModal],['Today',()=>{closeModal();openNewsDate(nowDay())}]]);
    }
  }
+
+ function newsPickerModal(date=nowDay()){
+   const chosen=safeDate(date)?date:nowDay();
+   let month=new Date(chosen+'T12:00:00Z');
+   month=new Date(Date.UTC(month.getUTCFullYear(),month.getUTCMonth(),1,12));
+   showModal('News calendar','Pick the date of a published headline crossword.',[['Close',closeModal]],extra=>{
+     function draw(){
+       extra.replaceChildren();
+       const y=month.getUTCFullYear(),m=month.getUTCMonth();
+       const controls=document.createElement('div');controls.className='calendar-head';
+       const previous=button('‹','calendar-arrow',()=>{month=new Date(Date.UTC(y,m-1,1,12));draw()});
+       const following=button('›','calendar-arrow',()=>{month=new Date(Date.UTC(y,m+1,1,12));draw()});
+       following.disabled=new Date(Date.UTC(y,m+1,1,12))>new Date(nowDay()+'T12:00:00Z');
+       controls.append(previous,textNode('strong','calendar-month',months[m]+' '+y),following);extra.append(controls);
+       const calendar=document.createElement('div');calendar.className='calendar-grid';
+       ['M','T','W','T','F','S','S'].forEach(x=>calendar.append(textNode('span','calendar-weekday',x)));
+       for(let k=0;k<(new Date(Date.UTC(y,m,1)).getUTCDay()+6)%7;k++)calendar.append(textNode('span','calendar-blank',''));
+       for(let k=1;k<=new Date(Date.UTC(y,m+1,0)).getUTCDate();k++){
+         const day=y+'-'+String(m+1).padStart(2,'0')+'-'+String(k).padStart(2,'0');
+         const b=button(String(k),'calendar-day'+(day===nowDay()?' today':''),()=>{closeModal();openNewsDate(day)});
+         b.disabled=day>nowDay();
+         calendar.append(b);
+       }
+       extra.append(calendar);
+     }
+     draw();
+   });
+ }
  function makeThemeMonths(){
    view='months';screen('Themed','Explore a new subject every month.',renderHome);
    const labels=document.createElement('div');labels.className='month-list';
@@ -189,7 +217,7 @@
  root.querySelector('.top-actions')?.prepend(backButton);
  // Replace old archive links with the new coherent main menu.
  document.getElementById('puzzleBtn').onclick=()=>{
-   if(edition.mode==='news')makeNewsCalendar(edition.date||nowDay());
+   if(edition.mode==='news'){newsPickerModal(edition.date||nowDay());return;}
    else if(edition.mode==='theme')makeThemeCalendar(monthSpecs.findIndex(x=>x.title===edition.title)>=0?monthSpecs.findIndex(x=>x.title===edition.title):(+edition.date?.slice(5,7)||1)-1);
    else makeClassics();
    dismissKeyboard();root.hidden=true;home.hidden=false;
