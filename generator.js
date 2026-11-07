@@ -32,34 +32,37 @@ if(typeof module!=='undefined')module.exports={createCrossword,PUZZLE_LIMIT};
 // v9: validate every online publication before the UI accepts it.
 // Crossword answers and their crossing letters can never be supplied unchecked.
 function parseMini(spec){
- if(!spec||!Array.isArray(spec.shape)||spec.shape.length!==5||spec.shape.some(s=>typeof s!=='string'||!/^[.#]{5}$/.test(s)))throw Error('Invalid daily crossword grid');
- if(!Array.isArray(spec.answers)||spec.answers.length!==10||!Array.isArray(spec.clues)||spec.clues.length!==10||!Array.isArray(spec.hints)||spec.hints.length!==10)throw Error('Daily crossword must contain ten clues and hints');
- const rows=spec.shape,cols=5,cells=rows.join('').split('').map(ch=>ch==='#'?null:'');
+ if(!spec||!Array.isArray(spec.shape)||spec.shape.length<5||spec.shape.length>12)throw Error('Invalid crossword shape');
+ const rows=spec.shape, R=rows.length,C=rows[0]?.length;
+ if(!Number.isInteger(C)||C<5||C>12||rows.some(s=>typeof s!=='string'||s.length!==C||!/^[.#]+$/.test(s)))throw Error('Invalid crossword dimensions');
+ if(!Array.isArray(spec.answers)||spec.answers.length!==10||!Array.isArray(spec.clues)||spec.clues.length!==10||!Array.isArray(spec.hints)||spec.hints.length!==10)throw Error('Crossword must contain ten clues and hints');
+ const cells=rows.join('').split('').map(ch=>ch==='#'?null:'');
  const slots=[],starts=[];
- for(let r=0;r<5;r++)for(let c=0;c<5;c++){
+ for(let r=0;r<R;r++)for(let c=0;c<C;c++){
   if(rows[r][c]==='#')continue;
   if(c===0||rows[r][c-1]==='#'){
-   const cs=[];for(let x=c;x<5&&rows[r][x]!=='#';x++)cs.push(r*cols+x);
-   if(cs.length<3)throw Error('Short Across slot');slots.push({direction:'Across',row:r,col:c,cells:cs});
+   const cs=[];for(let x=c;x<C&&rows[r][x]!=='#';x++)cs.push(r*C+x);
+   if(cs.length>=3)slots.push({direction:'Across',row:r,col:c,cells:cs});
   }
   if(r===0||rows[r-1][c]==='#'){
-   const cs=[];for(let y=r;y<5&&rows[y][c]!=='#';y++)cs.push(y*cols+c);
-   if(cs.length<3)throw Error('Short Down slot');slots.push({direction:'Down',row:r,col:c,cells:cs});
+   const cs=[];for(let y=r;y<R&&rows[y][c]!=='#';y++)cs.push(y*C+c);
+   if(cs.length>=3)slots.push({direction:'Down',row:r,col:c,cells:cs});
   }
  }
- if(slots.length!==10||slots.filter(s=>s.direction==='Across').length!==5||slots.filter(s=>s.direction==='Down').length!==5)throw Error('Daily mini must be five Across and five Down');
- const coverage=Array(25).fill(0);
+ if(slots.length!==10||slots.filter(s=>s.direction==='Across').length!==5||slots.filter(s=>s.direction==='Down').length!==5)throw Error('Mini must have exactly five Across and five Down');
+ const coverage=Array(R*C).fill(0);
+ const used=new Set();
  slots.forEach((slot,i)=>{
   const word=spec.answers[i],clue=spec.clues[i],hint=spec.hints[i];
-  if(typeof word!=='string'||!/^[A-Z]{3,5}$/.test(word)||word.length!==slot.cells.length)throw Error('Invalid answer length');
+  if(typeof word!=='string'||!/^[A-Z]{3,12}$/.test(word)||word.length!==slot.cells.length||used.has(word))throw Error('Invalid or repeated answer');
   if(typeof clue!=='string'||!clue.trim()||typeof hint!=='string'||!hint.trim())throw Error('Missing clue or hint');
-  slot.answer=word;slot.clue=clue;slot.hint=hint;
+  used.add(word);slot.answer=word;slot.clue=clue;slot.hint=hint;
   const first=slot.cells[0];if(!starts.includes(first))starts.push(first);
   slot.cells.forEach((pos,j)=>{if(cells[pos]&&cells[pos]!==word[j])throw Error('Conflicting crossword letters');cells[pos]=word[j];coverage[pos]++});
  });
- if(cells.some((v,i)=>v!==null&&(!v||coverage[i]!==2)))throw Error('A daily square has an invalid crossing');
+ if(cells.some((v,i)=>v!==null&&(!v||coverage[i]<1||coverage[i]>2)))throw Error('A square has invalid coverage');
  starts.sort((a,b)=>a-b);
  slots.forEach(slot=>{slot.number=starts.indexOf(slot.cells[0])+1});
- return {rows:5,cols,cells,entries:slots};
+ return {rows:R,cols:C,cells,entries:slots};
 }
 if(typeof module!=='undefined')module.exports.parseMini=parseMini;
