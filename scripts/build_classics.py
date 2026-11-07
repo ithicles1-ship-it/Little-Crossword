@@ -18,17 +18,43 @@ from textblob import en
 
 ROOT=Path(__file__).resolve().parent.parent
 OUT=ROOT/"data"/"classics100.json"
-SHAPES=[
- [".....#.",".#.##..",".#.##..","....#..","....#..",".##....","#.....#"],
- ["#......",".##....","..#.##.","..#....","..#...#","....#.#","..###.#"],
- ["......#","..#####","....##.","....#..",".#.#...",".#.....","##.##.."],
-]
+# Dense 5 × 5 layouts with exactly five Across and five Down.
+# Every row and column has one uninterrupted answer; no isolated islands or gaps.
 BANNED=set("""natasha pierre andrew sonya princess rostov anatole napoleon bolkonski
-denisov nicholas kutuzov prince had said got get did can are has was his her him
-the who its may not will then than once been all just very also only emperor
-captain russian french mariya saint xxx www intima septa russe pseudo coli tonsil
-veldt gypsy cytst cyst cysts plasma stasis lesion lesions rubles archons
-sabre tetra gentry dowry rouble ruble liege mesentery didn lise""".split())
+denisov nicholas kutuzov prince his her him was had said got get did can are
+has the who its may not will then than once been all just very also only
+emperor captain russian french mariya saint xxx www intima septa russe pseudo
+coli tonsil veldt gypsy cytst cyst cysts plasma stasis lesion lesions rubles
+archons sabre tetra gentry dowry rouble ruble liege mesentery didn lise
+nigga spic spick nigger chink fag faggot slut bitch porn fuck shit yyy yyyy
+strt knite wo haw wohaw litle maget gorup faier nise pra i prai
+ters wree yeard heare orney erned anye seein ash am asham fu er fuer
+staf triol unhip atune etym cyber cyber cobol nft php ftp css xml
+javascript jpeg json sql api url app apps www http https catty iam icee
+""".split())
+# A few everyday short words missing from the historical spelling corpus.
+SAFE_THREE=set("""ads app bio boo bop bra bro bum bun cog coy cud cue doc dud
+duo eel eke elk fin flu fry gab gel gob goo gym hex hob hoe hog hub ilk irk
+jab jag jig jog lag lob lop lug lye maw mew mom mow mum nab nil oaf oat pap
+pep pic pod pry pun pup rap rig sag sax sis sod sop soy spa tab tad tan tee
+tot ups urn vet woo yen yip yuk zap zoo""".split())
+
+def compact_shapes():
+    """All connected 5×5 row/column-convex puzzles with 10 entries."""
+    import itertools
+    row_options=["#"*off+"."*size+"#"*(5-off-size)
+                 for size in (3,4,5) for off in range(6-size)]
+    designs=[]
+    for shape in itertools.product(row_options,repeat=5):
+        cols=["".join(row[c] for row in shape) for c in range(5)]
+        if any(col.count(".")<3 or "#" in col.strip("#") for col in cols):
+            continue
+        lengths=[row.count(".") for row in shape]+[col.count(".") for col in cols]
+        if lengths.count(3)>2 or sum(lengths)<38:continue
+        designs.append(list(shape))
+    if len(designs)<20:raise RuntimeError("Compact shape catalogue is unexpectedly small")
+    return designs
+
 SKIP_SENSE=("obsolete","archaic","rare","dated","historical","vulgar","offensive",
             "military jargon","abbreviation of","a surname","a given name",
             "chiefly", "an archaic")
@@ -51,60 +77,108 @@ def slots(shape):
     return out
 
 def build_answers():
+    import collections
+    common_path=ROOT/"data"/"common-10000-short.txt"
+    common=[w.strip() for w in common_path.read_text(encoding="utf-8").splitlines()
+            if w.strip() and not w.startswith("#")]
+    rankings={word.upper():i for i,word in enumerate(common)}
     frequencies={w.upper():freq for w,freq in en.spelling.items()
-                 if re.fullmatch(r"[a-z]{3,6}",w) and freq>=4 and w not in BANNED
-                 and en.lexicon.get(w,"").startswith(("NN","VB","JJ","RB"))}
-    forbidden=set()
-    pools={n:sorted((w for w in frequencies if len(w)==n),key=lambda w:(-frequencies[w],w)) for n in range(3,7)}
-    def fill(shape,slot_list,puzzle_number,attempt):
-        cells=[""]*(len(shape)*len(shape[0]))
-        values=[None]*10;inside=set();calls=0
-        random_state=random.Random(100000+puzzle_number*37+attempt*119)
-        def choices(slot):
-            pattern=[cells[pos] for pos in slot[1]]
-            return [w for w in pools[len(pattern)]
-                    if w not in forbidden and w not in inside
-                    and all(not letter or letter==w[i] for i,letter in enumerate(pattern))]
-        def place(depth):
+        if re.fullmatch(r"[a-z]{3,5}",w) and freq>=1 and w not in BANNED
+        and en.lexicon.get(w,"").startswith(("NN","VB","JJ","RB"))}
+    for w,pos in en.lexicon.items():
+        if not re.fullmatch(r"[a-z]{3,5}",w) or w in BANNED:
+            continue
+        if not pos.startswith(("NN","VB","JJ","RB")):continue
+        if (w in SAFE_THREE and len(w)==3) or (len(w)>3 and w.upper() in rankings):
+            frequencies.setdefault(w.upper(),1)
+    # The familiar-word frequency list takes priority over technical dictionary fill.
+    def value(w):
+        rank=rankings.get(w,20000)
+        familiar=10000/(rank+200) if rank<20000 else 0
+        return familiar+__import__("math").log1p(frequencies[w])*1.8
+    pools={n:sorted((w for w in frequencies if len(w)==n),key=lambda w:(-value(w),w))
+           for n in (3,4,5)}
+    lookup={n:[collections.defaultdict(set) for _ in range(n)] for n in (3,4,5)}
+    for n,words in pools.items():
+        for w in words:
+            for j,ch in enumerate(w):lookup[n][j][ch].add(w)
+    print("Compact word pools:",{n:len(words) for n,words in pools.items()},flush=True)
+    shapes=compact_shapes()
+    shape_info=[]
+    for shape in shapes:
+        grid_slots=slots(shape)
+        # Use Across then Down for stable generation. Convert back to the actual
+        # numbered crossword's row-major ordering before writing the puzzle.
+        words_slots=sorted(grid_slots,key=lambda slot:(slot[0]!="Across",slot[1][0]))
+        shape_info.append((shape,grid_slots,words_slots))
+    used=set();solutions=[]
+    def fill(selected,seed,maxcalls):
+        grid=[""]*25;chosen=[None]*10;inside=set();calls=0
+        rng=random.Random(seed)
+        def candidates(slot):
+            cs=slot[1];n=len(cs);pattern=[grid[i] for i in cs]
+            matches=[lookup[n][j][ch] for j,ch in enumerate(pattern) if ch]
+            if not matches:
+                return [w for w in pools[n] if w not in used and w not in inside]
+            common_matches=set.intersection(*sorted(matches,key=len))
+            return [w for w in common_matches if w not in used and w not in inside]
+        def search(depth):
             nonlocal calls
             calls+=1
             if depth==10:return True
-            if calls>950:return False
-            available=[]
-            for idx,slot in enumerate(slot_list):
-                if values[idx] is not None:continue
-                opts=choices(slot)
+            if calls>=maxcalls:return False
+            options=[]
+            for i,slot in enumerate(selected):
+                if chosen[i] is not None:continue
+                opts=candidates(slot)
                 if not opts:return False
-                available.append((len(opts),-len(slot[1]),idx,opts))
-            available.sort(key=lambda v:(v[0],v[1]))
-            _,_,idx,options=available[0]
-            offers=options[:75]
-            offers.sort(key=lambda w:options.index(w)*.032+random_state.random()*3)
-            for word in offers:
+                options.append((len(opts),-len(slot[1]),i,opts))
+            _,_,i,available=min(options,key=lambda x:x[:3])
+            rng.shuffle(available)
+            available.sort(key=lambda w:(-value(w)/(1+rng.random()*100)))
+            for word in available[:70]:
                 changed=[]
-                for i,pos in enumerate(slot_list[idx][1]):
-                    if not cells[pos]:cells[pos]=word[i];changed.append(pos)
-                inside.add(word);values[idx]=word
-                if place(depth+1):return True
-                values[idx]=None;inside.remove(word)
-                for pos in changed:cells[pos]=""
+                for j,pos in enumerate(selected[i][1]):
+                    if not grid[pos]:grid[pos]=word[j];changed.append(pos)
+                chosen[i]=word;inside.add(word)
+                if search(depth+1):return True
+                chosen[i]=None;inside.remove(word)
+                for pos in changed:grid[pos]=""
             return False
-        return values if place(0) else None
-    puzzles=[]
-    for n in range(100):
-        found=None
-        for attempt in range(80):
-            shape=SHAPES[(n*17+attempt*37)%len(SHAPES)]
-            found=fill(shape,slots(shape),n,attempt)
-            if found:
-                assert not forbidden.intersection(found)
-                forbidden.update(found)
-                puzzles.append({"shape":shape,"answers":found})
+        return chosen if search(0) else None
+    started=time.monotonic()
+    for i in range(100):
+        indices=list(range(len(shape_info)))
+        rng=random.Random(12345+i*9973)
+        rng.shuffle(indices)
+        # Balance 1- and 2-short-answer patterns to prevent exhausting 3-letter
+        # words, while still looking close to the original 5×5 widget.
+        preferred=1 if i%3==0 else 2
+        indices.sort(key=lambda idx:(sum(len(cs)==3 for _,cs in shape_info[idx][2])!=preferred,rng.random()))
+        result=None
+        for attempt,shape_index in enumerate(indices):
+            shape,numbered,solve_slots=shape_info[shape_index]
+            words=fill(solve_slots,42+i*123+attempt*117, 2500 if i<30 else 7000)
+            if words:
+                answer_by_cell={(direction,tuple(cells)):word
+                    for (direction,cells),word in zip(solve_slots,words)}
+                ordered=[answer_by_cell[(direction,tuple(cells))] for direction,cells in numbered]
+                if len(set(ordered))!=10 or used.intersection(ordered):raise AssertionError("Repeated answer")
+                used.update(ordered)
+                result={"shape":shape,"answers":ordered}
+                solutions.append(result)
                 break
-        if not found:raise RuntimeError("Unable to produce crossword #"+str(n+1))
-    answers=[w for puzzle in puzzles for w in puzzle["answers"]]
-    assert len(answers)==1000 and len(set(answers))==1000
-    return puzzles
+        if result is None:
+            raise RuntimeError("Could not create 100 distinct compact grids: stopped at "
+                               +str(i)+" completed. Existing published collection is unchanged.")
+        if (i+1)%10==0:
+            print("Completed",i+1,"compact grids",len(used),"distinct answers",
+                  round(time.monotonic()-started,1),"seconds",flush=True)
+    assert len(solutions)==100 and len(used)==1000
+    for puzzle in solutions:
+        if len(puzzle["shape"])!=5 or any(len(row)!=5 for row in puzzle["shape"]):
+            raise AssertionError("Non-5×5 grid")
+    return solutions
 
 def plain(value):
     text=html.unescape(re.sub(r"<[^>]*>","",str(value or "")))
