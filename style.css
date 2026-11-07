@@ -90,3 +90,64 @@ body.keyboard-open .online-notice{display:none}
 .grid.large-mini .tile .letter{font-size:clamp(12px,3.8vw,20px);margin-top:2px}
 .grid.large-mini .tile .number{font-size:6px!important;left:2px!important;top:2px!important}
 body.keyboard-open .grid.large-mini .tile .letter{font-size:clamp(11px,3.1vw,17px)}
+
+
+/* v13: Personal home screen, compact numbered library, and date/month menus. */
+[hidden]{display:none!important}
+.crossword-home{
+ width:min(100%,500px);margin:0 auto;min-height:100svh;
+ padding:max(22px,calc(env(safe-area-inset-top) + 20px)) 17px max(28px,env(safe-area-inset-bottom));
+ display:flex;flex-direction:column;gap:18px;
+ animation:home-arrive .36s cubic-bezier(.2,1,.3,1);
+}
+@keyframes home-arrive{from{opacity:.5;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.home-heading{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;margin:6px 0 2px}
+.home-eyebrow{color:var(--lav);font-size:11px;font-weight:850;letter-spacing:.15em}
+.home-title{font-size:clamp(33px,8vw,43px);white-space:normal;letter-spacing:-.065em;line-height:1.07;margin:10px 0}
+.home-desc{color:#d0cfdb;line-height:1.55;font-size:13px;margin:0;max-width:350px}
+.home-back{border:1px solid var(--stroke);padding:10px 12px;white-space:nowrap;background:#ffffff13;border-radius:14px;color:#e3dfff;font-size:12px;font-weight:750}
+.home-editions{display:flex;flex-direction:column;gap:12px;margin-top:14px}
+.home-edition{display:flex;text-align:left;align-items:center;gap:14px;width:100%;background:linear-gradient(145deg,#383943,#2a2c34);border:1px solid #ffffff22;border-radius:24px;padding:19px 16px 19px 15px;box-shadow:0 9px 27px #0002;transition:transform .18s,border .18s}
+.home-edition:active,.month-tile:active{transform:scale(.985);border-color:#b9abff66}
+.home-edition-num{align-self:flex-start;font-size:10px;letter-spacing:.13em;color:#c9bbff;white-space:nowrap;font-weight:850;opacity:.9}
+.home-edition-copy{display:flex;flex-direction:column;gap:5px;flex:1}
+.home-edition-title{font-size:22px;font-weight:830;letter-spacing:-.035em}
+.home-edition-sub{font-size:11px;color:#bfb1ff;font-style:normal;font-weight:750}
+.home-edition-description{color:#cdcbd7;font-size:12px;line-height:1.5}
+.home-arrow{font-size:26px;color:#baaaff;align-self:center;margin-left:auto;font-weight:400}
+.home-footer,.home-footnote{color:#babac8;font-size:11px;line-height:1.65}
+.home-footer{text-align:center;margin-top:auto;padding-top:20px}
+.home-section-heading{font-size:10px;font-weight:850;letter-spacing:.13em;color:#cbbdff;margin-top:5px}
+.home-resume{background:#bdb0ff;color:#242033;border:0;border-radius:16px;padding:14px;text-align:center;font-weight:850;margin-top:3px}
+.classic-wall{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;padding-bottom:12px}
+.classic-tile{position:relative;border:1px solid #ffffff19;border-radius:15px;background:#353640;min-height:58px;text-align:center;font-size:19px;font-weight:850;font-variant-numeric:tabular-nums;transition:background .15s,transform .15s}
+.classic-tile:active{transform:scale(.94);background:#55506b}
+.classic-tile.done{border-color:#b7e5db88;background:#334e4c;color:#dcfff2}
+.tile-check{font-size:11px;position:absolute;right:5px;top:3px;color:#b7e5db}
+.calendar-head{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid var(--stroke);border-radius:17px;background:#ffffff0c;padding:9px 12px}
+.calendar-month{font-size:17px;letter-spacing:-.035em}
+.calendar-arrow{background:#ffffff15;border:0;border-radius:13px;font-size:28px;line-height:1;width:38px;height:39px;color:#cabfff}
+.calendar-arrow:disabled{opacity:.25}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;background:linear-gradient(145deg,#36363f,#292b31);border:1px solid #ffffff19;border-radius:22px;padding:12px}
+.calendar-weekday{text-align:center;font-size:10px;font-weight:800;color:#c4bbd9;padding:6px 0}
+.calendar-blank{min-height:41px}
+.calendar-day{position:relative;border:1px solid #ffffff11;background:#454653;border-radius:11px;aspect-ratio:1;min-height:34px;font-size:14px;font-weight:770;font-variant-numeric:tabular-nums}
+.calendar-day.today{border-color:var(--lav);box-shadow:inset 0 0 0 1px #b9abff60}
+.calendar-day.active{background:#aca0eb;color:#29243c}
+.calendar-day.complete:after{position:absolute;content:'';width:4px;height:4px;bottom:4px;left:calc(50% - 2px);background:#b1e8d8;border-radius:50%}
+.calendar-day:disabled{opacity:.24}
+.home-primary{background:#b8abff;color:#252238;font-weight:850;border:0;border-radius:16px;min-height:46px;padding:10px 18px;box-shadow:0 8px 25px #b8abff24;text-align:center}
+.month-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.month-tile{position:relative;min-height:115px;padding:14px 12px 15px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:6px;background:linear-gradient(145deg,#373741,#2a2c34);border:1px solid #ffffff18;border-radius:19px;transition:transform .16s,border-color .16s}
+.month-index{font-size:10px;color:#b9abff;font-weight:800}
+.month-name{font-size:18px;letter-spacing:-.025em}
+.month-topic{font-size:11px;color:#d4cadf}
+.month-tile .home-arrow{position:absolute;right:11px;bottom:9px;font-size:19px}
+.featured-theme{background:linear-gradient(145deg,#393a45,#2b2d35);border:1px solid #ffffff18;border-radius:24px;padding:20px;display:flex;flex-direction:column;gap:12px}
+.featured-theme .home-edition-num{font-size:10px}
+.featured-theme .home-edition-title{font-size:25px}
+.featured-theme .home-primary{margin-top:5px}
+.game-home-button{border:1px solid #ffffff23;background:#ffffff10;border-radius:12px;min-width:34px;height:40px;font-size:19px;line-height:1;padding:0}
+@media (min-width:450px){.classic-wall{grid-template-columns:repeat(10,minmax(0,1fr))}.classic-tile{min-height:43px;font-size:16px}}
+@media (max-width:360px){.home-edition{padding:15px 12px}.home-edition-title{font-size:20px}.classic-wall{gap:6px}.classic-tile{min-height:50px}.game-home-button{min-width:30px}}
+@media (prefers-reduced-motion:reduce){.crossword-home{animation:none}.classic-tile,.home-edition,.month-tile{transition:none}}
