@@ -28,9 +28,13 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Generated JSON must be committed atop the newest remote main.
+          # Reset the commit pointer, not the working files, to avoid a rebase
+          # conflict when another publishing run updated the same JSON.
+          git fetch origin main
+          git reset --mixed origin/main
           git add data/classics100.json
           if ! git diff --cached --quiet; then
             git commit -m 'Publish 100 Classic minis with 1000 unique answer words'
-            git pull --rebase origin main
             git push origin main
           fi
