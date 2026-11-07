@@ -1,11 +1,14 @@
 name: Build 100 unique Classic crosswords
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/build_classics.py'
-      - '.github/workflows/build-classics.yml'
+  # Classic is an editorially approved library, not a daily procedural feed.
+  # Never silently replace its 100 solutions or 1,000 authored clues.
   workflow_dispatch:
+    inputs:
+      confirm_replacement:
+        description: 'I approve replacing the Classic solution library and resetting affected puzzle progress'
+        type: boolean
+        required: true
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -13,6 +16,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   generate:
+    if: ${{ inputs.confirm_replacement == true }}
     runs-on: ubuntu-latest
     timeout-minutes: 14
     steps:
@@ -24,6 +28,8 @@ jobs:
         run: pip install textblob==0.18.0.post0 cmudict==1.1.3
       - name: Generate checked non-repeating answer grids and clues
         run: python scripts/build_classics.py
+      - name: Validate every answer, clue, hint and crossing before publishing
+        run: node scripts/check_v13.js
       - name: Publish updated puzzle library
         run: |
           git config user.name 'github-actions[bot]'
