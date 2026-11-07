@@ -1,0 +1,27 @@
+name: Validate crossword quality
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'generator.js'
+      - 'themes.js'
+      - 'clue-alternates.js'
+      - 'daily.js'
+      - 'scripts/check_puzzles.js'
+      - '.github/workflows/validate-puzzles.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate compact grids and clue uniqueness
+        run: node scripts/check_puzzles.js
+      - name: Validate news publisher syntax
+        run: python -m py_compile scripts/build_news.py
