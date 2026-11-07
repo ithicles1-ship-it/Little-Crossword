@@ -1,0 +1,31 @@
+name: Update daily headline crossword
+on:
+  schedule:
+    # 07:37 UTC = morning in the UK; GitHub may run scheduled jobs late.
+    - cron: '37 7 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build today's news edition from BBC RSS
+        run: python scripts/build_news.py
+      - name: Save updated edition for GitHub Pages
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if test -f data/news.json; then
+            git add data/news.json
+            if ! git diff --cached --quiet; then
+              git commit -m 'Update daily headline mini'
+              git push
+            else
+              echo 'No headline changes today'
+            fi
+          fi

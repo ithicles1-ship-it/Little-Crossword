@@ -1,0 +1,26 @@
+{
+  "name": "Little Crossword",
+  "short_name": "Crossword",
+  "description": "Your personal little crossword: daily classic, themed and news-inspired mini puzzles, playable offline.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#1c1d24",
+  "theme_color": "#1c1d24",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ <meta name="theme-color" content="#1c1d25">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+ <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <meta name="apple-mobile-web-app-title" content="Little Crossword">
+ <meta name="description" content="Your personal, offline-friendly mini crossword with three daily editions. Free to install and play.">
+ <link rel="manifest" href="./manifest.webmanifest">
+ <link rel="icon" href="./icons/icon-192.png" sizes="192x192">
+ <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+ <link rel="stylesheet" href="./style.css">
+ <title>Little Crossword</title>
+</head>
+<body>
+ <main class="app">
+  <header class="top">
+   <div class="title-group">
+    <div class="eyebrow"><span class="sparkle">✦</span> A moment to unwind</div>
+    <h1>Little Crossword<span class="accent">.</span></h1>
+   </div>
+   <div class="top-actions">
+    <button class="pill" id="puzzleBtn" aria-label="Choose puzzle"><span class="square-icon">▦</span> <span id="puzzleLabel">#1</span> <span class="chev">⌄</span></button>
+    <button class="icon-btn" id="settingsBtn" aria-label="More options">···</button>
+   </div>
+  </header>
+  <div class="status-strip"><span class="status-dot"></span><span id="puzzleCount">Three daily minis · 5 Across · 5 Down</span><span class="status-separator">·</span><span id="completed">0 completed</span></div>
+  <nav class="edition-tabs" aria-label="Choose today's crossword edition">
+    <button class="edition-tab is-active" data-edition="classic" type="button"><span class="edition-emoji">✦</span><span>Classic</span><small>Every day</small></button>
+    <button class="edition-tab" data-edition="news" type="button"><span class="edition-emoji">◉</span><span>In the News</span><small>Daily + offline</small></button>
+    <button class="edition-tab" data-edition="theme" type="button"><span class="edition-emoji">❖</span><span>Themed</span><small>Rotating topic</small></button>
+  </nav>
+  <div class="edition-subtitle" id="editionSubtitle" aria-live="polite">Your own little moment of calm.</div><div class="online-notice" id="onlineNotice" role="status" aria-live="polite" hidden></div>
+  <section class="panel" aria-label="Crossword puzzle">
+   <div class="panel-heading">
+    <div><h2 id="panelTitle">Daily crossword</h2><p class="panel-subtitle" id="progressText">Tap a tile to begin</p></div>
+    <button class="clues-shortcut" id="showClues" aria-label="View all clues" title="All clues">✧</button>
+   </div>
+   <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="bar"></div></div>
+   <div class="grid-shell">
+    <div class="grid" id="grid" role="group" aria-label="Crossword grid"></div>
+    <input id="nativeInput" class="native-input" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="done" aria-label="Type letters into the selected crossword answer">
+   </div>
+   <div class="clue-area" id="clueArea">
+    <button class="nav" id="prev" aria-label="Previous clue">←</button>
+    <div class="clue" id="clue" aria-live="polite"></div>
+    <button class="nav" id="next" aria-label="Next clue">→</button>
+   </div>
+   <div class="controls">
+    <button class="action" id="direction" aria-label="Switch to the crossing word">↕ Down</button>
+    <button class="action" id="hint">✧ Hint</button>
+    <button class="action primary" id="check">Check ✓</button>
+   </div>
+   <div class="keyboard-bar"><span id="keyboardHelp">Tap a square to use your iPhone keyboard</span><button id="keyboardToggle" aria-label="Show keyboard">⌨ Keyboard</button></div>
+  </section>
+  <div class="tools"><button id="daily">☀ Today’s editions</button><button id="random">⤨ Another mini</button><button id="puzzles">▦ Practice archive</button></div><div class="source-links" id="sourceLinks" hidden></div>
+  <div class="footer" id="installNote">Made for your Home Screen. Classic, Themed and the practice minis work offline.</div>
+ </main>
+ <div class="modal-scrim" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal">
+   <div class="modal-glyph">✦</div>
+   <h2 id="modalTitle"></h2><p id="modalBody"></p>
+   <div class="modal-extra" id="modalExtra"></div>
+   <div class="modal-buttons" id="modalButtons"></div>
+  </div>
+ </div>
+ <script src="./generator.js" defer></script>
+ <script src="./daily.js" defer></script>
+ <script src="./app.js" defer></script>
+</body>
+</html>
