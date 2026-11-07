@@ -17,6 +17,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
+from news_first import construct as construct_news_first
 
 ROOT=Path(__file__).resolve().parent.parent
 FEEDS=[
@@ -176,6 +177,14 @@ def build(items,now):
     grids,bank=data();options=[]
     reserved=reserved_for_today(date,grids)
     recent=recent_news_answers(date)
+    # Priority: extract real, independently reported headline answers FIRST,
+    # then construct and validate all remaining crossings around them.
+    news_first=construct_news_first(items,exclusions=reserved|recent)
+    if news_first is not None:
+        return {"date":date,"kind":"news","publisher":"multi-source-rss",
+                "puzzle":news_first}
+    # Deliberately labelled older fallback if today's headline anchors cannot
+    # yield a fair mini. Never claim this selected grid was news-first.
     for i,grid in enumerate(grids):
         candidates=[(j,w,matches(w,items)) for j,w in enumerate(grid["answers"])]
         candidates=[x for x in candidates if x[2]]
@@ -214,7 +223,8 @@ def build(items,now):
     return {"date":date,"kind":"news","publisher":"multi-source-rss","puzzle":{
         "shape":grid["shape"],"answers":grid["answers"],"clues":clues,"hints":hints,
         "title":"In the News",
-        "description":str(len(sources))+" topical clues from "+", ".join(sorted(used_pubs)),
+        "description":str(len(sources))+" headline-matched clues; a news-first grid was unavailable",
+        "method":"matched-existing-fallback",
         "sources":sources}}
 
 def main():
