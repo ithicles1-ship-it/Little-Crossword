@@ -30,6 +30,9 @@ nigga spic spick nigger chink fag faggot slut bitch porn fuck shit yyy yyyy
 strt knite wo haw wohaw litle maget gorup faier nise pra i prai
 ters wree yeard heare orney erned anye seein ash am asham fu er fuer
 staf triol unhip atune etym cyber cyber cobol nft php ftp css xml
+avec verso versa utero niger negro monei cocao ovata wanna wanta parte
+unnnt len dost inapt rec com thy pas o paso USSR ussr cole
+
 javascript jpeg json sql api url app apps www http https catty iam icee
 """.split())
 # A few everyday short words missing from the historical spelling corpus.
