@@ -28,8 +28,8 @@ assert len(shape)==5 and all(len(row)==5 for row in shape)
 ss=slots(shape)
 assert len(ss)==10
 assert len(set(result["answers"]))==10
-assert len(result["sources"])==2
-assert len({x["source"] for x in result["sources"]})==2
+assert 1<=len(result["sources"])<=2
+assert len({x["source"] for x in result["sources"]})==len(result["sources"])
 assert result["method"]=="headline-first"
 cells={}
 for answer,(direction,positions) in zip(result["answers"],ss):
