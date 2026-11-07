@@ -104,12 +104,14 @@
     "INURE"
   ],
   "clues": {
-    "authoredCount": 1000,
-    "source": "data/classic-curated-fallbacks.json",
+    "authoredCount": 534,
+    "source": "534 hand-curated clue/hint pairs; remaining 466 use dictionary-derived wording awaiting editorial review",
     "uniqueWording": true,
     "explicitHints": true,
     "banClueAnswerLeaks": true,
-    "banHintAnswerLeaks": true
+    "banHintAnswerLeaks": true,
+    "pendingIndividualReview": 466,
+    "editorialStatus": "in-progress; do not imply the full 1000-entry collection has been individually written"
   },
   "news": {
     "headlinesAreVerified": true,
