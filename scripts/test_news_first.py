@@ -12,7 +12,13 @@ for i,w in enumerate(words):
         "source":("BBC News" if i%2 else "The Guardian"),"url":f"https://example.org/story-{i}",
         "published":NOW})
 classic,fill=dictionary()
+from news_first import solve
+sample=classic[0]
+print('Sample known fill:',sample['answers'],flush=True)
+print('Sample shape:',sample['shape'],flush=True)
+print('Direct seeded solver:',solve(sample['shape'],[(sample['answers'][0],items[0],1),(sample['answers'][1],items[1],1)],fill,set(),123,max_calls=4000),flush=True)
 anchors=source_words(items,set(fill))
+print('Headline choices:',[(x[0],x[2]) for x in anchors[:22]],flush=True)
 assert any(x[0]=="ZELDA" for x in anchors)
 assert any(x[0]=="STORM" for x in anchors)
 result=construct(items)
