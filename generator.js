@@ -19,7 +19,10 @@ function createCrossword(id){
  slots.forEach(slot=>{const p=slot.cells[0];if(!starts.includes(p))starts.push(p)});
  starts.sort((a,b)=>a-b);
  slots.forEach((slot,i)=>{
-  const answer=spec.answers[i],detail=CLUE_BANK[answer];
+  const answer=spec.answers[i];
+  // Each occurrence within the curated archive gets its own authored clue/hint pair.
+  const prior=PUZZLES.slice(0,index).reduce((n,p)=>n+(p.answers.includes(answer)?1:0),0);
+  const detail=prior ? CLUE_ALTERNATES[answer]?.[prior-1] : CLUE_BANK[answer];
   if(!detail||answer.length!==slot.cells.length)throw Error('Invalid crossword '+(index+1));
   slot.answer=answer;slot.clue=detail[0];slot.hint=detail[1];slot.number=starts.indexOf(slot.cells[0])+1;
   slot.cells.forEach((n,j)=>{if(cells[n]&&cells[n]!==answer[j])throw Error('Crossing mismatch');cells[n]=answer[j]});
