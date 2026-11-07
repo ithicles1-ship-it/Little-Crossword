@@ -10,11 +10,11 @@ classic.forEach((spec,i)=>{
   assert(spec.shape.every(row=>row.length===5),'Classic '+(i+1)+' must have five columns');
   for(let row=0;row<5;row++){
     const stripped=spec.shape[row].replace(/^#+|#+$/g,'');
-    assert(/^\\.{3,5}$/.test(stripped),'Classic '+(i+1)+' contains a gap in a row');
+    assert(stripped.length>=3&&stripped.length<=5&&[...stripped].every(ch=>ch==='.'),'Classic '+(i+1)+' contains a gap in a row');
   }
   for(let col=0;col<5;col++){
     const column=spec.shape.map(row=>row[col]).join('').replace(/^#+|#+$/g,'');
-    assert(/^\\.{3,5}$/.test(column),'Classic '+(i+1)+' contains a gap in a column');
+    assert(column.length>=3&&column.length<=5&&[...column].every(ch=>ch==='.'),'Classic '+(i+1)+' contains a gap in a column');
   }
   const mini=generator.parseMini(spec);
   assert.equal(mini.entries.filter(x=>x.direction==='Across').length,5,'Classic '+(i+1)+' Across count');
