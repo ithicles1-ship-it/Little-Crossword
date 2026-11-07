@@ -67,10 +67,10 @@ function activateEdition(which){
  filled={...record.filled};clueHints={...record.clueHints};solved=completed.has(edition.key);
  if(solved)data.cells.forEach((v,i)=>{if(v!==null)filled[i]=v});
  entry=0;cell=active().cells[0];lastChanged=-1;
- $('puzzleLabel').textContent=which.mode==='archive'?'#'+number:prettyDay(which.date).slice(0,6);
+ $('puzzleLabel').textContent=(which.mode==='archive'||(which.mode==='classic'&&which.spec))?'#'+number:prettyDay(which.date).slice(0,6);
  $('panelTitle').textContent=which.title;
- $('editionSubtitle').textContent=which.mode==='archive'?'Practice mini #'+number:prettyDay(which.date)+' · '+which.description;
- $('puzzleCount').textContent=which.mode==='archive'?'24 hand-checked practice minis · 5 Across · 5 Down':which.source==='rss'?'Updated news edition · 5 Across / 5 Down':'Daily minis · 5 Across / 5 Down';
+ $('editionSubtitle').textContent=(which.mode==='archive'||(which.mode==='classic'&&which.spec))?which.description:prettyDay(which.date)+' · '+which.description;
+ $('puzzleCount').textContent=which.source==='library'?'100 unique Classic puzzles · 5 Across · 5 Down':which.mode==='archive'?'24 hand-checked practice minis · 5 Across · 5 Down':which.source==='rss'?'Published headline mini · 5 Across / 5 Down':'Daily minis · 5 Across / 5 Down';
  $('onlineNotice').hidden=true;
  setEditionTabs();updateSourceLinks();closeModal();buildGrid();render(true);save();
 }
