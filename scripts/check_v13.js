@@ -3,6 +3,7 @@ const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/st
 const generator=require('../generator.js');
 const classic=JSON.parse(fs.readFileSync('data/classics100.json','utf8'));
 const seen=new Set();
+const allClues=new Set();
 assert.equal(classic.length,100);
 classic.forEach((spec,i)=>{
   const mini=generator.parseMini(spec);
@@ -15,10 +16,16 @@ classic.forEach((spec,i)=>{
   }
   for(const e of mini.entries){
     assert(e.clue.length>=5&&e.hint.length>=5,'Missing clue/hint for '+e.answer);
+    assert(!e.clue.startsWith('Everyday word with'),'Uncurated clue for '+e.answer);
+    assert(!e.hint.startsWith('Its first letter'),'Mechanical hint for '+e.answer);
     assert(!new RegExp('\\b'+e.answer+'\\b','i').test(e.clue),'Answer leaked in clue for '+e.answer);
+    const normalized=e.clue.trim().toLocaleLowerCase('en-GB');
+    assert(!allClues.has(normalized),'Duplicate clue for '+e.answer);
+    allClues.add(normalized);
   }
 });
 assert.equal(seen.size,1000);
+assert.equal(allClues.size,1000);
 const sandbox={};
 vm.runInNewContext(fs.readFileSync('themes.js','utf8')+';globalThis.primary=THEMED_PACKS;',sandbox);
 vm.runInNewContext(fs.readFileSync('extra-themes.js','utf8')+';globalThis.extra=EXTRA_MONTHLY_THEMES;',sandbox);
