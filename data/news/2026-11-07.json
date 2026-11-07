@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-07",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      "#....",
+      ".....",
+      ".....",
+      "....#"
+    ],
+    "answers": [
+      "FAT",
+      "FATAL",
+      "AVAIL",
+      "TELL",
+      "SAVE",
+      "SEMI",
+      "METAL",
+      "MET",
+      "EMAIL",
+      "TILL"
+    ],
+    "clues": [
+      "The part trimmed from a steak",
+      "Sky News in the news: Leaving no second chance",
+      "Use to your advantage",
+      "Don't keep me guessing",
+      "The Guardian headline: “Can AI really _____ you money on your heating bill? I spent two years testing to find out”",
+      "Only halfway there",
+      "Al Jazeera headline: “‘Every person has their luck’: Morocco’s beach _____ detectorists”",
+      "Came face-to-face",
+      "BBC World in the news: A message that skips the postbox",
+      "The place where cash changes hands"
+    ],
+    "hints": [
+      "The opposite of lean.",
+      "Causing death.",
+      "Often follows 'of no ...'.",
+      "Say or inform.",
+      "Prevent a goal; also keep for later.",
+      "A prefix for half, or part of a final round.",
+      "Iron and copper belong to this group.",
+      "Past tense of meet.",
+      "Electronic mail.",
+      "Shop cash drawer; or 'until'."
+    ],
+    "title": "In the News",
+    "description": "4 topical clues from Al Jazeera, BBC World, Sky News, The Guardian",
+    "sources": [
+      {
+        "title": "Can AI really save you money on your heating bill? I spent two years testing to find out",
+        "url": "https://www.theguardian.com/money/2026/nov/07/can-ai-save-you-money-heating-bill",
+        "published": "2026-11-07T07:00:07+00:00",
+        "source": "The Guardian"
+      },
+      {
+        "title": "‘Every person has their luck’: Morocco’s beach metal detectorists",
+        "url": "https://www.aljazeera.com/news/2026/11/7/beachcombers-in-morocco-hunt-for-hidden-treasure?traffic_source=rss",
+        "published": "2026-11-07T06:47:45+00:00",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "Bomb hoaxes: Messages reveal how threat was passed on by air traffic control",
+        "url": "https://www.bbc.co.uk/news/videos/cq398m8w41lyo?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-05T18:22:46+00:00",
+        "source": "BBC World"
+      },
+      {
+        "title": "Boy, 6, dies in hospital after house fire that killed four members of his family",
+        "url": "https://news.sky.com/story/boy-6-dies-in-hospital-after-house-fire-that-killed-four-members-of-his-family-13609051",
+        "published": "2026-11-06T20:29:00+00:00",
+        "source": "Sky News"
+      }
+    ]
+  }
+}
