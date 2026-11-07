@@ -82,6 +82,9 @@ def slots(shape):
     return out
 
 def build_answers():
+    # Never reintroduce vocabulary already rejected by editorial review.
+    policy=json.loads((ROOT/'data'/'editorial-policy.json').read_text(encoding='utf-8'))
+    BANNED.update(w.lower() for w in policy['reviewNeeded'])
     import collections
     common_path=ROOT/"data"/"common-10000-short.txt"
     common=[w.strip() for w in common_path.read_text(encoding="utf-8").splitlines()
