@@ -64,8 +64,8 @@
     "An informal way to say think or suppose."
   ],
   "UNION": [
-    "A joining together of separate parts",
-    "Workers may organise one to negotiate collectively."
+    "An organisation representing workers",
+    "Also a joining together."
   ],
   "COWBOY": [
     "The cattle herder of a Western film",
@@ -105,7 +105,7 @@
   ],
   "COMA": [
     "A long period of deep unconsciousness",
-    "A medical state from which someone cannot easily be awakened."
+    "A medical condition from which a patient cannot easily wake."
   ],
   "UNIT": [
     "One single item in a larger set",
@@ -317,11 +317,11 @@
   ],
   "MIAMI": [
     "Florida city famous for South Beach",
-    "A five-letter city on America's Atlantic coast."
+    "A coastal city in the southeastern United States."
   ],
   "DARIN": [
-    "A first name sometimes spelled Darren",
-    "A male given name that almost sounds like 'daring'."
+    "An uncommon spelling of the given name Darren",
+    "A five-letter male first name."
   ],
   "MECCA": [
     "Sacred city visited by pilgrims on the Hajj",
@@ -352,8 +352,8 @@
     "It's the modern word 'town' with an old-fashioned ending."
   ],
   "FED": [
-    "Informal American term for a federal agent",
-    "A government investigator, in three letters."
+    "American slang for a government agent",
+    "A three-letter shorthand for a federal officer."
   ],
   "LOADS": [
     "A great many, informally",
@@ -388,12 +388,12 @@
     "A short word that completes the phrase for back-and-forth movement."
   ],
   "NERD": [
-    "Someone passionately absorbed in a specialist subject",
-    "Often a fan of technology, books or niche trivia."
+    "Someone absorbed in specialist interests",
+    "A keen enthusiast for a niche subject."
   ],
   "ANTSY": [
-    "Restless and unable to settle",
-    "Fidgety, especially when waiting for something."
+    "Fidgety and unable to settle",
+    "Restless, especially while waiting."
   ],
   "GASH": [
     "A deep, jagged cut",
@@ -408,12 +408,12 @@
     "The kidneys remove it from the blood."
   ],
   "ARGOT": [
-    "Specialised vocabulary of a particular group",
-    "Another term for group slang or jargon."
+    "Secret or specialised language of a group",
+    "A type of slang used by insiders."
   ],
   "SNAFU": [
-    "An arrangement that has gone completely wrong",
-    "Military-origin word for a chaotic mess."
+    "A situation that's gone spectacularly wrong",
+    "Military-origin slang for complete confusion."
   ],
   "PIMP": [
     "Give something an extravagantly flashy makeover",
@@ -424,8 +424,8 @@
     "A characteristic recorded in medical statistics."
   ],
   "BREED": [
-    "Raise animals to produce offspring",
-    "Also a type or variety of domesticated animal."
+    "A type of dog, such as a collie",
+    "Also to raise animals to reproduce."
   ],
   "TOPS": [
     "At most, as in \"ten minutes, ___\"",
@@ -2734,5 +2734,765 @@
   "MEN": [
     "Adult males",
     "Plural of man."
+  ],
+  "PASS": [
+    "Go by without stopping",
+    "Also succeed in an exam."
+  ],
+  "PAWN": [
+    "A chess piece that usually moves one square",
+    "Also a person used by someone more powerful."
+  ],
+  "ACHE": [
+    "A lingering dull pain",
+    "What a sore back might do."
+  ],
+  "SNARL": [
+    "An angry growl from a dog",
+    "Also a tangle or knot."
+  ],
+  "SERVE": [
+    "Bring food to a table",
+    "Also start a point in tennis."
+  ],
+  "ACNE": [
+    "Spots that commonly appear during adolescence",
+    "A skin condition involving pimples."
+  ],
+  "WHARF": [
+    "A place where ships load their cargo",
+    "A quay or landing stage."
+  ],
+  "NERVE": [
+    "What it takes to speak up in front of a crowd",
+    "Courage; also a bundle carrying signals in the body."
+  ],
+  "LED": [
+    "Guided a group yesterday",
+    "Past tense of lead."
+  ],
+  "BRA": [
+    "A garment worn to support the chest",
+    "An undergarment with two cups."
+  ],
+  "READS": [
+    "Looks through a book and understands its words",
+    "Third-person form of reading."
+  ],
+  "ASS": [
+    "A donkey, in an old-fashioned term",
+    "Also a mildly rude word for a fool."
+  ],
+  "DARES": [
+    "Challenges someone to take a risk",
+    "Third-person form of being brave enough."
+  ],
+  "DATA": [
+    "Information stored in a spreadsheet",
+    "Numbers or facts collected for analysis."
+  ],
+  "ARID": [
+    "Bone-dry, like a desert",
+    "Having very little rainfall."
+  ],
+  "AREAS": [
+    "Different regions on a map",
+    "Plural of a region or zone."
+  ],
+  "TIED": [
+    "Finished with the same score",
+    "Also fastened using a knot."
+  ],
+  "ADDS": [
+    "Puts another number into the sum",
+    "Third-person form of increase."
+  ],
+  "LAMP": [
+    "A light you switch on beside the bed",
+    "A small electrical lighting fixture."
+  ],
+  "LIPS": [
+    "The two soft edges of your mouth",
+    "What someone might purse to whistle."
+  ],
+  "ALIEN": [
+    "An extraterrestrial visitor in a sci-fi film",
+    "A creature from another planet."
+  ],
+  "PANEL": [
+    "A group of judges on a television show",
+    "Also a flat section of a wall or door."
+  ],
+  "ILIAC": [
+    "Relating to part of the pelvis",
+    "An anatomical term often paired with 'crest'."
+  ],
+  "CON": [
+    "A disadvantage in a pros-and-cons list",
+    "Also to trick someone dishonestly."
+  ],
+  "PIANO": [
+    "Instrument with black and white keys",
+    "A keyboard instrument played by pressing keys."
+  ],
+  "SEMEN": [
+    "The reproductive fluid containing sperm",
+    "A biological fluid produced by the male reproductive system."
+  ],
+  "NIL": [
+    "Zero, especially on a football scoreboard",
+    "Nothing at all."
+  ],
+  "SHOP": [
+    "A place to buy everyday things",
+    "A retail store."
+  ],
+  "SCOPE": [
+    "The extent of a project",
+    "Also an instrument for looking at things."
+  ],
+  "HOMER": [
+    "A home run in American baseball slang",
+    "Also the ancient Greek poet of epics."
+  ],
+  "OMENS": [
+    "Signs believed to predict the future",
+    "Plural of a forewarning."
+  ],
+  "PASSE": [
+    "No longer fashionable",
+    "A borrowed French adjective meaning outdated."
+  ],
+  "HOMES": [
+    "Places where people live",
+    "Plural of a dwelling."
+  ],
+  "HOT": [
+    "Very warm, like boiling tea",
+    "Opposite of cold."
+  ],
+  "OPENS": [
+    "Unfastens a locked door",
+    "Third-person form of make accessible."
+  ],
+  "TERSE": [
+    "Brief to the point of sounding abrupt",
+    "Using very few words."
+  ],
+  "PALE": [
+    "Very light in colour",
+    "Lacking strong colour in the face."
+  ],
+  "PHONE": [
+    "Device you use to call or text someone",
+    "Often kept in a pocket."
+  ],
+  "AORTA": [
+    "The largest artery in your body",
+    "Carries blood away from the heart."
+  ],
+  "LOSS": [
+    "The opposite of a victory",
+    "Something no longer in your possession."
+  ],
+  "EKE": [
+    "Just manage to get by, followed by 'out'",
+    "Make limited supplies last."
+  ],
+  "SHOOK": [
+    "Trembled with fear yesterday",
+    "Past tense of shake."
+  ],
+  "SWAY": [
+    "Move gently from side to side",
+    "Also to influence someone's decision."
+  ],
+  "WORSE": [
+    "Not as good as before",
+    "Comparative of bad."
+  ],
+  "ANTS": [
+    "Tiny insects living in a colony",
+    "Plural of the workers in an anthill."
+  ],
+  "YEA": [
+    "An old-fashioned word for 'yes'",
+    "Also means indeed."
+  ],
+  "GAP": [
+    "A space between two teeth",
+    "Also a break in a line or sequence."
+  ],
+  "GORGE": [
+    "A steep-sided valley cut by a river",
+    "Also to eat far too much."
+  ],
+  "ANGER": [
+    "The emotion behind a furious outburst",
+    "Strong displeasure or rage."
+  ],
+  "POOLS": [
+    "Places where swimmers do lengths",
+    "Plural of a body of still water."
+  ],
+  "MONO": [
+    "Sound coming from one audio channel",
+    "The opposite of stereo."
+  ],
+  "MANE": [
+    "Long hair around a lion's head",
+    "Also along a horse's neck."
+  ],
+  "CARGO": [
+    "Goods transported by ship or plane",
+    "Freight carried from place to place."
+  ],
+  "CAP": [
+    "A soft hat with a brim",
+    "Also a limit placed on an amount."
+  ],
+  "ANGEL": [
+    "A winged heavenly messenger",
+    "A kindly person, figuratively."
+  ],
+  "PEERS": [
+    "People of the same age or rank",
+    "Equals in social standing."
+  ],
+  "FLEA": [
+    "Tiny jumping insect that can bite pets",
+    "An unwelcome passenger in a dog's fur."
+  ],
+  "FLARE": [
+    "A sudden burst of bright light",
+    "Also a fiery signal sent into the air."
+  ],
+  "LARGE": [
+    "Bigger than the usual size",
+    "Opposite of small."
+  ],
+  "ENTER": [
+    "Go inside through the doorway",
+    "The opposite of exit."
+  ],
+  "ADS": [
+    "Short promotional messages",
+    "Abbreviation for advertisements."
+  ],
+  "LAND": [
+    "The ground beneath your feet",
+    "Also touch down after a flight."
+  ],
+  "PARTS": [
+    "Components inside a machine",
+    "Individual sections of a whole."
+  ],
+  "PUB": [
+    "Where you can order a pint in Britain",
+    "A public house."
+  ],
+  "URGE": [
+    "A powerful desire to do something",
+    "A strong impulse."
+  ],
+  "BEER": [
+    "A drink brewed from malt and hops",
+    "A common alcoholic drink served in pubs."
+  ],
+  "ROAM": [
+    "Wander without a fixed destination",
+    "Explore freely."
+  ],
+  "ROD": [
+    "A thin straight stick",
+    "Also the long pole used for fishing."
+  ],
+  "ONES": [
+    "Single units in a number",
+    "Plural of the number one."
+  ],
+  "ASPEN": [
+    "A tree whose leaves flutter in the breeze",
+    "A poplar with distinctive trembling foliage."
+  ],
+  "METRO": [
+    "Underground train system in a large city",
+    "Rapid urban transit."
+  ],
+  "ONSET": [
+    "The very beginning of an illness",
+    "The start of an event or process."
+  ],
+  "THAW": [
+    "Melt after a freezing spell",
+    "When ice starts turning to water."
+  ],
+  "DEPTH": [
+    "How far down the swimming pool goes",
+    "A measurement from top to bottom."
+  ],
+  "SERA": [
+    "Plural of serum, in medical terminology",
+    "Multiple samples of the clear part of blood."
+  ],
+  "NOW": [
+    "At this very moment",
+    "Neither before nor later."
+  ],
+  "SAFER": [
+    "Less likely to cause harm",
+    "Comparative of safe."
+  ],
+  "SAC": [
+    "A small fluid-filled pouch in the body",
+    "An anatomical bag or cavity."
+  ],
+  "ADOPT": [
+    "Take a child into your family legally",
+    "Also choose to follow a policy."
+  ],
+  "FOLIO": [
+    "A large sheet of paper folded once",
+    "Also a collection of pages."
+  ],
+  "EBONY": [
+    "Very dark, dense wood",
+    "A deep black hardwood."
+  ],
+  "RENT": [
+    "Money paid to a landlord",
+    "A regular payment for using a property."
+  ],
+  "ADOBE": [
+    "Sun-dried brick used in warm climates",
+    "Also a well-known software company."
+  ],
+  "COLON": [
+    "The punctuation mark with two stacked dots",
+    "Also a section of the large intestine."
+  ],
+  "PINT": [
+    "A quantity of beer ordered at the bar",
+    "A British unit equal to 568 millilitres."
+  ],
+  "TOY": [
+    "What a child might play with",
+    "An object made for amusement."
+  ],
+  "FIT": [
+    "In good physical condition",
+    "Also the right size for a garment."
+  ],
+  "FALSE": [
+    "Untrue or incorrect",
+    "The opposite of true."
+  ],
+  "IDLED": [
+    "Spent time doing nothing",
+    "Left an engine running without driving."
+  ],
+  "TESTS": [
+    "Examinations of someone's knowledge",
+    "Plural of a trial or assessment."
+  ],
+  "TRADE": [
+    "Buying and selling goods",
+    "Also a skilled occupation."
+  ],
+  "THUD": [
+    "The dull sound of a heavy object landing",
+    "Not a sharp crash, but a muffled impact."
+  ],
+  "RIPE": [
+    "Ready to pick and eat, like a banana",
+    "Fully matured fruit."
+  ],
+  "HILLS": [
+    "Smaller rises in the landscape than mountains",
+    "Plural of a rounded elevation."
+  ],
+  "UPSET": [
+    "Feeling distressed or unhappy",
+    "Also a surprise victory against expectations."
+  ],
+  "DEEDS": [
+    "Actions that speak louder than words",
+    "Plural of an act or legal property document."
+  ],
+  "DAD": [
+    "A child's informal word for father",
+    "A male parent."
+  ],
+  "DAMS": [
+    "Barriers built across several rivers",
+    "Plural of a structure that holds back water."
+  ],
+  "AWAIT": [
+    "Wait for something to arrive",
+    "Expect an event or person."
+  ],
+  "DRYER": [
+    "Machine that removes moisture from clothes",
+    "Often paired with a washing machine."
+  ],
+  "AWRY": [
+    "Not going according to plan",
+    "Wrong or off course."
+  ],
+  "YOGA": [
+    "Exercise using stretches, poses and breathing",
+    "A practice aimed at flexibility and calm."
+  ],
+  "MAYOR": [
+    "Elected leader of a town or city",
+    "A civic official who represents a municipality."
+  ],
+  "REP": [
+    "Short for a representative",
+    "A person speaking for a company or group."
+  ],
+  "SIEGE": [
+    "A military blockade around a city",
+    "An effort to force surrender by surrounding a place."
+  ],
+  "TRAP": [
+    "A device designed to catch an animal",
+    "Also a dangerous situation that's hard to escape."
+  ],
+  "PIC": [
+    "A photo, informally",
+    "A short word for picture."
+  ],
+  "PURGE": [
+    "Remove unwanted things in one go",
+    "A thorough clearing-out."
+  ],
+  "IDIOT": [
+    "A very foolish person, rudely put",
+    "An insult for someone acting stupidly."
+  ],
+  "CENTS": [
+    "Small units of American money",
+    "There are one hundred in a dollar."
+  ],
+  "DUDE": [
+    "A casual American way to address someone",
+    "Informal word for a man or person."
+  ],
+  "DARE": [
+    "Challenge someone to be brave",
+    "An invitation to take a risk."
+  ],
+  "DAM": [
+    "A wall holding back river water",
+    "Creates a reservoir upstream."
+  ],
+  "MEETS": [
+    "Encounters someone for the first time",
+    "Third-person form of come face-to-face."
+  ],
+  "RUG": [
+    "A small carpet you can move around",
+    "A floor covering smaller than a fitted carpet."
+  ],
+  "RAFTS": [
+    "Simple boats made of tied-together logs",
+    "Plural of a flat floating platform."
+  ],
+  "GONNA": [
+    "Colloquial written form of 'going to'",
+    "Common in informal speech."
+  ],
+  "ANODE": [
+    "The positive electrode in many electrochemical devices",
+    "An electrode opposite to the cathode."
+  ],
+  "DEEP": [
+    "A long way down",
+    "The opposite of shallow."
+  ],
+  "ERRS": [
+    "Makes mistakes",
+    "Third-person form of go wrong."
+  ],
+  "FINER": [
+    "More delicate or better in quality",
+    "Comparative of fine."
+  ],
+  "TONER": [
+    "Powder used in a laser printer",
+    "Also a skincare product after cleansing."
+  ],
+  "SNAPS": [
+    "Breaks suddenly with a crack",
+    "Also quick photographs, informally."
+  ],
+  "TUBA": [
+    "The enormous low-pitched brass instrument",
+    "The big brass horn often resting on a player's lap."
+  ],
+  "TONAL": [
+    "Relating to musical pitch",
+    "Describes the key or sound of music."
+  ],
+  "UNTIE": [
+    "Release a knot",
+    "The opposite of tie."
+  ],
+  "BEING": [
+    "Existing as a living creature",
+    "Also the present participle of be."
+  ],
+  "ARCS": [
+    "Curved lines forming part of circles",
+    "Plural of a bent segment."
+  ],
+  "LONER": [
+    "Someone who prefers their own company",
+    "A solitary person."
+  ],
+  "LAP": [
+    "One circuit of the running track",
+    "Also where a child sits on someone's knees."
+  ],
+  "ANTIC": [
+    "A playful, silly trick",
+    "A mischievous act."
+  ],
+  "PAINS": [
+    "Aches in several parts of the body",
+    "Plural of a hurt or suffering."
+  ],
+  "LEG": [
+    "Part of the body from hip to foot",
+    "Used for walking and running."
+  ],
+  "SIT": [
+    "Take a chair rather than stand",
+    "Lower yourself onto a seat."
+  ],
+  "SEWED": [
+    "Joined fabric with needle and thread",
+    "Past tense of sew."
+  ],
+  "IMAGE": [
+    "A picture in a photograph or on a screen",
+    "A visual representation."
+  ],
+  "TOKEN": [
+    "A small symbol of appreciation",
+    "Also a coin-like item used in a machine."
+  ],
+  "LEMON": [
+    "A sour yellow citrus fruit",
+    "Often squeezed over fish."
+  ],
+  "LAB": [
+    "Where scientists perform experiments",
+    "Short for laboratory."
+  ],
+  "NETS": [
+    "Mesh used to catch fish",
+    "Plural of a woven trap."
+  ],
+  "AWAKE": [
+    "No longer asleep",
+    "Conscious and alert."
+  ],
+  "BEGET": [
+    "Cause or bring into existence",
+    "A formal verb meaning produce."
+  ],
+  "DENS": [
+    "The homes of several wild animals",
+    "Plural of an animal's lair."
+  ],
+  "PALS": [
+    "Close friends, informally",
+    "Plural of a buddy."
+  ],
+  "PERK": [
+    "A bonus benefit at work",
+    "Something extra beyond your salary."
+  ],
+  "AKIN": [
+    "Closely related or similar",
+    "Having something in common."
+  ],
+  "LIVID": [
+    "Extremely furious",
+    "Also a bluish colour like a bruise."
+  ],
+  "EKING": [
+    "Barely managing to make supplies last",
+    "Often followed by 'out a living'."
+  ],
+  "GLEE": [
+    "Delight you can barely contain",
+    "Exuberant happiness."
+  ],
+  "RIVAL": [
+    "An opponent hoping to beat you",
+    "A competitor."
+  ],
+  "KNIFE": [
+    "A sharp utensil for cutting food",
+    "Part of a cutlery set."
+  ],
+  "DUE": [
+    "Expected to arrive or be paid",
+    "Owed at a particular time."
+  ],
+  "PAY": [
+    "Give money for goods or work",
+    "Settle a bill or wage."
+  ],
+  "PASHA": [
+    "A high-ranking Ottoman official",
+    "A title from the former Ottoman Empire."
+  ],
+  "ALTER": [
+    "Change the fit of a jacket",
+    "Modify or adjust."
+  ],
+  "YEAR": [
+    "Twelve months",
+    "One full cycle of the seasons."
+  ],
+  "MALE": [
+    "A biological category often contrasted with female",
+    "An adult animal of one reproductive sex."
+  ],
+  "MITE": [
+    "A tiny creature that may live in bedding",
+    "Also means a very small amount."
+  ],
+  "VISTA": [
+    "A beautiful long-distance view",
+    "A sweeping panorama."
+  ],
+  "VOW": [
+    "A solemn promise at a wedding",
+    "A formal pledge."
+  ],
+  "OTHER": [
+    "The one that isn't this one",
+    "Alternative or different."
+  ],
+  "WEAR": [
+    "Have clothes on",
+    "Also gradually damage through use."
+  ],
+  "MANO": [
+    "Hand, in Spanish",
+    "A word for a body part in another language."
+  ],
+  "MEDAL": [
+    "A small award worn on a ribbon",
+    "Given for bravery or sporting achievement."
+  ],
+  "AVOID": [
+    "Steer clear of something",
+    "Keep away from it."
+  ],
+  "ORE": [
+    "Rock containing a valuable metal",
+    "Mined before the metal is extracted."
+  ],
+  "FEVER": [
+    "An unusually high body temperature",
+    "A symptom that can accompany infection."
+  ],
+  "FARO": [
+    "An old card game played for money",
+    "A gambling game once popular in the American West."
+  ],
+  "ADORE": [
+    "Love someone deeply",
+    "Feel great affection for."
+  ],
+  "RAID": [
+    "A sudden attack or search",
+    "Police might carry one out."
+  ],
+  "OLD": [
+    "No longer new",
+    "Having existed for a long time."
+  ],
+  "ISLE": [
+    "A small island",
+    "A poetic or literary term for an island."
+  ],
+  "ICE": [
+    "Frozen water in your drink",
+    "What forms when water becomes solid."
+  ],
+  "SHRUB": [
+    "A bush smaller than a tree",
+    "A woody garden plant."
+  ],
+  "LEASE": [
+    "A contract to rent a property",
+    "An agreement allowing temporary use."
+  ],
+  "EASEL": [
+    "Stand that holds a painting",
+    "The support used by an artist."
+  ],
+  "CHEAP": [
+    "Not costing much money",
+    "The opposite of expensive."
+  ],
+  "PERT": [
+    "Cheeky and confidently lively",
+    "A short word meaning saucy or brisk."
+  ],
+  "ERASE": [
+    "Remove writing from a page",
+    "Make a mark disappear."
+  ],
+  "USER": [
+    "Someone operating a computer or app",
+    "A person who uses a service."
+  ],
+  "BELT": [
+    "What keeps your trousers up",
+    "A strip fastened around the waist."
+  ],
+  "CAMP": [
+    "Sleep outdoors in a tent",
+    "An organised outdoor site."
+  ],
+  "CURIO": [
+    "An unusual little collectible",
+    "A strange or interesting object."
+  ],
+  "MASS": [
+    "A large quantity gathered together",
+    "Also the amount of matter in a body."
+  ],
+  "PRY": [
+    "Try to find out someone's secrets",
+    "Ask nosy questions."
+  ],
+  "LUNAR": [
+    "Relating to the Moon",
+    "A word used for the natural satellite of Earth."
+  ],
+  "LAMB": [
+    "A young sheep",
+    "An animal often seen in spring fields."
+  ],
+  "ARTSY": [
+    "Self-consciously creative and fashionable",
+    "An adjective for someone with artistic tastes."
+  ],
+  "MISS": [
+    "Fail to hit the target",
+    "Also feel someone's absence."
+  ],
+  "BOY": [
+    "A male child",
+    "Opposite of girl."
   ]
 }
