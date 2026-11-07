@@ -3060,8 +3060,8 @@
     "A deep black hardwood."
   ],
   "RENT": [
-    "Money paid to a landlord",
-    "A regular payment for using a property."
+    "Money paid each month to a landlord",
+    "A regular payment for use of a property."
   ],
   "ADOBE": [
     "Sun-dried brick used in warm climates",
@@ -3376,8 +3376,8 @@
     "A formal pledge."
   ],
   "OTHER": [
-    "The one that isn't this one",
-    "Alternative or different."
+    "Not this one, but the alternative",
+    "Different from the one already mentioned."
   ],
   "WEAR": [
     "Have clothes on",
@@ -3892,7 +3892,7 @@
     "Also squeeze too many things into a space."
   ],
   "CRANE": [
-    "Tall machine that lifts heavy objects",
+    "A tall machine that lifts heavy loads",
     "Also a long-necked bird."
   ],
   "ADEPT": [
@@ -4254,5 +4254,245 @@
   "ROBED": [
     "Dressed in a long ceremonial gown",
     "Wearing formal loose garments."
+  ],
+  "FLAG": [
+    "What might fly above a castle or a country",
+    "A fabric symbol raised on a pole."
+  ],
+  "FOAL": [
+    "A horse in its first year",
+    "A very young horse."
+  ],
+  "LIME": [
+    "Citrus fruit you might squeeze into a mojito",
+    "A sour, usually green fruit."
+  ],
+  "OILED": [
+    "Made slippery before a machine starts",
+    "Lubricated with a greasy liquid."
+  ],
+  "LEARN": [
+    "Pick up a skill through practice",
+    "What you do when knowledge sticks."
+  ],
+  "CRUSH": [
+    "The secret someone you fancy",
+    "Also means to squash or flatten."
+  ],
+  "RAGES": [
+    "Storms around in a furious temper",
+    "Burns or fights angrily, in the third person."
+  ],
+  "MEET": [
+    "Come face to face for the first time",
+    "What two friends arrange for a coffee."
+  ],
+  "STEEL": [
+    "Material of a modern skyscraper's frame",
+    "Strong metal made chiefly from iron."
+  ],
+  "HASTY": [
+    "Made without enough thought",
+    "A hurried decision might be described this way."
+  ],
+  "EVEN": [
+    "Level, without bumps or dips",
+    "Also describes numbers divisible by two."
+  ],
+  "SEEM": [
+    "Give the impression of being something",
+    "Appear to be, without necessarily being."
+  ],
+  "MAX": [
+    "The highest amount allowed, for short",
+    "Short for maximum."
+  ],
+  "SALON": [
+    "A place to have your hair styled",
+    "A hairdresser's workplace."
+  ],
+  "RUDE": [
+    "Not exactly minding your manners",
+    "Impolite or discourteous."
+  ],
+  "BENT": [
+    "No longer straight after a knock",
+    "Past tense of bend."
+  ],
+  "STRAW": [
+    "What might let you sip a milkshake",
+    "Also dried stalks used as farm bedding."
+  ],
+  "STRAY": [
+    "An animal wandering without an owner",
+    "A lost pet, or one that has gone off course."
+  ],
+  "SAG": [
+    "Droop in the middle under the weight",
+    "What an old mattress might do."
+  ],
+  "GAMES": [
+    "What you play on a console or a board",
+    "Plural of a pastime or competition."
+  ],
+  "SPRAY": [
+    "Mist from a crashing wave",
+    "Also a fine jet of paint or perfume."
+  ],
+  "LACK": [
+    "Be without enough of something",
+    "An absence or shortage."
+  ],
+  "CHART": [
+    "A visual way to show rising sales",
+    "Also a navigator's map."
+  ],
+  "MILES": [
+    "A long way to walk, perhaps",
+    "Units used for measuring road distances."
+  ],
+  "NEWS": [
+    "What a reporter hopes to break",
+    "Fresh information about events."
+  ],
+  "LEAD": [
+    "What a detective hopes to follow",
+    "Also the person at the front of a group."
+  ],
+  "EEL": [
+    "A fish that almost looks like a snake",
+    "Long, slender and slippery."
+  ],
+  "SPREE": [
+    "An enthusiastic bout of shopping",
+    "Often comes after 'shopping'."
+  ],
+  "SCAN": [
+    "Look over quickly for a familiar face",
+    "Also what a medical imaging machine can do."
+  ],
+  "CABAL": [
+    "A secretive group plotting together",
+    "A small clique working behind the scenes."
+  ],
+  "DRAMA": [
+    "A TV series full of conflict",
+    "Also a play intended for the stage."
+  ],
+  "HEN": [
+    "The egg-laying bird in a farmyard",
+    "A female chicken."
+  ],
+  "NAMED": [
+    "Given a particular title or identity",
+    "What parents did when choosing a baby's first name."
+  ],
+  "LADS": [
+    "The boys off on a night out",
+    "Informal British plural for young men."
+  ],
+  "STARS": [
+    "The lights of the night sky",
+    "Suns seen from very far away."
+  ],
+  "HATE": [
+    "The opposite of love",
+    "A very strong dislike."
+  ],
+  "PAGAN": [
+    "Following a religion outside the major world faiths",
+    "An adjective linked to pre-Christian traditions."
+  ],
+  "PUT": [
+    "Place something where it belongs",
+    "You might do this with a book on a shelf."
+  ],
+  "HOARD": [
+    "A secret stash of supplies",
+    "Stockpile, rather than spend or share."
+  ],
+  "OLE": [
+    "What a crowd might shout at a flamenco show",
+    "Spanish cheer of encouragement."
+  ],
+  "MODEL": [
+    "A miniature replica of a plane",
+    "Also someone posing for a photograph."
+  ],
+  "MEGA": [
+    "Enormous, in casual speech",
+    "A prefix meaning a million."
+  ],
+  "GREY": [
+    "The colour between black and white, in British English",
+    "The British spelling of gray."
+  ],
+  "FARM": [
+    "Where crops grow and livestock are raised",
+    "A place with fields and barns."
+  ],
+  "RETRO": [
+    "Fashion that looks back a few decades",
+    "Old-school in style."
+  ],
+  "MATER": [
+    "A very old-fashioned British word for mother",
+    "An upper-class slang term for one's mum."
+  ],
+  "PREY": [
+    "What a predator is chasing",
+    "An animal hunted for food."
+  ],
+  "ROUGH": [
+    "Not smooth to the touch",
+    "The opposite of polished."
+  ],
+  "SLIDE": [
+    "What children race down at the playground",
+    "Also what ice skaters do across ice."
+  ],
+  "BREAD": [
+    "Freshly baked food cut into slices",
+    "What you use for a sandwich."
+  ],
+  "BOATS": [
+    "Craft that float on water",
+    "Plural of a small vessel."
+  ],
+  "SHIRT": [
+    "What goes beneath a suit jacket",
+    "A garment with sleeves and often a collar."
+  ],
+  "PAPER": [
+    "What you write notes on",
+    "Made into books and notebooks."
+  ],
+  "PLANE": [
+    "A flying vehicle with wings",
+    "An aircraft that carries passengers."
+  ],
+  "ROSES": [
+    "Flowers traditionally given on Valentine's Day",
+    "Often red and covered in thorns."
+  ],
+  "HOTEL": [
+    "Somewhere to check in for the night",
+    "A building with rooms for travellers."
+  ],
+  "SWEET": [
+    "The opposite of sour",
+    "Also a small piece of confectionery."
+  ],
+  "UNDER": [
+    "Not above or beside, but below",
+    "Where a mouse might hide beneath a table."
+  ],
+  "SOUND": [
+    "What your ears detect",
+    "Also means healthy or reliable."
+  ],
+  "MARCH": [
+    "The month after February",
+    "Also walking in step with others."
   ]
 }
