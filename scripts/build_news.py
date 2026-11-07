@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""No API key. Make an optional news-linked mini from public BBC RSS headlines.
+"""No-cost multi-publisher headline crossword for a static GitHub Pages app.
 
-Uses pre-validated puzzle solutions and human-curated clue/hint pairs. It NEVER
-claims to create fresh AI-authored answers or guesses facts from news articles.
+No fabricated current events, no third-party AI API, no paid subscriptions.
+The crossword is generated from pre-verified solution grids and editorial clues.
 """
-from __future__ import annotations
 import argparse
+import concurrent.futures
 import datetime as dt
 import email.utils
 import html
@@ -15,101 +15,201 @@ import sys
 import urllib.request
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from urllib.parse import urlsplit
 from zoneinfo import ZoneInfo
 
 ROOT=Path(__file__).resolve().parent.parent
-RSS_URL='https://feeds.bbci.co.uk/news/rss.xml'
-BLOCK={'THE','AND','HIS','WAS','YES','HAT','MAN','FAT','CAT','WAR','MET','NET','PER','SON','RAT','DAY','NEW','RED','SAD','GAS','TILL','ELSE','NEED','HERE','NONE','MALE','FAR','NOT','HER','HIM','SHE'}
+FEEDS=[
+ ("BBC News","https://feeds.bbci.co.uk/news/rss.xml"),
+ ("BBC World","https://feeds.bbci.co.uk/news/world/rss.xml"),
+ ("The Guardian","https://www.theguardian.com/uk/rss"),
+ ("Sky News","https://feeds.skynews.com/feeds/rss/home.xml"),
+ ("NPR","https://feeds.npr.org/1001/rss.xml"),
+ ("Al Jazeera","https://www.aljazeera.com/xml/rss/all.xml"),
+]
+ALLOWED={"bbc.co.uk","bbc.com","theguardian.com","news.sky.com","npr.org","aljazeera.com"}
+BLOCK=set("THE AND HIS WAS YES HAT MAN FAT CAT WAR MET NET PER SON RAT DAY NEW RED SAD GAS TILL ELSE NEED HERE NONE MALE FAR NOT HER HIM SHE SENT TEST REST MORE MOST DONE OVER".split())
+TOPICS={
+ "ELECT":r"\b(election|vote|voter|ballot|polls?|candidate|midterms?)\b",
+ "RATES":r"\b(interest|inflation|mortgage|bank|rates?|tax)\b",
+ "WAGES":r"\b(salaries|salary|wages|pay rise|workers?|employment)\b",
+ "WAGE":r"\b(salaries|salary|wages|pay rise|workers?|employment)\b",
+ "RENT":r"\b(tenants?|landlords?|rents?|housing|homes?)\b",
+ "GAME":r"\b(games?|football|match|tournament|league|sport|competition)\b",
+ "RIVAL":r"\b(rivals?|derby|opponents?|clash|final)\b",
+ "ALERT":r"\b(alerts?|warning|warns?|threat|emergency|police)\b",
+ "FATAL":r"\b(fatal|deaths?|killed|deadly|dies|died)\b",
+ "WAVE":r"\b(waves?|surge|floods?|tsunami|sea)\b",
+ "NAVAL":r"\b(navy|naval|warship|fleet|military ship)\b",
+ "WEB":r"\b(website|web|internet|online|digital)\b",
+ "EMAIL":r"\b(emails?|inbox|messages?|online)\b",
+ "HORSE":r"\b(horse|racing|rider|equestrian)\b",
+ "CAB":r"\b(taxi|ride.hailing|cabs?|private hire)\b",
+ "SANTA":r"\b(christmas|santa|father christmas|festive)\b",
+ "FIRED":r"\b(fired|sacked|dismissed|layoffs?|jobs? cuts|redundanc)\b",
+ "FIRE":r"\b(fires?|wildfire|burning|blaze)\b",
+ "YEAR":r"\b(year|annual|anniversary|2026|2027)\b",
+ "GATES":r"\b(gates?|airport|border|terminal)\b",
+ "SUN":r"\b(sun|solar|heatwave|sunlight|sunny)\b",
+ "EVENT":r"\b(events?|festival|ceremony|conference|summit)\b",
+ "RANGE":r"\b(range|far.reaching|broad|wide|variety)\b",
+ "ANGRY":r"\b(angry|anger|outrage|furious|protesters?)\b",
+ "HOPE":r"\b(hopes?|optimism|promises?|recovery)\b",
+}
 
-def get_data():
-    text=(ROOT/'generator.js').read_text(encoding='utf8')
-    grids=json.loads(re.search(r'const PUZZLES=(\[.*?\]);\s*const CLUE_BANK=',text,re.S).group(1))
-    bank=json.loads(re.search(r'const CLUE_BANK=(\{.*?\});\s*const PUZZLE_LIMIT=',text,re.S).group(1))
-    return grids,bank
+def data():
+    src=(ROOT/"generator.js").read_text(encoding="utf-8")
+    grids=json.loads(re.search(r"const PUZZLES=(\[.*?\]);\s*const CLUE_BANK=",src,re.S).group(1))
+    clues=json.loads(re.search(r"const CLUE_BANK=(\{.*?\});\s*const PUZZLE_LIMIT=",src,re.S).group(1))
+    return grids,clues
 
-def fetch_items(xml_bytes=None,now=None):
-    now=now or dt.datetime.now(dt.timezone.utc)
-    if xml_bytes is None:
-        req=urllib.request.Request(RSS_URL,headers={'User-Agent':'LittleCrosswordPersonal/1.0 (+personal GitHub Pages mini crossword)'})
-        with urllib.request.urlopen(req,timeout=22) as resp:
-            xml_bytes=resp.read(2_000_000)
-    root=ET.fromstring(xml_bytes)
-    fresh=[]
-    for item in root.findall('./channel/item'):
-        title=html.unescape(''.join(item.findtext('title','')).strip())
-        url=(item.findtext('link','') or '').strip()
-        published=item.findtext('pubDate','')
-        try: date=email.utils.parsedate_to_datetime(published).astimezone(dt.timezone.utc)
-        except (TypeError, ValueError, OverflowError, AttributeError): continue
-        if not (dt.timedelta(hours=-3)<=now-date<=dt.timedelta(hours=48)):continue
-        if not (url.startswith('https://www.bbc.co.uk/') or url.startswith('https://www.bbc.com/')):continue
-        if not title or len(title)>280:continue
-        fresh.append({'title':title,'url':url,'published':date.isoformat()})
-    return fresh[:60]
+def approved(url):
+    parts=urlsplit(url)
+    host=(parts.hostname or "").lower()
+    return parts.scheme=="https" and any(host==d or host.endswith("."+d) for d in ALLOWED)
 
-def build(items,now=None):
-    now=now or dt.datetime.now(dt.timezone.utc)
-    day=now.astimezone(ZoneInfo('Europe/London')).date().isoformat()
-    grids,bank=get_data()
-    ranked=[]
-    for i,g in enumerate(grids):
-        hits=[]
-        for j,w in enumerate(g['answers']):
-            if w in BLOCK or len(w)<4:continue
-            matches=[x for x in items if re.search(r'(?<!\w)'+re.escape(w)+r'(?!\w)',x['title'],re.I)]
-            if matches: hits.append((j,w,matches[0]))
-        distinct=len(set(hit[2]['url'] for hit in hits))
-        # Rotate tie-breaks to avoid always preferring early grids.
-        rotate=(i-(int(now.timestamp()/86400)*7)%len(grids))%len(grids)
-        ranked.append((len(hits),distinct,-rotate,i,hits))
-    ranked.sort(reverse=True)
-    hit_count,distinct,_,idx,hits=ranked[0]
-    if hit_count<1:return None
-    g=grids[idx]
-    clues=[bank[w][0] for w in g['answers']]
-    hints=[bank[w][1] for w in g['answers']]
-    sources=[]
-    # Headline gets transformed into a short fill-in-the-blank clue.
-    for j,w,item in hits[:3]:
-        title=item['title']
-        masked=re.sub(r'(?<!\w)'+re.escape(w)+r'(?!\w)','_____',title,flags=re.I)
-        if masked==title:continue
-        if len(masked)>95:
-            at=masked.index('_____');start=max(0,at-33);end=min(len(masked),at+58)
-            masked=('…' if start else '')+masked[start:end]+('…' if end<len(masked) else '')
-        clues[j]=f'From a BBC headline: “{masked}”'
-        sources.append({'title':title,'url':item['url'],'published':item['published']})
+def date_parse(raw):
+    try:
+        t=email.utils.parsedate_to_datetime(raw)
+        if t is None: t=dt.datetime.fromisoformat(raw.replace("Z","+00:00"))
+        if t.tzinfo is None: t=t.replace(tzinfo=dt.timezone.utc)
+        return t.astimezone(dt.timezone.utc)
+    except (TypeError,ValueError,OverflowError,AttributeError):
+        try: return dt.datetime.fromisoformat(raw.replace("Z","+00:00")).astimezone(dt.timezone.utc)
+        except (TypeError,ValueError,OverflowError,AttributeError): return None
+
+def parse_feed(raw,publisher,now):
+    root=ET.fromstring(raw);entries=root.findall(".//item")
+    atom=False
+    if not entries: entries=root.findall(".//{http://www.w3.org/2005/Atom}entry");atom=True
+    records=[]
+    for e in entries:
+        if atom:
+            ns="{http://www.w3.org/2005/Atom}"
+            title=e.findtext(ns+"title","")
+            link=e.find(ns+"link")
+            url=link.get("href","") if link is not None else ""
+            date_str=e.findtext(ns+"published","") or e.findtext(ns+"updated","")
+        else:
+            title=e.findtext("title","")
+            url=e.findtext("link","")
+            date_str=e.findtext("pubDate","") or e.findtext("{http://purl.org/dc/elements/1.1/}date","")
+        published=date_parse(date_str)
+        if published is None or not dt.timedelta(hours=-2)<=now-published<=dt.timedelta(hours=60):continue
+        title=html.unescape(re.sub(r"<[^>]*>","",title)).strip()
+        if not (15<=len(title)<=240) or not approved(url):continue
+        records.append({"title":title,"url":url,"published":published.isoformat(),"source":publisher})
+    return records[:70]
+
+def fetch_one(feed,now):
+    publisher,url=feed
+    req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; LittleCrossword/2.0; personal PWA)","Accept":"application/rss+xml,application/xml,text/xml,*/*"})
+    try:
+        with urllib.request.urlopen(req,timeout=11) as r:raw=r.read(1500000)
+        return parse_feed(raw,publisher,now)
+    except Exception as e:
+        print("Feed unavailable:",publisher,str(e),file=sys.stderr)
+        return []
+
+def fetch_all(now):
+    with concurrent.futures.ThreadPoolExecutor(max_workers=6) as executor:
+        batches=executor.map(lambda feed:fetch_one(feed,now),FEEDS)
+        unique={}
+        for batch in batches:
+            for x in batch:
+                key=re.sub(r"\W+"," ",x["title"].lower()).strip()
+                unique.setdefault(key,x)
+    return list(unique.values())
+
+def matches(answer,items):
+    if len(answer)<4 or answer in BLOCK:return []
+    exact=re.compile(r"(?<!\w)"+re.escape(answer)+r"(?!\w)",re.I)
+    related=re.compile(TOPICS[answer],re.I) if answer in TOPICS else None
+    out=[]
+    for item in items:
+        word=bool(exact.search(item["title"]))
+        topic=bool(related.search(item["title"])) if related else False
+        if word or topic:out.append((2 if word else 1,item,word))
+    out.sort(key=lambda x:(-x[0],x[1]["source"],x[1]["url"]))
+    return out[:25]
+
+def build(items,now):
+    if not items:return None
+    date=now.astimezone(ZoneInfo("Europe/London")).date().isoformat()
+    grids,bank=data();options=[]
+    for i,grid in enumerate(grids):
+        candidates=[(j,w,matches(w,items)) for j,w in enumerate(grid["answers"])]
+        candidates=[x for x in candidates if x[2]]
+        if not candidates:continue
+        publishers={y[1]["source"] for _,_,xx in candidates for y in xx}
+        tie=(i-dt.date.fromisoformat(date).toordinal())%len(grids)
+        options.append((len(candidates),len(publishers),-tie,i,candidates))
+    if not options:return None
+    _,_,_,grid_id,candidates=max(options)
+    grid=grids[grid_id]
+    clues=[bank[w][0] for w in grid["answers"]]
+    hints=[bank[w][1] for w in grid["answers"]]
+    sources=[];used_urls=set();used_pubs=set()
+    for j,w,potential in sorted(candidates,key=lambda x:(len(x[2]),x[0])):
+        if len(sources)>=4:break
+        options=sorted(potential,key=lambda x:(x[1]["source"] in used_pubs,x[1]["url"] in used_urls,-x[0]))
+        rank,item,exact=options[0]
+        if item["url"] in used_urls:continue
+        if exact:
+            masked=re.sub(r"(?<!\w)"+re.escape(w)+r"(?!\w)","_____",item["title"],flags=re.I)
+            if len(masked)>105:
+                at=masked.index("_____");a=max(0,at-35);b=min(len(masked),at+48)
+                masked=("…" if a else "")+masked[a:b]+("…" if b<len(masked) else "")
+            clue=item["source"]+" headline: “"+masked+"”"
+        else:
+            clue=item["source"]+" in the news: "+bank[w][0]
+        if re.search(r"(?<!\w)"+re.escape(w)+r"(?!\w)",clue,re.I):continue
+        clues[j]=clue;sources.append(item);used_urls.add(item["url"]);used_pubs.add(item["source"])
     if not sources:return None
-    puzzle={'shape':g['shape'],'answers':g['answers'],'clues':clues,'hints':hints,
-            'title':'In the News',
-            'description':f"BBC headlines · {len(sources)} linked clue{'s' if len(sources)!=1 else ''} · {day}",
-            'sources':sources}
-    # Content and crossing check: the source grids are already checked but validate again.
-    assert len(g['answers'])==10 and len(clues)==len(hints)==10
-    for w,c,h in zip(g['answers'],clues,hints):
-        assert c and h and not re.search(r'(?<!\w)'+re.escape(w)+r'(?!\w)',c,re.I),f'Clue leaks {w}'
-    return {'date':day,'kind':'news','publisher':'free-rss-rule-based','puzzle':puzzle}
+    for w,clue,hint in zip(grid["answers"],clues,hints):
+        if not clue or not hint or re.search(r"(?<!\w)"+re.escape(w)+r"(?!\w)",clue,re.I):
+            raise ValueError("Invalid clue, hint or answer leakage")
+    return {"date":date,"kind":"news","publisher":"multi-source-rss","puzzle":{
+        "shape":grid["shape"],"answers":grid["answers"],"clues":clues,"hints":hints,
+        "title":"In the News",
+        "description":str(len(sources))+" topical clues from "+", ".join(sorted(used_pubs)),
+        "sources":sources}}
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument('--fixture',type=Path,help='Local RSS fixture for testing')
-    ap.add_argument('--dry-run',action='store_true')
+    ap.add_argument("--fixture",type=Path,action="append")
+    ap.add_argument("--dry-run",action="store_true")
+    ap.add_argument("--force",action="store_true")
     args=ap.parse_args()
+    today=dt.datetime.now(ZoneInfo("Europe/London")).date().isoformat()
+    path=ROOT/"data"/"news.json"
+    if path.exists() and not args.force:
+        try:
+            if json.loads(path.read_text(encoding="utf-8")).get("date")==today:
+                print("Already published for",today,"— preserving today's answers")
+                return 0
+        except (ValueError,OSError): pass
     try:
-        items=fetch_items(args.fixture.read_bytes() if args.fixture else None)
-        result=build(items)
+        now=dt.datetime.now(dt.timezone.utc)
+        if args.fixture:
+            items=[]
+            for i,fixture in enumerate(args.fixture):
+                items+=parse_feed(fixture.read_bytes(),FEEDS[i%len(FEEDS)][0],now)
+        else:items=fetch_all(now)
+        print("Fresh headlines:",len(items),"publishers:",", ".join(sorted({x["source"] for x in items})))
+        result=build(items,now)
         if not result:
-            print('No sufficiently recent relevant headlines; offline Newsroom mini stays available.')
+            print("No fresh matching headlines. Keeping clearly labelled offline fallback.")
             return 0
         if args.dry_run:
-            print(json.dumps({'date':result['date'],'linked_clues':len(result['puzzle']['sources']),
-                              'answers':result['puzzle']['answers']},indent=2));return 0
-        path=ROOT/'data'/'news.json'
-        path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
-        print('Wrote',path,'for',result['date'],'with',len(result['puzzle']['sources']),'real headlines')
+            print(json.dumps(result,indent=2,ensure_ascii=False))
+            return 0
+        path.parent.mkdir(parents=True,exist_ok=True)
+        path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+        print("Published",today,"with",len(result["puzzle"]["sources"]),"headline-linked clues")
         return 0
-    except (OSError,ValueError,ET.ParseError,AssertionError) as exc:
-        print('News update unavailable:',str(exc),file=sys.stderr)
-        return 0  # don't take the crossword website offline because a news feed failed
+    except (OSError,ValueError,ET.ParseError,AttributeError) as e:
+        print("Publisher unavailable:",str(e),file=sys.stderr)
+        return 0
 
-if __name__=='__main__':sys.exit(main())
+if __name__=="__main__":sys.exit(main())
