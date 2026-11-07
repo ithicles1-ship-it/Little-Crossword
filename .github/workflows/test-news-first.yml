@@ -1,0 +1,22 @@
+name: Test news-first puzzle constructor
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/news_first.py'
+      - 'scripts/test_news_first.py'
+      - '.github/workflows/test-news-first.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate headline anchors and puzzle intersections
+        run: python scripts/test_news_first.py
