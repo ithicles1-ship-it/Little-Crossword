@@ -184,7 +184,7 @@
    home.append(card);
    home.append(textNode('p','home-footnote','The monthly calendar will expand when more fully themed daily puzzles are curated. We will not silently reuse unrelated answers as a new daily crossword.'));
  }
- const backButton=button('← Menu','game-home-button',exit);
+ const backButton=button('←','game-home-button',exit);backButton.setAttribute('aria-label','Back to the main menu');
  root.querySelector('.top-actions')?.prepend(backButton);
  // Replace old archive links with the new coherent main menu.
  document.getElementById('puzzleBtn').onclick=()=>{
