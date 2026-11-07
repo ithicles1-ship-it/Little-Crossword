@@ -66,21 +66,21 @@
  }
  function makeClassics(){
    view='classics';
-   screen('Classic','100 small crosswords. Every answer is used once in the complete collection.',renderHome);
+   screen('Classic','100 original 5×5 minis, with five Across and five Down. No answer repeats in the collection.',renderHome);
    const intro=textNode('div','home-section-heading','YOUR CLASSIC COLLECTION');
    const status=textNode('p','home-footnote','Loading your verified puzzles…');home.append(intro,status);
    const list=document.createElement('div');list.className='classic-wall';home.append(list);
    loadLibrary().then(puzzles=>{
      if(view!=='classics')return;
-     status.textContent='100 minis · 1,000 non-repeating answers · 5 Across / 5 Down';
+     status.textContent='100 compact 5×5 minis · 1,000 different answers · 5 Across / 5 Down';
      for(let i=0;i<100;i++){
        const id=i+1,puzzle=puzzles[i];
        const b=button(String(id).padStart(2,'0'),'classic-tile',()=>{
-         enter({mode:'classic',source:'library',key:'classic-library-v1:'+id,number:id,date:nowDay(),title:'Classic #'+id,
-           description:'One of 100 original minis · all new answers',spec:puzzle});
+         enter({mode:'classic',source:'library',key:'classic-compact-v2:'+id,number:id,date:nowDay(),title:'Classic #'+id,
+           description:'Compact 5×5 layout · no repeated answers',spec:puzzle});
        });
        b.title='Classic puzzle '+id;
-       if(completed.has('classic-library-v1:'+id)){b.classList.add('done');b.append(textNode('small','tile-check','✓'))}
+       if(completed.has('classic-compact-v2:'+id)){b.classList.add('done');b.append(textNode('small','tile-check','✓'))}
        list.append(b);
      }
    }).catch(err=>{if(view!=='classics')return;status.textContent='The puzzle collection could not be loaded. Reopen the app with internet once, then try again. '+err.message});
