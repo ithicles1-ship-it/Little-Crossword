@@ -49,7 +49,7 @@
    if(library)return library;
    if(loading)return loading;
    loading=(async()=>{
-     const response=await fetch('./data/classics100.json',{cache:'force-cache'});
+     const response=await fetch('./data/classics100.json',{cache:'no-store'});
      if(!response.ok)throw Error('The verified collection has not finished publishing');
      const puzzles=await response.json();
      if(!Array.isArray(puzzles)||puzzles.length!==100)throw Error('Expected exactly 100 verified puzzles');
