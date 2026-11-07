@@ -221,6 +221,22 @@ def construct(items, exclusions=None, max_tries=180):
                 best=(answer,[a,b])
                 break
         if best or attempts>max_tries:break
+    if not best:
+        # Two unrelated headlines cannot always intersect cleanly in a 5×5.
+        # One genuinely verified anchor still deserves a fresh, news-first
+        # crossword; NEVER invent a second story or claim two linked clues.
+        solo=[x for x in matches if x[0] in fill]
+        for a in solo[:22]:
+            candidate_shapes=shapes[:]
+            rng.shuffle(candidate_shapes)
+            for _,shape in candidate_shapes[:40]:
+                attempts+=1
+                answer=solve(shape,[a],fill,exclusions,seed=attempts+len(a[0])*1000,
+                             max_calls=1700)
+                if answer:
+                    best=(answer,[a])
+                    break
+            if best:break
     if not best:return None
     grid,anchors=best
     indexed={word:article for word,article,_ in anchors}
@@ -237,7 +253,7 @@ def construct(items, exclusions=None, max_tries=180):
             c,hint,_=fill[w]
         if re.search(r'(?<![A-Za-z])'+re.escape(w)+r'(?![A-Za-z])',c,re.I):return None
         clues.append(c);hints.append(hint)
-    if len(sources)!=2:return None
+    if len(sources)!=len(anchors) or len(sources)<1:return None
     return {
         'shape':grid['shape'],
         'answers':grid['answers'],
@@ -245,6 +261,6 @@ def construct(items, exclusions=None, max_tries=180):
         'hints':hints,
         'sources':sources,
         'title':'In the News',
-        'description':'Two verified headline answers built into today’s crossword',
+        'description':str(len(sources))+' verified headline answer'+('s' if len(sources)!=1 else '')+' built into today’s crossword',
         'method':'headline-first'
     }
