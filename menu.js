@@ -17,7 +17,7 @@
    {title:'Food & Drink',pack:THEMED_PACKS[3]},
    {title:'Summer',pack:THEMED_PACKS[0]},
    {title:'At Sea',pack:THEMED_PACKS[4]},
-   {title:'Holiday Escapes',pack:THEMED_PACKS[0]},
+   {title:'Travel & Holidays',pack:EXTRA_MONTHLY_THEMES[3]},
    {title:'School Days',pack:EXTRA_MONTHLY_THEMES[0]},
    {title:'Halloween Night',pack:EXTRA_MONTHLY_THEMES[1]},
    {title:'Science Lab',pack:EXTRA_MONTHLY_THEMES[2]},
