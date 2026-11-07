@@ -40,7 +40,7 @@
  function enter(which){
    if(which)activateEdition(which);
    lastPlayable=edition;home.hidden=true;root.hidden=false;
-   window.scrollTo({top:0,behavior:'instant'});
+   window.scrollTo(0,0);
  }
  function exit(){dismissKeyboard();root.hidden=true;home.hidden=false;renderHome();window.scrollTo(0,0)}
  const safeDate=d=>/^\d{4}-\d\d-\d\d$/.test(d)&&!Number.isNaN(Date.parse(d+'T12:00:00Z'));
@@ -114,7 +114,7 @@
  }
  function drawNewsCalendar(){
    screen('In the News','Choose a day to open its published headline crossword.',renderHome);
-   addCalendar(home,calendarMonth,nowDay(),d=>makeNewsCalendar(d),'news');
+   addCalendar(home,calendarMonth,nowDay(),d=>openNewsDate(d),'news');
    home.append(textNode('p','home-footnote','Headline puzzles are available only for dates successfully published by the news updater. Older dates without an archive cannot be reconstructed.'));
    const quick=button('Read today’s headlines','home-primary',()=>openNewsDate(nowDay()));home.append(quick);
  }
@@ -143,6 +143,7 @@
  }
  async function openNewsDate(date){
    if(!safeDate(date)||date>nowDay())return;
+   newsSelected=date;
    const candidate=getCachedOnline('news',date);
    if(candidate){try{enter(candidate);return}catch(e){console.warn('Cached edition rejected',e)}}
    try{
