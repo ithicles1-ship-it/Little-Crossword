@@ -44,10 +44,10 @@ function setEditionTabs(){
 function updateSourceLinks(){
  const box=$('sourceLinks');box.replaceChildren();box.hidden=true;
  if(edition.mode!=='news'||!edition.sources?.length)return;
- const label=document.createElement('span');label.textContent='Stories from BBC News:';box.append(label);
+ const label=document.createElement('span');label.textContent='Recent stories behind today’s clues:';box.append(label);
  edition.sources.slice(0,3).forEach((s,i)=>{
   if(!/^https:\/\//.test(s.url))return;
-  const b=document.createElement('button');b.textContent=s.title?.length>58?s.title.slice(0,55)+'…':(s.title||`Story ${i+1}`);
+  const b=document.createElement('button');b.textContent=(s.source?s.source+' · ':'')+(s.title?.length>55?s.title.slice(0,52)+'…':(s.title||`Story ${i+1}`));
   b.title=s.title||'Read original story';b.onclick=()=>window.open(s.url,'_blank','noopener,noreferrer');box.append(b);
  });
  box.hidden=false;
@@ -91,7 +91,7 @@ function activateOffline(mode,date){
    return;
  }
  const d=dailyChoice(mode,date);
- activateEdition({...d,source:'offline',key:`offline:${mode}:${date}`});
+ activateEdition({...d,source:'offline',key:mode==='theme'?`offline:theme:v2:${date}`:`offline:${mode}:${date}`});
 }
 function setNotice(message,linkMode,linkDate){
  const box=$('onlineNotice');box.replaceChildren();
@@ -115,7 +115,7 @@ function onlineEditionFromPayload(payload,mode,date){
  parseMini(p);
  if(!Array.isArray(p.sources)||!p.sources.length)throw Error('Missing source headlines');
  return {mode,source:'rss',date,key:todayLiveKey(mode,date),number:1,spec:p,
- title:'In the News',description:p.description||'Clues linked to today’s BBC headlines',sources:p.sources};
+ title:'In the News',description:p.description||'Clues inspired by recent verified headlines',sources:p.sources};
 }
 async function fetchNewsEdition(date){
  const response=await fetch('./data/news.json?date='+encodeURIComponent(date),{cache:'no-store'});
@@ -138,10 +138,11 @@ function loadDaily(mode){
    if(edition.key===checking&&!solved&&Object.keys(filled).length===0){activateEdition(which)}
    else if(edition.mode==='news'&&edition.date===date)setNotice('Today’s headline-linked crossword is ready.', 'news',date);
  }).catch(()=>{
-   if(edition.key===checking)setNotice('Today’s headline update is not available yet. This offline Newsroom mini is ready to play.');
+   if(edition.key===checking)setNotice('Today’s news edition hasn’t been published yet. The offline Newsroom mini is ready; check again after the morning refresh.');
  });
 }
 function buildGrid(){
+ grid.classList.toggle('large-mini',Math.max(data.rows,data.cols)>6);
  grid.style.setProperty('--rows',data.rows);grid.style.setProperty('--cols',data.cols);grid.replaceChildren();tiles=[];
  for(let i=0;i<data.cells.length;i++){
   const b=document.createElement('button');b.type='button'; b.className='tile';
@@ -308,7 +309,7 @@ function showPuzzles(){
   extra.append(list);
  });
 }
-function settings(){showModal('Little Crossword','A private-use crossword with three daily editions, five Across and five Down, saved progress and offline play. Classic and Themed rotate through 24 checked grids. News updates use real headlines when available; they do not use live AI. Tap a square twice to switch direction.',[
+function settings(){showModal('Little Crossword','A private-use crossword with three daily editions, five Across and five Down, saved progress and offline play. Classic draws from 24 checked minis. Themed has eight fully themed, verified grids. News clues link to multiple publishers when fresh headlines are available. Tap a square twice to switch direction.',[
  ['Close',closeModal],['More options',()=>showModal('Puzzle options','Choose what you want to clear.',[
   ['Clear word',()=>{
     if(!solved){for(const k of active().cells){delete filled[k]}cell=active().cells[0];save();render(true)}
