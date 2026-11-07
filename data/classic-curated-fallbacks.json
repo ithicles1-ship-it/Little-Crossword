@@ -172,8 +172,8 @@
     "What you say when you have finished getting dressed."
   ],
   "AGO": [
-    "Some time before the present moment",
-    "Used after a number of years or days to refer to the past."
+    "Three years ___, in the past",
+    "Used after an amount of elapsed time."
   ],
   "COIL": [
     "A loop of wire, rope or spring",
@@ -209,7 +209,7 @@
   ],
   "COPY": [
     "Make a duplicate of something",
-    "A second version of an original."
+    "Create a second identical version."
   ],
   "CODES": [
     "Secret systems of letters or numbers",
@@ -276,16 +276,16 @@
     "An anatomical passage ending at the anus."
   ],
   "OFT": [
-    "Frequently, in an old-fashioned turn of phrase",
-    "An abbreviated, poetic alternative to 'often'."
+    "Frequently, in an old-fashioned phrase",
+    "Poetic shorthand for often."
   ],
   "RARER": [
-    "Harder to come by than before",
-    "Comparative form of 'rare'."
+    "Harder to find than before",
+    "Comparative of rare."
   ],
   "THINE": [
-    "Belonging to you, in Shakespeare's time",
-    "The old-fashioned possessive form of 'yours'."
+    "An old poetic word for \"yours\"",
+    "An archaic possessive pronoun."
   ],
   "OBESE": [
     "Carrying considerably more body fat than is healthy",
@@ -356,8 +356,8 @@
     "A government investigator, in three letters."
   ],
   "LOADS": [
-    "Great quantities of something",
-    "Informal plural meaning 'a lot'."
+    "A great many, informally",
+    "An abundance or a lot."
   ],
   "MOTEL": [
     "Roadside accommodation for motorists",
@@ -426,5 +426,701 @@
   "BREED": [
     "Raise animals to produce offspring",
     "Also a type or variety of domesticated animal."
+  ],
+  "TOPS": [
+    "At most, as in \"ten minutes, ___\"",
+    "An informal upper limit."
+  ],
+  "TACIT": [
+    "Understood without a word being said",
+    "An unspoken agreement might be described this way."
+  ],
+  "OPERA": [
+    "Theatre where even arguments are sung",
+    "A dramatic performance with an orchestra and singers."
+  ],
+  "PSALM": [
+    "A sacred song from a biblical collection",
+    "A hymn associated with the Book of Psalms."
+  ],
+  "SENSE": [
+    "One of five ways to experience the world",
+    "Sight and smell are examples."
+  ],
+  "LAPSE": [
+    "A momentary slip in concentration",
+    "A temporary failure of memory or judgement."
+  ],
+  "LOG": [
+    "A tree trunk destined for the fireplace",
+    "A length of wood, or a record of events."
+  ],
+  "OCEAN": [
+    "The vast blue expanse between continents",
+    "Larger than a sea."
+  ],
+  "GIRLS": [
+    "Daughters, as opposed to sons",
+    "Plural of a young female person."
+  ],
+  "TAME": [
+    "Happy around people rather than wild",
+    "An animal accustomed to human company."
+  ],
+  "WEB": [
+    "A spider's home-made trap",
+    "Sticky strands spun by an eight-legged hunter."
+  ],
+  "WALES": [
+    "Country whose capital is Cardiff",
+    "The home of Snowdonia and the Welsh language."
+  ],
+  "ERODE": [
+    "Wear away, little by little",
+    "What wind and water do to a coastline."
+  ],
+  "BET": [
+    "Money put on an uncertain outcome",
+    "A wager on a result."
+  ],
+  "SPARE": [
+    "An extra tyre kept in the boot",
+    "Something held in reserve."
+  ],
+  "SANE": [
+    "Thinking clearly and rationally",
+    "The opposite of irrational."
+  ],
+  "PLEA": [
+    "An urgent appeal for help",
+    "Also a response entered in court."
+  ],
+  "ALLOT": [
+    "Divide out a share for each person",
+    "Assign a fixed portion."
+  ],
+  "NEED": [
+    "A necessity, not merely a wish",
+    "Something you cannot manage without."
+  ],
+  "EASE": [
+    "The opposite of difficulty",
+    "A feeling of comfort or effortlessness."
+  ],
+  "ROAD": [
+    "Where cars travel between towns",
+    "A route with a surface for vehicles."
+  ],
+  "RIFT": [
+    "A serious split between former friends",
+    "A crack in a relationship."
+  ],
+  "ODOR": [
+    "A smell, especially an unpleasant one",
+    "American spelling of odour."
+  ],
+  "ALOUD": [
+    "Spoken so others can hear",
+    "Not silently or just in your head."
+  ],
+  "DELTA": [
+    "Greek letter shaped like a triangle",
+    "Also a river mouth divided into channels."
+  ],
+  "IDLE": [
+    "Not in use, like a parked engine",
+    "Having nothing to do."
+  ],
+  "FOOLS": [
+    "People who act without good judgement",
+    "Plural of a silly person."
+  ],
+  "SHY": [
+    "Quiet around unfamiliar people",
+    "Reserved or timid in company."
+  ],
+  "TRUTH": [
+    "What remains when the lies are gone",
+    "The opposite of a falsehood."
+  ],
+  "DAY": [
+    "The time between one midnight and the next",
+    "A full twenty-four hours."
+  ],
+  "NEW": [
+    "Fresh from the box",
+    "The opposite of second-hand."
+  ],
+  "NOTES": [
+    "Brief reminders scribbled in a notebook",
+    "A musician also reads these on a stave."
+  ],
+  "EVENT": [
+    "An occasion worth putting in the diary",
+    "A planned happening or gathering."
+  ],
+  "WEST": [
+    "Where the sun seems to set",
+    "Compass direction opposite east."
+  ],
+  "DROVE": [
+    "Was behind the wheel yesterday",
+    "Past tense of driving a car."
+  ],
+  "DRAB": [
+    "Dull and lacking colour or excitement",
+    "A grey room might feel this way."
+  ],
+  "RAGE": [
+    "Anger at full volume",
+    "An intense outburst of fury."
+  ],
+  "RATES": [
+    "Prices charged per hour, for example",
+    "Also percentages applied to interest."
+  ],
+  "AGENT": [
+    "A person who acts on someone's behalf",
+    "A talent representative or secret operative."
+  ],
+  "BEST": [
+    "Better than all the rest",
+    "The top-performing option."
+  ],
+  "MEAL": [
+    "Breakfast, lunch or dinner",
+    "Food eaten at a particular time."
+  ],
+  "MEDIA": [
+    "The press, television and news outlets collectively",
+    "Organisations that report the news."
+  ],
+  "EAGER": [
+    "Can't wait to get started",
+    "Keen and enthusiastic."
+  ],
+  "AVERT": [
+    "Stop a disaster before it happens",
+    "Prevent or turn away."
+  ],
+  "LESS": [
+    "Not as much",
+    "The opposite of more."
+  ],
+  "LEAVE": [
+    "Head out through the door",
+    "Go away or depart."
+  ],
+  "LET": [
+    "Give permission to go ahead",
+    "Allow something to happen."
+  ],
+  "EDGES": [
+    "The outer borders of a page",
+    "Where a shape ends."
+  ],
+  "TIERS": [
+    "Levels arranged one above another",
+    "Rows of seats in a theatre."
+  ],
+  "ART": [
+    "Creative work displayed in a gallery",
+    "Painting, sculpture or another form of expression."
+  ],
+  "CUP": [
+    "A small vessel for drinking tea",
+    "You might win one in a football final, too."
+  ],
+  "CASES": [
+    "Suitcases or court proceedings, perhaps",
+    "Plural of a container or legal matter."
+  ],
+  "URINE": [
+    "Liquid waste passed by the kidneys",
+    "Stored in the bladder until released."
+  ],
+  "PEDAL": [
+    "What a cyclist presses with a foot",
+    "A foot-operated lever."
+  ],
+  "CARED": [
+    "Showed concern about someone",
+    "Past tense of feeling compassion."
+  ],
+  "CAR": [
+    "What you might park on a driveway",
+    "A four-wheeled road vehicle."
+  ],
+  "DELL": [
+    "A small wooded valley",
+    "A leafy hollow in the countryside."
+  ],
+  "ASIDE": [
+    "Out of the way, to one side",
+    "A remark said quietly to someone nearby."
+  ],
+  "RENAL": [
+    "Medical word meaning related to kidneys",
+    "Describes the organs that filter blood."
+  ],
+  "SELL": [
+    "Exchange something for money",
+    "What a shop does with its stock."
+  ],
+  "STEM": [
+    "What supports a flower above the roots",
+    "The stalk of a plant."
+  ],
+  "SLATE": [
+    "Grey roofing stone that comes in thin sheets",
+    "Also a list of candidates."
+  ],
+  "TAKEN": [
+    "Already occupied, like a reserved seat",
+    "No longer available."
+  ],
+  "ENEMY": [
+    "Someone on the opposite side of a fight",
+    "The opposite of an ally."
+  ],
+  "MESS": [
+    "An untidy room or a muddled situation",
+    "Something you need to clean up."
+  ],
+  "LANE": [
+    "A narrow country road",
+    "Often a smaller route between hedges."
+  ],
+  "MAKES": [
+    "Creates something from scratch",
+    "Third-person form of create."
+  ],
+  "MID": [
+    "Neither beginning nor end, for short",
+    "An abbreviation for middle."
+  ],
+  "ITEMS": [
+    "Things on a shopping list",
+    "Individual entries in a collection."
+  ],
+  "DENY": [
+    "Say an accusation isn't true",
+    "Refuse to admit or accept."
+  ],
+  "ACUTE": [
+    "Sharp and severe, as in a sudden pain",
+    "Also describes an angle below ninety degrees."
+  ],
+  "GUILE": [
+    "Clever trickery used to get one's way",
+    "Cunning that may involve deception."
+  ],
+  "ORDER": [
+    "Ask for dinner from the menu",
+    "Also the arrangement of things in a sequence."
+  ],
+  "OCCUR": [
+    "Happen or take place",
+    "What an event does when it comes about."
+  ],
+  "CLIP": [
+    "Fasten papers together with a little holder",
+    "Also a short extract from a video."
+  ],
+  "FLUID": [
+    "Able to flow, like water",
+    "A liquid, or something that changes smoothly."
+  ],
+  "TITLE": [
+    "What appears on the cover of a novel",
+    "The name given to a work."
+  ],
+  "PEER": [
+    "Someone your own age or standing",
+    "Also to look closely or with difficulty."
+  ],
+  "RUN": [
+    "Go faster than a walk",
+    "A quick trip on foot."
+  ],
+  "USING": [
+    "Putting something to work",
+    "Employing a tool or method."
+  ],
+  "NEEDY": [
+    "Lacking the essentials of life",
+    "In need of help or support."
+  ],
+  "PHASE": [
+    "One stage of a longer process",
+    "The Moon has different ones."
+  ],
+  "PET": [
+    "Animal you look after at home",
+    "A companion, perhaps a cat or dog."
+  ],
+  "HERO": [
+    "The person who saves the day",
+    "A brave protagonist."
+  ],
+  "EERIE": [
+    "Strangely unsettling, like an empty house at night",
+    "Spooky or uncanny."
+  ],
+  "TREND": [
+    "A style that's becoming popular",
+    "A direction of change over time."
+  ],
+  "ORGY": [
+    "An unrestrained bout of feasting or excess",
+    "A wild revel or spree."
+  ],
+  "HARSH": [
+    "Rough, severe or hard to bear",
+    "A description of bitter criticism."
+  ],
+  "HAND": [
+    "What you wave to greet someone",
+    "The part of your arm with fingers."
+  ],
+  "APART": [
+    "Separated by a distance",
+    "Not together."
+  ],
+  "RATIO": [
+    "A comparison written as two numbers",
+    "The relationship between quantities, such as 2:1."
+  ],
+  "SCALP": [
+    "The skin on top of your head",
+    "Where your head hair grows."
+  ],
+  "HELL": [
+    "A fiery underworld in many traditions",
+    "The opposite destination from heaven in some beliefs."
+  ],
+  "APACE": [
+    "Quickly, in a slightly old-fashioned expression",
+    "At a brisk speed."
+  ],
+  "NATAL": [
+    "Relating to the time of birth",
+    "A word seen in 'prenatal'."
+  ],
+  "DRILL": [
+    "A tool for making holes in wood",
+    "Also repeated practice of a skill."
+  ],
+  "TOP": [
+    "The highest point of a mountain",
+    "Opposite of bottom."
+  ],
+  "VOTE": [
+    "Choose a candidate on a ballot paper",
+    "What citizens cast in an election."
+  ],
+  "VILLA": [
+    "A holiday house, often with a pool",
+    "A spacious home, especially on holiday."
+  ],
+  "ORBIT": [
+    "The path Earth follows around the Sun",
+    "A repeating route around a larger body."
+  ],
+  "TAUT": [
+    "Pulled tight, like a rope",
+    "Under tension, with no slack."
+  ],
+  "ELM": [
+    "A tall tree once common along streets",
+    "A deciduous tree of the genus Ulmus."
+  ],
+  "VIRAL": [
+    "Spreading rapidly online",
+    "Also describing something caused by a virus."
+  ],
+  "VASE": [
+    "A container for freshly cut flowers",
+    "Often placed in the centre of a table."
+  ],
+  "ALBUM": [
+    "A collection of songs from one musician",
+    "Also a book for keeping photographs."
+  ],
+  "SLIT": [
+    "A narrow cut or opening",
+    "A thin opening made with a blade."
+  ],
+  "EAT": [
+    "What you do when you're hungry",
+    "Consume food."
+  ],
+  "SAW": [
+    "A tool with teeth for cutting wood",
+    "Also the past tense of see."
+  ],
+  "SOWED": [
+    "Planted seeds in the soil",
+    "What the farmer did last spring."
+  ],
+  "AREA": [
+    "A region or the size of a surface",
+    "Measured in square units in mathematics."
+  ],
+  "WELL": [
+    "In a satisfactory way",
+    "Also a deep shaft for reaching water."
+  ],
+  "SCORE": [
+    "The number beside your team on the scoreboard",
+    "Points earned during a game."
+  ],
+  "STIR": [
+    "Move a spoon around in the soup",
+    "Mix by circling an object through liquid."
+  ],
+  "CODE": [
+    "A set of instructions a computer follows",
+    "Also a secret system of symbols."
+  ],
+  "TOWEL": [
+    "What you reach for after a shower",
+    "A piece of absorbent cloth."
+  ],
+  "IDEAL": [
+    "Perfect for the situation",
+    "Exactly what you would hope for."
+  ],
+  "RED": [
+    "The colour of a stop sign",
+    "One of the three primary colours of light."
+  ],
+  "YET": [
+    "Up to now, as in \"not ___\"",
+    "Also means nevertheless."
+  ],
+  "YOUTH": [
+    "The early years of life",
+    "A time before adulthood."
+  ],
+  "ENTRY": [
+    "Your name on a competition list",
+    "An act of going into a place."
+  ],
+  "TIDAL": [
+    "Influenced by the rise and fall of the sea",
+    "Relating to the ocean's regular movement."
+  ],
+  "TONIC": [
+    "What goes with gin in a classic mixed drink",
+    "Also a restorative medicine or drink."
+  ],
+  "TOSS": [
+    "Throw lightly into the air",
+    "What you might do with a coin before a match."
+  ],
+  "OUTDO": [
+    "Go one better than a rival",
+    "Surpass someone else's achievement."
+  ],
+  "STRAP": [
+    "A strip that fastens a bag or watch",
+    "A narrow piece of leather or fabric."
+  ],
+  "SHYLY": [
+    "In a bashful way",
+    "Without much confidence around others."
+  ],
+  "LOW": [
+    "Not very high off the ground",
+    "Opposite of high."
+  ],
+  "LITHE": [
+    "Graceful and easy in movement",
+    "Flexible, supple and slender."
+  ],
+  "OFTEN": [
+    "Frequently, but not always",
+    "More than occasionally."
+  ],
+  "WEARS": [
+    "Has on, as in \"she ___ a coat\"",
+    "Third-person present form of put on clothing."
+  ],
+  "LIFE": [
+    "What a living thing possesses",
+    "The period between birth and death."
+  ],
+  "LOSE": [
+    "Fail to win a contest",
+    "The opposite of triumph."
+  ],
+  "GOTTA": [
+    "Informal way to say \"have to\"",
+    "A colloquial expression of obligation."
+  ],
+  "GUT": [
+    "An instinctive feeling",
+    "Also another word for the intestines."
+  ],
+  "USHER": [
+    "Person who shows you to your theatre seat",
+    "A guide at a cinema or event."
+  ],
+  "TEENS": [
+    "Ages thirteen through nineteen",
+    "The years immediately before twenty."
+  ],
+  "GASP": [
+    "A sharp breath of surprise",
+    "An involuntary intake of air."
+  ],
+  "GUST": [
+    "A sudden blast of wind",
+    "A brief strong burst of moving air."
+  ],
+  "ALPHA": [
+    "First letter of the Greek alphabet",
+    "Comes before beta."
+  ],
+  "STRIP": [
+    "A long narrow piece of material",
+    "Also to remove a covering."
+  ],
+  "PRINT": [
+    "Put words or images onto paper",
+    "What a newspaper press produces."
+  ],
+  "ULTRA": [
+    "Beyond the usual extreme",
+    "A prefix meaning 'far beyond'."
+  ],
+  "AGE": [
+    "How old someone is",
+    "Measured in years for people."
+  ],
+  "SPRIG": [
+    "A little branch clipped from a plant",
+    "A short shoot with leaves."
+  ],
+  "APT": [
+    "Especially suitable for the occasion",
+    "Appropriate or fitting."
+  ],
+  "SPAS": [
+    "Places to unwind with pools and treatments",
+    "Plural of a wellness retreat."
+  ],
+  "SIGH": [
+    "Let out a long breath of disappointment",
+    "A soft sound of sadness or relief."
+  ],
+  "PORES": [
+    "Tiny openings in your skin",
+    "Sweat can pass through them."
+  ],
+  "ATONE": [
+    "Make amends for doing something wrong",
+    "Try to put right a past offence."
+  ],
+  "SAUCE": [
+    "Something poured over pasta or chips",
+    "A flavourful liquid accompaniment."
+  ],
+  "IOTA": [
+    "A very tiny amount",
+    "Also a Greek letter."
+  ],
+  "GROUP": [
+    "People brought together for a reason",
+    "A collection, or a band."
+  ],
+  "PEN": [
+    "Something you use to sign a letter",
+    "Writes with ink."
+  ],
+  "HENCE": [
+    "For that reason, as in \"___ the delay\"",
+    "A slightly formal way to say therefore."
+  ],
+  "SEEN": [
+    "Already watched or noticed",
+    "Past participle of see."
+  ],
+  "AIR": [
+    "What you breathe without seeing",
+    "The atmosphere around us."
+  ],
+  "AIMED": [
+    "Pointed at a particular target",
+    "Directed a weapon or camera toward something."
+  ],
+  "IDEA": [
+    "A thought that suddenly pops into your head",
+    "An inspiration or suggestion."
+  ],
+  "REST": [
+    "A break after a busy day",
+    "Time spent recovering your strength."
+  ],
+  "ABIDE": [
+    "Put up with, as in \"can't ___ it\"",
+    "Tolerate or endure."
+  ],
+  "ANTE": [
+    "Money everyone puts in before a poker hand",
+    "An initial contribution to a pot."
+  ],
+  "BARN": [
+    "A farm building used for storing hay",
+    "Also a shelter for livestock."
+  ],
+  "NAMES": [
+    "What appear on everyone's place cards",
+    "Plural of a person's identifying word."
+  ],
+  "TREAT": [
+    "A little indulgence after a long week",
+    "Also something to give someone as a reward."
+  ],
+  "END": [
+    "The very last part",
+    "The opposite of beginning."
+  ],
+  "ADD": [
+    "Combine two numbers to get a sum",
+    "A basic operation in arithmetic."
+  ],
+  "ALERT": [
+    "Wide awake and paying attention",
+    "Also a warning notification."
+  ],
+  "DONOR": [
+    "Someone who gives blood or money",
+    "A person making a contribution."
+  ],
+  "DANCE": [
+    "Move in time with music",
+    "A series of steps to a rhythm."
+  ],
+  "DUKE": [
+    "A nobleman ranked below a prince",
+    "A hereditary title of nobility."
+  ],
+  "SIS": [
+    "Your sister, affectionately shortened",
+    "Informal word for a female sibling."
+  ],
+  "ENNUI": [
+    "That dull sense of having nothing interesting to do",
+    "A French-derived term for boredom."
+  ],
+  "ROCKS": [
+    "Things you might skim across a pond",
+    "Plural of a stone."
+  ],
+  "TREE": [
+    "A living thing with roots, trunk and branches",
+    "An oak or pine is one."
   ]
 }
