@@ -258,6 +258,9 @@ def main():
         history[today]=result["puzzle"]["answers"]
         history={k:v for k,v in history.items() if k>=str(dt.date.fromisoformat(today)-dt.timedelta(days=90))}
         path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+        archive_path=ROOT/"data"/"news"/(today+".json")
+        archive_path.parent.mkdir(parents=True,exist_ok=True)
+        archive_path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
         history_path.write_text(json.dumps(history,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
         print("Published",today,"with",len(result["puzzle"]["sources"]),"headline-linked clues")
         return 0
