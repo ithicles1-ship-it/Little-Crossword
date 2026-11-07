@@ -220,7 +220,7 @@ def dictionary_prefix(prefix):
     req=urllib.request.Request(url,headers={"User-Agent":"LittleCrossword/1.0","Accept":"application/json"})
     try:
         with urllib.request.urlopen(req,timeout=18) as response:
-            return prefix,json.loads(response.read(1500000))
+            return prefix,json.loads(response.read(16000000))
     except Exception as e:
         print("Definition group unavailable:",prefix,str(e),flush=True)
         return prefix,{}
