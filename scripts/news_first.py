@@ -91,9 +91,13 @@ def dictionary():
         for w,c,h in zip(p['answers'],p['clues'],p['hints']):
             if not 3<=len(w)<=5 or not re.fullmatch('[A-Z]+',w):continue
             if w in exclude:continue
+            # Headlines can introduce a proper-name anchor, but the ordinary
+            # crossing words must already have individually written, approved
+            # clues and hints. Never use an automatic first dictionary sense.
+            if w not in manual:continue
             if w not in fill:
-                edited=(index<18) or w in manual
-                fill[w]=(c,h,4 if edited else 1)
+                clue,hint=manual[w]
+                fill[w]=(clue,hint,5)
     return classic,fill
 
 def solve(shape, anchors, fill, exclusions, seed, max_calls=2600):
@@ -257,6 +261,14 @@ def construct(items, exclusions=None, max_tries=180):
         if re.search(r'(?<![A-Za-z])'+re.escape(w)+r'(?![A-Za-z])',c,re.I):return None
         clues.append(c);hints.append(hint)
     if len(sources)!=len(anchors) or len(sources)<1:return None
+    # The news-specific answers must genuinely appear in their corresponding
+    # source headlines, with no duplicate publisher link masquerading as a
+    # different story.
+    if len({x['url'] for x in sources})!=len(sources):return None
+    for anchor in anchors:
+        word, article, _=anchor
+        if not re.search(r'(?<![A-Za-z])'+re.escape(word)+r'(?![A-Za-z])',
+                         article['title'],re.I):return None
     return {
         'shape':grid['shape'],
         'answers':grid['answers'],
