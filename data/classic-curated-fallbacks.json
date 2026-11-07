@@ -56,8 +56,8 @@
     "Also one part of a meal or a series of lessons."
   ],
   "RENEW": [
-    "Give something another period of life",
-    "You might do this with a passport or subscription."
+    "Extend a passport or subscription",
+    "Make valid again for another period."
   ],
   "RECKON": [
     "Estimate without being completely certain",
@@ -324,32 +324,32 @@
     "A five-letter male first name."
   ],
   "MECCA": [
-    "Sacred city visited by pilgrims on the Hajj",
-    "A city in Saudi Arabia central to Islam."
+    "Sacred city visited by Muslim pilgrims",
+    "Home to the Kaaba in Saudi Arabia."
   ],
   "SARI": [
-    "Long draped garment worn in South Asia",
-    "A colourful traditional outfit wrapped around the body."
+    "A long, draped garment worn in South Asia",
+    "Often wrapped elegantly around the body."
   ],
   "HOWSE": [
-    "Old spelling of the word for a home",
-    "It sounds like 'house' but has a different vowel spelling."
+    "An archaic spelling of a dwelling",
+    "Sounds like the usual word for a home."
   ],
   "HAFTA": [
-    "Informal written version of 'have to'",
-    "How you might spell a hurriedly spoken obligation."
+    "Informal spelling of \"have to\"",
+    "How hurried speech sometimes represents an obligation."
   ],
   "LIMA": [
-    "South American capital on the Pacific coast",
-    "The capital city of Peru."
+    "Capital city of Peru",
+    "A major coastal South American city."
   ],
   "PISS": [
-    "Vulgar, four-letter verb meaning to urinate",
-    "Appears in 'take the ___', meaning to tease or mock."
+    "A rude four-letter word for urinate",
+    "Also appears in British slang for taking the mickey."
   ],
   "TOWNE": [
-    "Archaic spelling of a settlement larger than a village",
-    "It's the modern word 'town' with an old-fashioned ending."
+    "An old-fashioned spelling of a settlement",
+    "The standard form drops the final e."
   ],
   "FED": [
     "American slang for a government agent",
@@ -384,8 +384,8 @@
     "In football, teams try to score these."
   ],
   "FRO": [
-    "Backwards, in the expression 'to and ___'",
-    "A short word that completes the phrase for back-and-forth movement."
+    "Back again, as in 'to and ___'",
+    "The return direction in a familiar phrase."
   ],
   "NERD": [
     "Someone absorbed in specialist interests",
@@ -416,8 +416,8 @@
     "Military-origin slang for complete confusion."
   ],
   "PIMP": [
-    "Give something an extravagantly flashy makeover",
-    "A colloquial verb often used about customising a car."
+    "Give a car a flashy makeover, informally",
+    "Also a word with a very different adult meaning."
   ],
   "SEX": [
     "A biological classification, often male or female",
@@ -3494,5 +3494,765 @@
   "BOY": [
     "A male child",
     "Opposite of girl."
+  ],
+  "OWES": [
+    "Still has a debt to repay",
+    "Third-person form of be indebted."
+  ],
+  "ODD": [
+    "A little strange or unusual",
+    "Also describes a number not divisible by two."
+  ],
+  "WOES": [
+    "Several troubles or sorrows",
+    "Plural of deep distress."
+  ],
+  "ELBOW": [
+    "The bend halfway down your arm",
+    "A joint between forearm and upper arm."
+  ],
+  "SLIME": [
+    "Sticky green goo from a fantasy monster",
+    "A slippery, unpleasant substance."
+  ],
+  "DOLLS": [
+    "Toys shaped like little people",
+    "Plural of a child's figure."
+  ],
+  "STAT": [
+    "Immediately, in hospital shorthand",
+    "A medical instruction meaning right now."
+  ],
+  "DEBIT": [
+    "Money taken out of your account",
+    "A charge recorded on the left side of an account."
+  ],
+  "SOMA": [
+    "The fictional feel-good drug in Brave New World",
+    "Also an ancient Greek word for body."
+  ],
+  "WET": [
+    "Soaked with rain",
+    "The opposite of dry."
+  ],
+  "MATT": [
+    "A male given name, short for Matthew",
+    "Common first-name abbreviation with two final T's."
+  ],
+  "MACHO": [
+    "Trying very hard to appear masculine",
+    "An exaggerated display of toughness."
+  ],
+  "ACHED": [
+    "Throbbed with a dull pain",
+    "Past tense of a lingering hurt."
+  ],
+  "TRIAD": [
+    "A group of three connected things",
+    "Three members or elements together."
+  ],
+  "TENDS": [
+    "Usually does something, as in \"she ___ to agree\"",
+    "Has a habit of acting in a particular way."
+  ],
+  "ACRES": [
+    "Units used to measure farmland",
+    "Plural of a large land-area measure."
+  ],
+  "SAY": [
+    "Speak a word aloud",
+    "Express something verbally."
+  ],
+  "CHINA": [
+    "Country whose capital is Beijing",
+    "Also fine porcelain tableware."
+  ],
+  "HEADY": [
+    "Powerfully exciting or intoxicating",
+    "An overwhelming, dizzying feeling."
+  ],
+  "ODDS": [
+    "The chances of something happening",
+    "Numbers used by a bookmaker."
+  ],
+  "LOT": [
+    "A large quantity, as in \"a whole ___\"",
+    "Also a parcel of land or an auction item."
+  ],
+  "LODGE": [
+    "A small holiday house in the woods",
+    "Also a place to stay in a national park."
+  ],
+  "ORES": [
+    "Rocks from which metals are extracted",
+    "Plural of mineral-bearing rock."
+  ],
+  "TENT": [
+    "Portable shelter on a campsite",
+    "Held upright with poles and pegs."
+  ],
+  "SWORE": [
+    "Made a solemn promise yesterday",
+    "Also used strong language."
+  ],
+  "SLAW": [
+    "Shredded cabbage salad, for short",
+    "Coleslaw, in an American abbreviation."
+  ],
+  "WANE": [
+    "Become gradually weaker, like the fading Moon",
+    "Lose strength or visibility."
+  ],
+  "LADEN": [
+    "Heavily loaded with goods",
+    "Weighed down with cargo."
+  ],
+  "ANGST": [
+    "A deep feeling of anxiety or dread",
+    "Emotional unease."
+  ],
+  "WEE": [
+    "Very small, especially in Scottish speech",
+    "An informal word for tiny."
+  ],
+  "FALL": [
+    "Drop from a great height",
+    "Also the American word for autumn."
+  ],
+  "FOCUS": [
+    "Pay close attention to one thing",
+    "Also the sharp point of an image through a lens."
+  ],
+  "ALIBI": [
+    "Proof you were elsewhere when a crime occurred",
+    "A suspect's account of their whereabouts."
+  ],
+  "LINEN": [
+    "Cool fabric made from flax",
+    "Often used for summer shirts and bedding."
+  ],
+  "LOGS": [
+    "Chunks of wood stacked beside the fire",
+    "Plural of a section of tree trunk."
+  ],
+  "POLIO": [
+    "Disease largely prevented by childhood vaccination",
+    "A viral illness that can cause paralysis."
+  ],
+  "PIT": [
+    "A deep hole dug in the ground",
+    "Also the hard seed at the centre of some fruit."
+  ],
+  "ICING": [
+    "Sweet covering spread over a cake",
+    "A sugar-based decoration."
+  ],
+  "TUBES": [
+    "Hollow cylinders used to carry liquids",
+    "Plural of a pipe-like shape."
+  ],
+  "SIN": [
+    "An act considered morally wrong",
+    "A transgression in religion."
+  ],
+  "SWAP": [
+    "Exchange one thing for another",
+    "Trade places or possessions."
+  ],
+  "SLIM": [
+    "Thin and narrow in build",
+    "Not wide or bulky."
+  ],
+  "WINE": [
+    "Drink made by fermenting grapes",
+    "Often served from a glass bottle."
+  ],
+  "ABACK": [
+    "Caught by surprise, as in \"taken ___\"",
+    "Unprepared and startled."
+  ],
+  "PENCE": [
+    "Small British coins in plural",
+    "One hundred of these make a pound."
+  ],
+  "LIBEL": [
+    "A damaging false statement published in writing",
+    "A type of defamation."
+  ],
+  "LEAN": [
+    "Tilt to one side",
+    "Also describes meat with little fat."
+  ],
+  "INANE": [
+    "Completely silly or pointless",
+    "An empty, foolish remark."
+  ],
+  "KEN": [
+    "The extent of someone's knowledge",
+    "As in \"beyond my ___\"."
+  ],
+  "LID": [
+    "The cover that sits on a saucepan",
+    "What closes the top of a container."
+  ],
+  "LEVEL": [
+    "Neither rising nor falling",
+    "A flat, even surface."
+  ],
+  "ICONS": [
+    "Small pictures representing apps",
+    "Plural of a recognisable symbol."
+  ],
+  "DOTS": [
+    "Tiny round marks on a page",
+    "The marks above several lowercase i's."
+  ],
+  "DECO": [
+    "The decorative style popular in the 1920s, for short",
+    "Abbreviation for Art Deco."
+  ],
+  "DIVE": [
+    "Leap headfirst into water",
+    "A plunge beneath the surface."
+  ],
+  "PIVOT": [
+    "Turn around a fixed point",
+    "Change direction or strategy suddenly."
+  ],
+  "PEG": [
+    "Small fastener for hanging washing",
+    "Also a short wooden or metal pin."
+  ],
+  "EVENS": [
+    "Makes a score level",
+    "Balances two unequal things."
+  ],
+  "GELS": [
+    "Sets into a jelly-like texture",
+    "Thickens into a semi-solid."
+  ],
+  "SKI": [
+    "Glide down a snowy mountain",
+    "One of two long boards worn on the feet."
+  ],
+  "SHEEP": [
+    "Woolly farm animals",
+    "Plural and singular forms are identical."
+  ],
+  "KEEP": [
+    "Hold on to something rather than give it away",
+    "Retain or preserve."
+  ],
+  "INNS": [
+    "Small places offering rooms to travellers",
+    "Plural of a traditional lodging house."
+  ],
+  "ASHEN": [
+    "Deathly pale, like someone in shock",
+    "Greyish and drained of colour."
+  ],
+  "ASKS": [
+    "Puts a question to another person",
+    "Third-person form of inquire."
+  ],
+  "SHEA": [
+    "Nut used to make a rich skin butter",
+    "An African tree whose seeds yield a moisturiser."
+  ],
+  "SHEEN": [
+    "A gentle glow on polished furniture",
+    "A lustrous, shiny surface."
+  ],
+  "KEEPS": [
+    "Continues holding something",
+    "Third-person form of retain."
+  ],
+  "SAP": [
+    "Sticky liquid inside a tree",
+    "Also drain someone's strength."
+  ],
+  "LASH": [
+    "A single hair growing on an eyelid",
+    "Also to strike with a whip."
+  ],
+  "LAPEL": [
+    "The folded part of a jacket beside the collar",
+    "Where someone may pin a badge."
+  ],
+  "AURAL": [
+    "Relating to hearing rather than sight",
+    "An adjective concerning the ears."
+  ],
+  "STOP": [
+    "Bring a moving car to a halt",
+    "The opposite of start."
+  ],
+  "HENS": [
+    "Female chickens on a farm",
+    "Plural of an egg-laying bird."
+  ],
+  "SAUTE": [
+    "Fry food quickly in a little fat",
+    "A cooking technique from French."
+  ],
+  "APRON": [
+    "What a cook ties on to protect their clothes",
+    "A garment worn over the front."
+  ],
+  "REAPS": [
+    "Harvests a crop",
+    "Also receives the consequences of one's actions."
+  ],
+  "ILL": [
+    "Feeling unwell or sick",
+    "Not in good health."
+  ],
+  "MAPS": [
+    "Pictures showing where roads and towns are",
+    "Plural of a geographic diagram."
+  ],
+  "MASH": [
+    "Crushed potatoes made smooth with butter",
+    "Also to crush food into a soft mixture."
+  ],
+  "AUTO": [
+    "A motor vehicle, especially in American English",
+    "Shortened form of automobile."
+  ],
+  "PRIMA": [
+    "First, in Italian",
+    "Also part of the phrase for a leading ballerina."
+  ],
+  "SANER": [
+    "More reasonable than before",
+    "Comparative of sane."
+  ],
+  "AURA": [
+    "An atmosphere surrounding a person",
+    "An impression or subtle glow."
+  ],
+  "STING": [
+    "The sharp pain from a wasp",
+    "Also a police operation to catch a criminal."
+  ],
+  "GYM": [
+    "Where you go to lift weights",
+    "Short for gymnasium."
+  ],
+  "HOMEY": [
+    "Cosy and comfortable, American-style",
+    "Like a welcoming home."
+  ],
+  "ARM": [
+    "Body part from shoulder to hand",
+    "You raise it to wave."
+  ],
+  "SUN": [
+    "The star that gives Earth daylight",
+    "The centre of our solar system."
+  ],
+  "SERUM": [
+    "Clear fluid separated from blood",
+    "Also a light skincare treatment."
+  ],
+  "USERS": [
+    "People operating a website or app",
+    "Plural of someone who uses a service."
+  ],
+  "NOSE": [
+    "The part of your face you smell with",
+    "Between your eyes and mouth."
+  ],
+  "PESO": [
+    "Money used in Mexico",
+    "A currency in several Latin American countries."
+  ],
+  "PANE": [
+    "One piece of glass in a window",
+    "A single window section."
+  ],
+  "FARES": [
+    "Prices paid for bus or train journeys",
+    "Plural of a transport ticket cost."
+  ],
+  "FIG": [
+    "A sweet, soft fruit with many tiny seeds",
+    "Often eaten dried."
+  ],
+  "INURE": [
+    "Become used to something unpleasant",
+    "Harden or accustom through experience."
+  ],
+  "GEMS": [
+    "Precious stones in a jewellery box",
+    "Plural of a polished jewel."
+  ],
+  "CRAM": [
+    "Study furiously the night before an exam",
+    "Also squeeze too many things into a space."
+  ],
+  "CRANE": [
+    "Tall machine that lifts heavy objects",
+    "Also a long-necked bird."
+  ],
+  "ADEPT": [
+    "Highly skilled at a particular task",
+    "Expert or proficient."
+  ],
+  "MOST": [
+    "The greatest amount",
+    "The opposite of least."
+  ],
+  "REDO": [
+    "Do a task again from scratch",
+    "Repeat to correct mistakes."
+  ],
+  "WANES": [
+    "Gradually becomes weaker",
+    "Third-person form of fade or diminish."
+  ],
+  "WIN": [
+    "Finish first in the competition",
+    "The opposite of lose."
+  ],
+  "INEPT": [
+    "Clumsy and lacking skill",
+    "Not particularly competent."
+  ],
+  "NEWT": [
+    "A little amphibian with a long tail",
+    "Related to salamanders."
+  ],
+  "HAT": [
+    "Something worn on your head",
+    "A brimmed cap or other head covering."
+  ],
+  "HAILS": [
+    "Calls out to a taxi",
+    "Also praises someone enthusiastically."
+  ],
+  "AGREE": [
+    "Have the same opinion",
+    "The opposite of disagree."
+  ],
+  "TOYS": [
+    "Objects children play with",
+    "Plural of a plaything."
+  ],
+  "SAGO": [
+    "Starch harvested from a tropical palm",
+    "Also used in puddings."
+  ],
+  "SAGA": [
+    "An extended family story spanning generations",
+    "A long, dramatic tale."
+  ],
+  "HAIRY": [
+    "Covered in lots of fur or hair",
+    "Also an informal word for dangerous."
+  ],
+  "HOB": [
+    "The part of a cooker with heated rings",
+    "British word for a stovetop."
+  ],
+  "OGLES": [
+    "Stares at someone in an intrusive way",
+    "Looks with excessive interest."
+  ],
+  "BASE": [
+    "The bottom or foundation of a structure",
+    "Also a point to return to."
+  ],
+  "TAG": [
+    "A small label attached to clothes",
+    "Also a chasing game children play."
+  ],
+  "TANKS": [
+    "Large armoured military vehicles",
+    "Also containers holding water."
+  ],
+  "ADULT": [
+    "A person who's fully grown",
+    "No longer a child."
+  ],
+  "GASES": [
+    "Substances with no fixed shape or volume",
+    "Plural of a state of matter."
+  ],
+  "DADA": [
+    "A small child's affectionate word for father",
+    "Also the name of an avant-garde art movement."
+  ],
+  "DONE": [
+    "Finished, with nothing left to do",
+    "Completed."
+  ],
+  "BONUS": [
+    "An extra payment or reward",
+    "Something additional and welcome."
+  ],
+  "BAN": [
+    "Prohibit something officially",
+    "Forbid by a rule."
+  ],
+  "ANKLE": [
+    "Joint connecting your foot and leg",
+    "A point just above the heel."
+  ],
+  "NESTS": [
+    "Homes built by several birds",
+    "Plural of a bird's shelter."
+  ],
+  "SHOE": [
+    "What protects your foot when you walk",
+    "Comes in pairs, often with laces."
+  ],
+  "STONE": [
+    "Small hard material found in a river",
+    "A rock or pebble."
+  ],
+  "OGLED": [
+    "Stared at someone too obviously",
+    "Looked with intrusive interest."
+  ],
+  "EAST": [
+    "Direction of sunrise",
+    "Opposite of west."
+  ],
+  "TOGA": [
+    "Ancient Roman garment draped around the body",
+    "A long piece of cloth worn over a tunic."
+  ],
+  "HOWLS": [
+    "Makes long, mournful cries",
+    "What wolves sometimes do."
+  ],
+  "HIT": [
+    "Strike a ball with a bat",
+    "Make contact forcefully."
+  ],
+  "INSET": [
+    "A smaller picture set inside a larger one",
+    "An inserted panel or detail."
+  ],
+  "TEED": [
+    "Placed a golf ball on a little stand",
+    "Past tense of preparing for a drive."
+  ],
+  "MIST": [
+    "Very fine droplets floating near the ground",
+    "Lighter than thick fog."
+  ],
+  "MAP": [
+    "A drawing of roads and landmarks",
+    "Helps you navigate unfamiliar places."
+  ],
+  "IRONS": [
+    "Appliances that flatten creased clothes",
+    "Plural of the device used on shirts."
+  ],
+  "SCRAP": [
+    "A small leftover piece",
+    "Also a brief fight."
+  ],
+  "THEME": [
+    "The central subject of a story",
+    "A recurring idea or topic."
+  ],
+  "ARCH": [
+    "A curved structure over a doorway",
+    "An inverted U-shaped feature."
+  ],
+  "PORED": [
+    "Studied a book with intense concentration",
+    "Often followed by 'over' when reading closely."
+  ],
+  "DEW": [
+    "Tiny drops of moisture on morning grass",
+    "Condenses overnight in cool air."
+  ],
+  "NAME": [
+    "The word someone calls you by",
+    "An identifier given to a person or thing."
+  ],
+  "SPEW": [
+    "Pour out forcefully and messily",
+    "Gush or eject suddenly."
+  ],
+  "HALF": [
+    "One of two equal portions",
+    "Fifty percent of a whole."
+  ],
+  "ALLEY": [
+    "A narrow passage between buildings",
+    "A backstreet or lane."
+  ],
+  "LOOSE": [
+    "Not tied tightly",
+    "The opposite of secure or tight."
+  ],
+  "FOOT": [
+    "Part of the body below the ankle",
+    "You stand on two of them."
+  ],
+  "ALOOF": [
+    "Keeping your distance from others",
+    "Unfriendly or emotionally detached."
+  ],
+  "FRY": [
+    "Cook something in hot oil",
+    "What you do with chips in a pan."
+  ],
+  "FLOOR": [
+    "The surface you walk on indoors",
+    "The opposite of ceiling."
+  ],
+  "TESTY": [
+    "Irritable and quick to snap",
+    "Bad-tempered."
+  ],
+  "AYE": [
+    "A sailor's word for yes",
+    "A form of agreement heard in Parliament."
+  ],
+  "POT": [
+    "A cooking vessel with a lid",
+    "Used to boil or simmer food."
+  ],
+  "IDOLS": [
+    "Performers adored by fans",
+    "Plural of a person widely admired."
+  ],
+  "MOXIE": [
+    "Courage and determination, American-style",
+    "An informal word for nerve or grit."
+  ],
+  "PRIME": [
+    "Of the highest quality",
+    "Also a number divisible only by itself and one."
+  ],
+  "ODORS": [
+    "Smells, in American spelling",
+    "Plural of a scent."
+  ],
+  "SCAR": [
+    "A mark left after a wound heals",
+    "A lasting sign of an injury."
+  ],
+  "TOXIC": [
+    "Poisonous or seriously harmful",
+    "Also describes an unhealthy relationship."
+  ],
+  "SEER": [
+    "Someone who claims to predict the future",
+    "A fortune teller or prophet."
+  ],
+  "PUSH": [
+    "Apply force to move something away",
+    "The opposite of pull."
+  ],
+  "INPUT": [
+    "Information entered into a computer",
+    "Data that goes in."
+  ],
+  "SWAMI": [
+    "An Indian spiritual teacher",
+    "A Hindu religious title."
+  ],
+  "SEDAN": [
+    "A four-door car with an enclosed boot, in the US",
+    "American name for a saloon car."
+  ],
+  "UNWED": [
+    "Not married",
+    "An adjective describing someone single."
+  ],
+  "DEN": [
+    "A wild animal's sheltered home",
+    "A cave-like hiding place."
+  ],
+  "SPADE": [
+    "A garden tool for digging soil",
+    "A flat-bladed implement with a handle."
+  ],
+  "HUMAN": [
+    "A person, not a robot",
+    "Relating to our species."
+  ],
+  "TIN": [
+    "A metal container for baked beans",
+    "Also a chemical element with symbol Sn."
+  ],
+  "TIP": [
+    "The very end of a pencil",
+    "Also money left for good service."
+  ],
+  "ILEUM": [
+    "Final section of the small intestine",
+    "An anatomical part between jejunum and colon."
+  ],
+  "PALMS": [
+    "The inner surfaces of your hands",
+    "Also tropical trees with fronds."
+  ],
+  "COLA": [
+    "A sweet fizzy brown drink",
+    "Often flavoured with caffeine."
+  ],
+  "CONE": [
+    "An ice-cream holder with a pointed end",
+    "Also a geometric shape with a circular base."
+  ],
+  "BOWEL": [
+    "Part of the digestive tract",
+    "The intestines, in everyday medical language."
+  ],
+  "BAT": [
+    "A flying mammal active at night",
+    "Also sporting equipment for striking a ball."
+  ],
+  "ANNUM": [
+    "Year, in a Latin phrase",
+    "Appears after 'per' when talking about annual pay."
+  ],
+  "TEEMS": [
+    "Is full of busy living things",
+    "As in a pond that ___ with fish."
+  ],
+  "SACKS": [
+    "Large bags for storing grain",
+    "Plural of a heavy-duty bag."
+  ],
+  "SCARF": [
+    "A long garment wrapped around your neck",
+    "Keeps you warm in winter."
+  ],
+  "ARDOR": [
+    "Intense enthusiasm, in American spelling",
+    "Fervour or passion."
+  ],
+  "COMBO": [
+    "A combination of different things",
+    "Also a small musical group."
+  ],
+  "KNEE": [
+    "The joint halfway down your leg",
+    "A hinge between thigh and shin."
+  ],
+  "SEND": [
+    "Make a message or parcel go to someone",
+    "The opposite of receive."
+  ],
+  "CRONE": [
+    "An old woman in a fairy tale",
+    "A traditional, often unkind folklore term."
+  ],
+  "ADMEN": [
+    "Men working in advertising, traditionally",
+    "An older plural for male marketing professionals."
+  ],
+  "ROBED": [
+    "Dressed in a long ceremonial gown",
+    "Wearing formal loose garments."
   ]
 }
