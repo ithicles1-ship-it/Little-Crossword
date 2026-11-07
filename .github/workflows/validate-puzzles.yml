@@ -8,6 +8,11 @@ on:
       - 'clue-alternates.js'
       - 'daily.js'
       - 'scripts/check_puzzles.js'
+      - 'scripts/check_v13.js'
+      - 'data/classics100.json'
+      - 'extra-themes.js'
+      - 'menu.js'
+      - 'app.js'
       - '.github/workflows/validate-puzzles.yml'
   workflow_dispatch:
 permissions:
@@ -22,6 +27,8 @@ jobs:
         with:
           node-version: '22'
       - name: Validate compact grids and clue uniqueness
-        run: node scripts/check_puzzles.js
+        run: |
+          node scripts/check_puzzles.js
+          node scripts/check_v13.js
       - name: Validate news publisher syntax
         run: python -m py_compile scripts/build_news.py
