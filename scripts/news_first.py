@@ -83,11 +83,14 @@ def source_words(items, fill_words):
 
 def dictionary():
     classic=json.loads((ROOT/'data'/'classics100.json').read_text(encoding='utf-8'))
+    review=json.loads((ROOT/'data'/'editorial-policy.json').read_text(encoding='utf-8'))
+    exclude=set(review['restrictedForNewsFill'])
     manual=json.loads((ROOT/'data'/'classic-curated-fallbacks.json').read_text(encoding='utf-8'))
     fill={}
     for index,p in enumerate(classic):
         for w,c,h in zip(p['answers'],p['clues'],p['hints']):
             if not 3<=len(w)<=5 or not re.fullmatch('[A-Z]+',w):continue
+            if w in exclude:continue
             if w not in fill:
                 edited=(index<18) or w in manual
                 fill[w]=(c,h,4 if edited else 1)
