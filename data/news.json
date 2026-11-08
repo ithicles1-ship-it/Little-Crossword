@@ -1,78 +1,61 @@
 {
-  "date": "2026-11-07",
+  "date": "2026-11-08",
   "kind": "news",
   "publisher": "multi-source-rss",
   "puzzle": {
     "shape": [
-      "##...",
       "#....",
       ".....",
       ".....",
-      "....#"
+      "....#",
+      "...##"
     ],
     "answers": [
-      "FAT",
-      "FATAL",
-      "AVAIL",
-      "TELL",
-      "SAVE",
-      "SEMI",
-      "METAL",
-      "MET",
-      "EMAIL",
-      "TILL"
+      "MEGA",
+      "MODEL",
+      "EAGLE",
+      "GREY",
+      "ADS",
+      "HOARD",
+      "HERO",
+      "EDGES",
+      "RELY",
+      "OLE"
     ],
     "clues": [
-      "The part trimmed from a steak",
-      "Sky News in the news: Leaving no second chance",
-      "Use to your advantage",
-      "Don't keep me guessing",
-      "The Guardian headline: “Can AI really _____ you money on your heating bill? I spent two years testing to find out”",
-      "Only halfway there",
-      "Al Jazeera headline: “‘Every person has their luck’: Morocco’s beach _____ detectorists”",
-      "Came face-to-face",
-      "BBC World in the news: A message that skips the postbox",
-      "The place where cash changes hands"
+      "Enormous, in casual speech",
+      "A miniature replica of a plane",
+      "BBC News headline: Germans wrestle with what to do with Hitler's destroyed ____'s Nest retreat",
+      "The colour between black and white, in British English",
+      "Short promotional messages",
+      "A secret stash of supplies",
+      "The person who saves the day",
+      "The outer borders of a page",
+      "Put your trust in someone",
+      "What a crowd might shout at a flamenco show"
     ],
     "hints": [
-      "The opposite of lean.",
-      "Causing death.",
-      "Often follows 'of no ...'.",
-      "Say or inform.",
-      "Prevent a goal; also keep for later.",
-      "A prefix for half, or part of a final round.",
-      "Iron and copper belong to this group.",
-      "Past tense of meet.",
-      "Electronic mail.",
-      "Shop cash drawer; or 'until'."
+      "A prefix meaning a million.",
+      "Also someone posing for a photograph.",
+      "The bird whose score in golf is two under par.",
+      "The British spelling of gray.",
+      "Abbreviation for advertisements.",
+      "Stockpile, rather than spend or share.",
+      "A brave protagonist.",
+      "Where a shape ends.",
+      "Depend on a person or thing.",
+      "Spanish cheer of encouragement."
     ],
-    "title": "In the News",
-    "description": "4 topical clues from Al Jazeera, BBC World, Sky News, The Guardian",
     "sources": [
       {
-        "title": "Can AI really save you money on your heating bill? I spent two years testing to find out",
-        "url": "https://www.theguardian.com/money/2026/nov/07/can-ai-save-you-money-heating-bill",
-        "published": "2026-11-07T07:00:07+00:00",
-        "source": "The Guardian"
-      },
-      {
-        "title": "‘Every person has their luck’: Morocco’s beach metal detectorists",
-        "url": "https://www.aljazeera.com/news/2026/11/7/beachcombers-in-morocco-hunt-for-hidden-treasure?traffic_source=rss",
-        "published": "2026-11-07T06:47:45+00:00",
-        "source": "Al Jazeera"
-      },
-      {
-        "title": "Bomb hoaxes: Messages reveal how threat was passed on by air traffic control",
-        "url": "https://www.bbc.co.uk/news/videos/cq398m8w41lyo?at_medium=RSS&at_campaign=rss",
-        "published": "2026-11-05T18:22:46+00:00",
-        "source": "BBC World"
-      },
-      {
-        "title": "Boy, 6, dies in hospital after house fire that killed four members of his family",
-        "url": "https://news.sky.com/story/boy-6-dies-in-hospital-after-house-fire-that-killed-four-members-of-his-family-13609051",
-        "published": "2026-11-06T20:29:00+00:00",
-        "source": "Sky News"
+        "title": "Germans wrestle with what to do with Hitler's destroyed Eagle's Nest retreat",
+        "url": "https://www.bbc.co.uk/news/articles/cm74pk1g51nko?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-08T00:48:59+00:00",
+        "source": "BBC News"
       }
-    ]
+    ],
+    "title": "In the News",
+    "description": "1 verified headline answer built into today’s crossword",
+    "method": "headline-first"
   }
 }

@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-08",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "#....",
+      ".....",
+      ".....",
+      "....#",
+      "...##"
+    ],
+    "answers": [
+      "MEGA",
+      "MODEL",
+      "EAGLE",
+      "GREY",
+      "ADS",
+      "HOARD",
+      "HERO",
+      "EDGES",
+      "RELY",
+      "OLE"
+    ],
+    "clues": [
+      "Enormous, in casual speech",
+      "A miniature replica of a plane",
+      "BBC News headline: Germans wrestle with what to do with Hitler's destroyed ____'s Nest retreat",
+      "The colour between black and white, in British English",
+      "Short promotional messages",
+      "A secret stash of supplies",
+      "The person who saves the day",
+      "The outer borders of a page",
+      "Put your trust in someone",
+      "What a crowd might shout at a flamenco show"
+    ],
+    "hints": [
+      "A prefix meaning a million.",
+      "Also someone posing for a photograph.",
+      "The bird whose score in golf is two under par.",
+      "The British spelling of gray.",
+      "Abbreviation for advertisements.",
+      "Stockpile, rather than spend or share.",
+      "A brave protagonist.",
+      "Where a shape ends.",
+      "Depend on a person or thing.",
+      "Spanish cheer of encouragement."
+    ],
+    "sources": [
+      {
+        "title": "Germans wrestle with what to do with Hitler's destroyed Eagle's Nest retreat",
+        "url": "https://www.bbc.co.uk/news/articles/cm74pk1g51nko?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-08T00:48:59+00:00",
+        "source": "BBC News"
+      }
+    ],
+    "title": "In the News",
+    "description": "1 verified headline answer built into today’s crossword",
+    "method": "headline-first"
+  }
+}
