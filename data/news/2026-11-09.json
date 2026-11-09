@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-09",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "#....",
+      ".....",
+      ".....",
+      ".....",
+      "#...#"
+    ],
+    "answers": [
+      "SALE",
+      "STRAW",
+      "AROMA",
+      "LASER",
+      "EYES",
+      "STRAY",
+      "SAG",
+      "AROSE",
+      "GAMES",
+      "WAR"
+    ],
+    "clues": [
+      "An event when prices are reduced",
+      "What might let you sip a milkshake",
+      "The lovely smell of fresh coffee",
+      "A concentrated beam of light",
+      "The organs that let you see",
+      "An animal wandering without an owner",
+      "Droop in the middle under the weight",
+      "Came up or emerged",
+      "BBC News headline: What can you read into Premier League table after 10 ____?",
+      "Fighting between nations or armies"
+    ],
+    "hints": [
+      "The shop's discount promotion.",
+      "Also dried stalks used as farm bedding.",
+      "A pleasant scent.",
+      "Used in scanners and some medical procedures.",
+      "You have two of them on your face.",
+      "A lost pet, or one that has gone off course.",
+      "What an old mattress might do.",
+      "Past tense of arise.",
+      "Plural of a pastime or competition.",
+      "The opposite of peace."
+    ],
+    "sources": [
+      {
+        "title": "What can you read into Premier League table after 10 games?",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c91463n3mlzlo?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-08T19:40:34+00:00",
+        "source": "BBC News"
+      }
+    ],
+    "title": "In the News",
+    "description": "1 verified headline answer built into today’s crossword",
+    "method": "headline-first"
+  }
+}
