@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-10",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      "#....",
+      ".....",
+      ".....",
+      "....#"
+    ],
+    "answers": [
+      "SUN",
+      "SONGS",
+      "UPSET",
+      "NEED",
+      "HOPE",
+      "HERE",
+      "SENSE",
+      "SUB",
+      "URGED",
+      "BEST"
+    ],
+    "clues": [
+      "The reason the shadows move",
+      "What the crowd sings back",
+      "When things don't go to plan",
+      "Not merely a nice extra",
+      "Al Jazeera in the news: The thing that keeps you trying",
+      "Present at this very spot",
+      "What makes the answer feel right",
+      "A replacement called from the bench",
+      "Sky News headline: “Scots _____ to use A&E 'only when necessary' amid 'significant pressures'”",
+      "The Guardian headline: “Ultimate 1-50: the male footballers _____ associated with each squad number”"
+    ],
+    "hints": [
+      "Our nearest star.",
+      "Pieces of music with words.",
+      "Distressed or knocked out of balance.",
+      "Something essential.",
+      "A wish that something good will happen.",
+      "In this place.",
+      "A human has five ways of perceiving things.",
+      "A bench replacement or an underwater vessel.",
+      "Strongly encouraged.",
+      "Better than every other."
+    ],
+    "title": "In the News",
+    "description": "3 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "Hegseth promises to defend ‘warriors’ as he faces impeachment",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/11/10/hegseth-promises-to-defend-warriors-as-he-faces-impeachment?traffic_source=rss",
+        "published": "2026-11-10T14:02:25+00:00",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "Scots urged to use A&E 'only when necessary' amid 'significant pressures'",
+        "url": "https://news.sky.com/story/scots-urged-to-use-ae-only-when-necessary-amid-significant-pressures-13610586",
+        "published": "2026-11-10T11:40:00+00:00",
+        "source": "Sky News"
+      },
+      {
+        "title": "Ultimate 1-50: the male footballers best associated with each squad number",
+        "url": "https://www.theguardian.com/football/ng-interactive/2026/nov/10/ultimate-1-50-the-male-footballers-best-associated-with-each-squad-number",
+        "published": "2026-11-10T06:00:30+00:00",
+        "source": "The Guardian"
+      }
+    ]
+  }
+}
