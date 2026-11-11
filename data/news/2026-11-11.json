@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-11",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      "#....",
+      ".....",
+      ".....",
+      "....#"
+    ],
+    "answers": [
+      "SAD",
+      "SANTA",
+      "ANGER",
+      "DEED",
+      "LANE",
+      "LACE",
+      "RANGE",
+      "RAY",
+      "ACTED",
+      "YEAR"
+    ],
+    "clues": [
+      "How a goodbye can feel",
+      "The Guardian in the news: A very busy visitor on Christmas Eve",
+      "What a long queue might stir up",
+      "An action worth remembering",
+      "A quieter route between the fields",
+      "Finishing touch for a formal dress",
+      "From the lowest to the highest",
+      "A little line of sunshine",
+      "Played a part, perhaps",
+      "BBC News in the news: One complete lap of the calendar"
+    ],
+    "hints": [
+      "Unhappy.",
+      "Father Christmas.",
+      "A strong feeling of irritation.",
+      "Something done, good or bad.",
+      "A narrow road or track.",
+      "Decorative delicate fabric or a shoe fastening.",
+      "The span between extremes.",
+      "A beam of light.",
+      "It's what performers do on stage.",
+      "Period of 365 or 366 days."
+    ],
+    "title": "In the News",
+    "description": "2 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "Mini record player on track for No 1 in Christmas toy parade",
+        "url": "https://www.theguardian.com/lifeandstyle/2026/nov/11/mini-record-player-on-track-for-no-1-in-christmas-toy-parade",
+        "published": "2026-11-11T12:40:19+00:00",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Dua Lipa to become first female British headliner at Coachella 2027",
+        "url": "https://www.bbc.co.uk/news/articles/cjr4g0n9d1g5o?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-11T10:53:47+00:00",
+        "source": "BBC News"
+      }
+    ]
+  }
+}

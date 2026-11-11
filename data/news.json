@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "kind": "news",
   "publisher": "multi-source-rss",
   "puzzle": {
@@ -11,62 +11,56 @@
       "....#"
     ],
     "answers": [
-      "SUN",
-      "SONGS",
-      "UPSET",
-      "NEED",
-      "HOPE",
-      "HERE",
-      "SENSE",
-      "SUB",
-      "URGED",
-      "BEST"
+      "SAD",
+      "SANTA",
+      "ANGER",
+      "DEED",
+      "LANE",
+      "LACE",
+      "RANGE",
+      "RAY",
+      "ACTED",
+      "YEAR"
     ],
     "clues": [
-      "The reason the shadows move",
-      "What the crowd sings back",
-      "When things don't go to plan",
-      "Not merely a nice extra",
-      "Al Jazeera in the news: The thing that keeps you trying",
-      "Present at this very spot",
-      "What makes the answer feel right",
-      "A replacement called from the bench",
-      "Sky News headline: “Scots _____ to use A&E 'only when necessary' amid 'significant pressures'”",
-      "The Guardian headline: “Ultimate 1-50: the male footballers _____ associated with each squad number”"
+      "How a goodbye can feel",
+      "The Guardian in the news: A very busy visitor on Christmas Eve",
+      "What a long queue might stir up",
+      "An action worth remembering",
+      "A quieter route between the fields",
+      "Finishing touch for a formal dress",
+      "From the lowest to the highest",
+      "A little line of sunshine",
+      "Played a part, perhaps",
+      "BBC News in the news: One complete lap of the calendar"
     ],
     "hints": [
-      "Our nearest star.",
-      "Pieces of music with words.",
-      "Distressed or knocked out of balance.",
-      "Something essential.",
-      "A wish that something good will happen.",
-      "In this place.",
-      "A human has five ways of perceiving things.",
-      "A bench replacement or an underwater vessel.",
-      "Strongly encouraged.",
-      "Better than every other."
+      "Unhappy.",
+      "Father Christmas.",
+      "A strong feeling of irritation.",
+      "Something done, good or bad.",
+      "A narrow road or track.",
+      "Decorative delicate fabric or a shoe fastening.",
+      "The span between extremes.",
+      "A beam of light.",
+      "It's what performers do on stage.",
+      "Period of 365 or 366 days."
     ],
     "title": "In the News",
-    "description": "3 headline-matched clues; a news-first grid was unavailable",
+    "description": "2 headline-matched clues; a news-first grid was unavailable",
     "method": "matched-existing-fallback",
     "sources": [
       {
-        "title": "Hegseth promises to defend ‘warriors’ as he faces impeachment",
-        "url": "https://www.aljazeera.com/video/newsfeed/2026/11/10/hegseth-promises-to-defend-warriors-as-he-faces-impeachment?traffic_source=rss",
-        "published": "2026-11-10T14:02:25+00:00",
-        "source": "Al Jazeera"
-      },
-      {
-        "title": "Scots urged to use A&E 'only when necessary' amid 'significant pressures'",
-        "url": "https://news.sky.com/story/scots-urged-to-use-ae-only-when-necessary-amid-significant-pressures-13610586",
-        "published": "2026-11-10T11:40:00+00:00",
-        "source": "Sky News"
-      },
-      {
-        "title": "Ultimate 1-50: the male footballers best associated with each squad number",
-        "url": "https://www.theguardian.com/football/ng-interactive/2026/nov/10/ultimate-1-50-the-male-footballers-best-associated-with-each-squad-number",
-        "published": "2026-11-10T06:00:30+00:00",
+        "title": "Mini record player on track for No 1 in Christmas toy parade",
+        "url": "https://www.theguardian.com/lifeandstyle/2026/nov/11/mini-record-player-on-track-for-no-1-in-christmas-toy-parade",
+        "published": "2026-11-11T12:40:19+00:00",
         "source": "The Guardian"
+      },
+      {
+        "title": "Dua Lipa to become first female British headliner at Coachella 2027",
+        "url": "https://www.bbc.co.uk/news/articles/cjr4g0n9d1g5o?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-11T10:53:47+00:00",
+        "source": "BBC News"
       }
     ]
   }
