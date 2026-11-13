@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-13",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "#....",
+      "#....",
+      ".....",
+      ".....",
+      "...##"
+    ],
+    "answers": [
+      "SANE",
+      "SPIRE",
+      "ALLOW",
+      "NEED",
+      "EASE",
+      "PLEA",
+      "MILES",
+      "MEN",
+      "ERODE",
+      "NEW"
+    ],
+    "clues": [
+      "Thinking clearly and rationally",
+      "The tall point on top of a church",
+      "Give someone permission",
+      "BBC News headline: 'It's been amazing' - Owain Wyn Evans completes four-nation Children in ____ ride",
+      "The opposite of difficulty",
+      "An urgent appeal for help",
+      "A long way to walk, perhaps",
+      "Adult males",
+      "Wear away, little by little",
+      "Fresh from the box"
+    ],
+    "hints": [
+      "The opposite of irrational.",
+      "A tapering architectural feature.",
+      "Let something happen.",
+      "Something you cannot manage without.",
+      "A feeling of comfort or effortlessness.",
+      "Also a response entered in court.",
+      "Units used for measuring road distances.",
+      "Plural of man.",
+      "What wind and water do to a coastline.",
+      "The opposite of second-hand."
+    ],
+    "sources": [
+      {
+        "title": "'It's been amazing' - Owain Wyn Evans completes four-nation Children in Need ride",
+        "url": "https://www.bbc.co.uk/news/articles/cr86895201y9o?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-13T13:55:55+00:00",
+        "source": "BBC News"
+      }
+    ],
+    "title": "In the News",
+    "description": "1 verified headline answer built into today’s crossword",
+    "method": "headline-first"
+  }
+}

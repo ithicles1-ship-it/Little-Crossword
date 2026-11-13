@@ -1,57 +1,57 @@
 {
-  "date": "2026-11-12",
+  "date": "2026-11-13",
   "kind": "news",
   "publisher": "multi-source-rss",
   "puzzle": {
     "shape": [
       "#....",
+      "#....",
       ".....",
       ".....",
-      "....#",
       "...##"
     ],
     "answers": [
-      "SCAN",
-      "SPREE",
-      "CABAL",
-      "ACID",
-      "NET",
-      "SPACE",
-      "SOLE",
-      "ORBIT",
-      "LEAD",
-      "EEL"
+      "SANE",
+      "SPIRE",
+      "ALLOW",
+      "NEED",
+      "EASE",
+      "PLEA",
+      "MILES",
+      "MEN",
+      "ERODE",
+      "NEW"
     ],
     "clues": [
-      "Look over quickly for a familiar face",
-      "An enthusiastic bout of shopping",
-      "A secretive group plotting together",
-      "A substance with a low pH",
-      "What catches a fish or a football",
-      "The Guardian headline: Oil slicks seen from ____: the devastating impact of boat strikes on fragile Gulf ecosystems",
-      "The bottom of a shoe or foot",
-      "The path Earth follows around the Sun",
-      "What a detective hopes to follow",
-      "A fish that almost looks like a snake"
+      "Thinking clearly and rationally",
+      "The tall point on top of a church",
+      "Give someone permission",
+      "BBC News headline: 'It's been amazing' - Owain Wyn Evans completes four-nation Children in ____ ride",
+      "The opposite of difficulty",
+      "An urgent appeal for help",
+      "A long way to walk, perhaps",
+      "Adult males",
+      "Wear away, little by little",
+      "Fresh from the box"
     ],
     "hints": [
-      "Also what a medical imaging machine can do.",
-      "Often comes after 'shopping'.",
-      "A small clique working behind the scenes.",
-      "Lemon juice is an example.",
-      "A mesh trap or goal backing.",
-      "Also an empty area between objects.",
-      "Also a flat fish.",
-      "A repeating route around a larger body.",
-      "Also the person at the front of a group.",
-      "Long, slender and slippery."
+      "The opposite of irrational.",
+      "A tapering architectural feature.",
+      "Let something happen.",
+      "Something you cannot manage without.",
+      "A feeling of comfort or effortlessness.",
+      "Also a response entered in court.",
+      "Units used for measuring road distances.",
+      "Plural of man.",
+      "What wind and water do to a coastline.",
+      "The opposite of second-hand."
     ],
     "sources": [
       {
-        "title": "Oil slicks seen from space: the devastating impact of boat strikes on fragile Gulf ecosystems",
-        "url": "https://www.theguardian.com/world/2026/nov/12/oil-slicks-seen-from-space-the-devastating-impact-of-boat-strikes-on-fragile-gulf-ecosystems",
-        "published": "2026-11-12T03:00:07+00:00",
-        "source": "The Guardian"
+        "title": "'It's been amazing' - Owain Wyn Evans completes four-nation Children in Need ride",
+        "url": "https://www.bbc.co.uk/news/articles/cr86895201y9o?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-13T13:55:55+00:00",
+        "source": "BBC News"
       }
     ],
     "title": "In the News",
