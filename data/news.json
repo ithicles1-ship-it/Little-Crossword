@@ -1,61 +1,67 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-14",
   "kind": "news",
   "publisher": "multi-source-rss",
   "puzzle": {
     "shape": [
-      "#....",
+      "##...",
       "#....",
       ".....",
       ".....",
-      "...##"
+      "....#"
     ],
     "answers": [
-      "SANE",
-      "SPIRE",
-      "ALLOW",
-      "NEED",
-      "EASE",
-      "PLEA",
-      "MILES",
-      "MEN",
-      "ERODE",
-      "NEW"
+      "GAS",
+      "GATES",
+      "ALICE",
+      "SENT",
+      "TALE",
+      "TALL",
+      "SATIN",
+      "SEE",
+      "ELECT",
+      "ELSE"
     ],
     "clues": [
-      "Thinking clearly and rationally",
-      "The tall point on top of a church",
-      "Give someone permission",
-      "BBC News headline: 'It's been amazing' - Owain Wyn Evans completes four-nation Children in ____ ride",
-      "The opposite of difficulty",
-      "An urgent appeal for help",
-      "A long way to walk, perhaps",
-      "Adult males",
-      "Wear away, little by little",
-      "Fresh from the box"
+      "The fuel you can't always see",
+      "The Guardian in the news: What guards the entrance to a garden",
+      "A girl who fell down a rabbit hole",
+      "The message is no longer in drafts",
+      "You never know how it ends",
+      "The one who can reach the top shelf",
+      "A sheen you can feel",
+      "What an optician helps you do",
+      "Al Jazeera in the news: Put into office by voting",
+      "What other option is there?"
     ],
     "hints": [
-      "The opposite of irrational.",
-      "A tapering architectural feature.",
-      "Let something happen.",
-      "Something you cannot manage without.",
-      "A feeling of comfort or effortlessness.",
-      "Also a response entered in court.",
-      "Units used for measuring road distances.",
-      "Plural of man.",
-      "What wind and water do to a coastline.",
-      "The opposite of second-hand."
-    ],
-    "sources": [
-      {
-        "title": "'It's been amazing' - Owain Wyn Evans completes four-nation Children in Need ride",
-        "url": "https://www.bbc.co.uk/news/articles/cr86895201y9o?at_medium=RSS&at_campaign=rss",
-        "published": "2026-11-13T13:55:55+00:00",
-        "source": "BBC News"
-      }
+      "A substance that spreads to fill a container.",
+      "Swinging or sliding barriers.",
+      "A famous Wonderland heroine.",
+      "Dispatched or mailed.",
+      "A story.",
+      "Of greater than average height.",
+      "Smooth glossy fabric.",
+      "Perceive with your eyes.",
+      "Choose through a ballot.",
+      "Meaning 'other' or 'different'."
     ],
     "title": "In the News",
-    "description": "1 verified headline answer built into today’s crossword",
-    "method": "headline-first"
+    "description": "2 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "UK-EU breakthrough will allow airport-style checks at Eurotunnel to avoid border ‘chaos’",
+        "url": "https://www.theguardian.com/travel/2026/nov/14/eurotunnel-drive-in-fingerprint-trial-folkestone-calais-border",
+        "published": "2026-11-14T07:00:38+00:00",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Migrant caravan heads to US from Mexico after Democrats’ midterm win",
+        "url": "https://www.aljazeera.com/video/newsfeed/2026/11/14/migrant-caravan-heads-to-us-from-mexico-after-democrats-midterm-win?traffic_source=rss",
+        "published": "2026-11-14T09:43:54+00:00",
+        "source": "Al Jazeera"
+      }
+    ]
   }
 }
