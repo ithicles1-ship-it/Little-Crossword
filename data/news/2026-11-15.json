@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-15",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      "#....",
+      ".....",
+      ".....",
+      "....#"
+    ],
+    "answers": [
+      "FAT",
+      "FALSE",
+      "ASKED",
+      "TEST",
+      "BASE",
+      "BONY",
+      "FOLKS",
+      "FOE",
+      "ONSET",
+      "EYED"
+    ],
+    "clues": [
+      "The part trimmed from a steak",
+      "Not one word of it is true",
+      "Sky News headline: “US _____ if Ukraine would give up parts of Donbas for NATO membership, Zelenskyy says”",
+      "The paper you'd rather not fail",
+      "BBC News headline: “Iran targets US military _____ in Bahrain with drone attack”",
+      "All angles and no padding",
+      "The people back home",
+      "Someone on the other side",
+      "Right at the beginning",
+      "Gave it a lingering look"
+    ],
+    "hints": [
+      "The opposite of lean.",
+      "Untrue or incorrect.",
+      "Past tense of requesting information.",
+      "An exam or trial.",
+      "A foundation or starting point.",
+      "Having prominent bones.",
+      "Informal word for people or family.",
+      "An enemy.",
+      "The start of something, often unpleasant.",
+      "Watched closely, in the past tense."
+    ],
+    "title": "In the News",
+    "description": "2 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "US asked if Ukraine would give up parts of Donbas for NATO membership, Zelenskyy says",
+        "url": "https://news.sky.com/story/us-asks-if-ukraine-would-give-up-parts-of-donbas-for-nato-membership-zelenskyy-says-13612188",
+        "published": "2026-11-14T13:12:00+00:00",
+        "source": "Sky News"
+      },
+      {
+        "title": "Iran targets US military base in Bahrain with drone attack",
+        "url": "https://www.bbc.co.uk/news/articles/cqn4e2py48kwo?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-15T13:42:58+00:00",
+        "source": "BBC News"
+      }
+    ]
+  }
+}
