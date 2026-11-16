@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-16",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      "#....",
+      ".....",
+      ".....",
+      "....#"
+    ],
+    "answers": [
+      "FAT",
+      "FATAL",
+      "AVAIL",
+      "TELL",
+      "SAVE",
+      "SEMI",
+      "METAL",
+      "MET",
+      "EMAIL",
+      "TILL"
+    ],
+    "clues": [
+      "The part trimmed from a steak",
+      "Al Jazeera in the news: Leaving no second chance",
+      "Use to your advantage",
+      "The Guardian headline: “Miaow! What your cat is really trying to _____ you”",
+      "BBC News headline: “How Frank can restore reputation and _____ Crystal Palace”",
+      "Only halfway there",
+      "Not wood, glass or plastic",
+      "Came face-to-face",
+      "BBC News in the news: A message that skips the postbox",
+      "The place where cash changes hands"
+    ],
+    "hints": [
+      "The opposite of lean.",
+      "Causing death.",
+      "Often follows 'of no ...'.",
+      "Say or inform.",
+      "Prevent a goal; also keep for later.",
+      "A prefix for half, or part of a final round.",
+      "Iron and copper belong to this group.",
+      "Past tense of meet.",
+      "Electronic mail.",
+      "Shop cash drawer; or 'until'."
+    ],
+    "title": "In the News",
+    "description": "4 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "Miaow! What your cat is really trying to tell you",
+        "url": "https://www.theguardian.com/lifeandstyle/2026/nov/16/miaow-what-your-cat-is-really-trying-to-tell-you",
+        "published": "2026-11-16T15:17:30+00:00",
+        "source": "The Guardian"
+      },
+      {
+        "title": "How Frank can restore reputation and save Crystal Palace",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cmge3y2qjlyro?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-16T15:15:57+00:00",
+        "source": "BBC News"
+      },
+      {
+        "title": "Russell Brand prison message 'appalling' and being investigated, No 10 says",
+        "url": "https://www.bbc.co.uk/news/articles/cm9d7pe8y559o?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-16T15:31:58+00:00",
+        "source": "BBC News"
+      },
+      {
+        "title": "‘My arms are empty’: Tragedy strikes Gaza family after baby dies from cold",
+        "url": "https://www.aljazeera.com/features/2026/11/16/my-arms-are-empty-gaza-mothers-brace-for-another-winter-of-cold-and-fear?traffic_source=rss",
+        "published": "2026-11-16T14:20:43+00:00",
+        "source": "Al Jazeera"
+      }
+    ]
+  }
+}
