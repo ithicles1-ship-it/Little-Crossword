@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-20",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      ".....",
+      ".....",
+      ".....",
+      "#...."
+    ],
+    "answers": [
+      "DAD",
+      "DRAMA",
+      "ADDED",
+      "DEEDS",
+      "HORDE",
+      "HEN",
+      "OVAL",
+      "EVADE",
+      "NAMED",
+      "LADS"
+    ],
+    "clues": [
+      "The Guardian headline: ‘I went to bed … then ____ called to say Mum was convulsing’ - This is climate breakdown",
+      "A TV series full of conflict",
+      "Put one more onto the pile",
+      "Actions that speak louder than words",
+      "A huge crowd moving together",
+      "The egg-laying bird in a farmyard",
+      "An egg-like shape",
+      "Avoid being caught or answering",
+      "Given a particular title or identity",
+      "The boys off on a night out"
+    ],
+    "hints": [
+      "A male parent.",
+      "Also a play intended for the stage.",
+      "Increased a total in the past.",
+      "Plural of an act or legal property document.",
+      "A large unruly mass of people.",
+      "A female chicken.",
+      "A stretched circle.",
+      "Escape through clever manoeuvring.",
+      "What parents did when choosing a baby's first name.",
+      "Informal British plural for young men."
+    ],
+    "sources": [
+      {
+        "title": "‘I went to bed … then Dad called to say Mum was convulsing’ - This is climate breakdown",
+        "url": "https://www.theguardian.com/environment/ng-interactive/2026/nov/20/ferocity-of-heatwave-took-them-by-surprise-anne-sophie-woronoff-climate-breakdown",
+        "published": "2026-11-20T12:00:18+00:00",
+        "source": "The Guardian"
+      }
+    ],
+    "title": "In the News",
+    "description": "1 verified headline answer built into today’s crossword",
+    "method": "headline-first"
+  }
+}
