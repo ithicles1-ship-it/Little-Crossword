@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-22",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      "#....",
+      ".....",
+      ".....",
+      "....#"
+    ],
+    "answers": [
+      "SUN",
+      "SANTA",
+      "ULCER",
+      "NEED",
+      "PALE",
+      "PACE",
+      "DANCE",
+      "DAY",
+      "ACTED",
+      "YEAR"
+    ],
+    "clues": [
+      "The reason the shadows move",
+      "The Guardian headline: “What do I want from _____? No more lazy, joyless Christmas lists | Polly Hudson”",
+      "A painful sore beneath the surface",
+      "Not merely a nice extra",
+      "Looking like you've seen a ghost",
+      "Keep this up when you're walking",
+      "How some people express music",
+      "Another sunrise-to-sunrise chapter",
+      "Played a part, perhaps",
+      "BBC World headline: “In a _____ of AI solving maths problems, an Anthropic worker says he may have cracked the biggest”"
+    ],
+    "hints": [
+      "Our nearest star.",
+      "Father Christmas.",
+      "An open sore in the stomach or on skin.",
+      "Something essential.",
+      "Light in colour or complexion.",
+      "Speed of movement.",
+      "Movement in time with a beat.",
+      "Twenty-four hours.",
+      "It's what performers do on stage.",
+      "Period of 365 or 366 days."
+    ],
+    "title": "In the News",
+    "description": "2 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "What do I want from Santa? No more lazy, joyless Christmas lists | Polly Hudson",
+        "url": "https://www.theguardian.com/commentisfree/2026/nov/22/what-do-i-want-from-santa-no-more-lazy-joyless-christmas-lists",
+        "published": "2026-11-22T05:00:18+00:00",
+        "source": "The Guardian"
+      },
+      {
+        "title": "In a year of AI solving maths problems, an Anthropic worker says he may have cracked the biggest",
+        "url": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-20T23:08:57+00:00",
+        "source": "BBC World"
+      }
+    ]
+  }
+}
