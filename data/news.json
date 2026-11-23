@@ -1,67 +1,61 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "kind": "news",
   "publisher": "multi-source-rss",
   "puzzle": {
     "shape": [
-      "##...",
       "#....",
       ".....",
       ".....",
-      "....#"
+      "....#",
+      "...##"
     ],
     "answers": [
-      "SUN",
-      "SANTA",
-      "ULCER",
-      "NEED",
-      "PALE",
-      "PACE",
-      "DANCE",
-      "DAY",
-      "ACTED",
-      "YEAR"
+      "HERO",
+      "HOARD",
+      "EDGED",
+      "RELY",
+      "OLE",
+      "MODEL",
+      "MEGA",
+      "EAGLE",
+      "GREY",
+      "ADD"
     ],
     "clues": [
-      "The reason the shadows move",
-      "The Guardian headline: “What do I want from _____? No more lazy, joyless Christmas lists | Polly Hudson”",
-      "A painful sore beneath the surface",
-      "Not merely a nice extra",
-      "Looking like you've seen a ghost",
-      "Keep this up when you're walking",
-      "How some people express music",
-      "Another sunrise-to-sunrise chapter",
-      "Played a part, perhaps",
-      "BBC World headline: “In a _____ of AI solving maths problems, an Anthropic worker says he may have cracked the biggest”"
+      "The person who saves the day",
+      "A secret stash of supplies",
+      "Moved slowly towards something",
+      "Put your trust in someone",
+      "What a crowd might shout at a flamenco show",
+      "A miniature replica of a plane",
+      "Enormous, in casual speech",
+      "A large bird of prey with sharp talons",
+      "The Guardian headline: ‘Most of the video budget went on Steve Strange’s makeup’: Midge Ure on how Visage made Fade to ____",
+      "Combine two numbers to get a sum"
     ],
     "hints": [
-      "Our nearest star.",
-      "Father Christmas.",
-      "An open sore in the stomach or on skin.",
-      "Something essential.",
-      "Light in colour or complexion.",
-      "Speed of movement.",
-      "Movement in time with a beat.",
-      "Twenty-four hours.",
-      "It's what performers do on stage.",
-      "Period of 365 or 366 days."
+      "A brave protagonist.",
+      "Stockpile, rather than spend or share.",
+      "Also supplied with a border or sharp rim.",
+      "Depend on a person or thing.",
+      "Spanish cheer of encouragement.",
+      "Also someone posing for a photograph.",
+      "A prefix meaning a million.",
+      "The bird whose score in golf is two under par.",
+      "The British spelling of gray.",
+      "A basic operation in arithmetic."
     ],
-    "title": "In the News",
-    "description": "2 headline-matched clues; a news-first grid was unavailable",
-    "method": "matched-existing-fallback",
     "sources": [
       {
-        "title": "What do I want from Santa? No more lazy, joyless Christmas lists | Polly Hudson",
-        "url": "https://www.theguardian.com/commentisfree/2026/nov/22/what-do-i-want-from-santa-no-more-lazy-joyless-christmas-lists",
-        "published": "2026-11-22T05:00:18+00:00",
+        "title": "‘Most of the video budget went on Steve Strange’s makeup’: Midge Ure on how Visage made Fade to Grey",
+        "url": "https://www.theguardian.com/culture/2026/nov/23/visage-fade-to-grey-midge-ure-steve-strange-millais-ophelia-pre-raphaelite",
+        "published": "2026-11-23T15:08:47+00:00",
         "source": "The Guardian"
-      },
-      {
-        "title": "In a year of AI solving maths problems, an Anthropic worker says he may have cracked the biggest",
-        "url": "https://www.bbc.co.uk/news/articles/c6pqr2g7w059o?at_medium=RSS&at_campaign=rss",
-        "published": "2026-11-20T23:08:57+00:00",
-        "source": "BBC World"
       }
-    ]
+    ],
+    "title": "In the News",
+    "description": "1 verified headline answer built into today’s crossword",
+    "method": "headline-first"
   }
 }
