@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-24",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      "#....",
+      ".....",
+      ".....",
+      "....#"
+    ],
+    "answers": [
+      "NET",
+      "NAVAL",
+      "EMAIL",
+      "TELL",
+      "GAME",
+      "GIVE",
+      "RIVAL",
+      "RAW",
+      "AVAIL",
+      "WELL"
+    ],
+    "clues": [
+      "A goalkeeper might guard one",
+      "Having to do with the fleet",
+      "A message that skips the postbox",
+      "BBC News headline: “Why I don't always _____ potential employers I'm dyslexic”",
+      "The Guardian headline: “Football Daily | The _____’s gone: has fantasy football been ruined by AI gafferbots?”",
+      "Hand something over",
+      "Al Jazeera in the news: The one you want to beat",
+      "The opposite of ready-to-eat steak",
+      "Use to your advantage",
+      "NPR headline: “They attended Trump's meme coin dinner.  It didn't go _____”"
+    ],
+    "hints": [
+      "Mesh used for catching things.",
+      "Related to ships and the navy.",
+      "Electronic mail.",
+      "Say or inform.",
+      "A competition or pastime.",
+      "Opposite of take.",
+      "A competitor.",
+      "Not cooked.",
+      "Often follows 'of no ...'.",
+      "In good health; also a water source."
+    ],
+    "title": "In the News",
+    "description": "4 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "Why I don't always tell potential employers I'm dyslexic",
+        "url": "https://www.bbc.co.uk/news/articles/c6rmgjynynero?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-24T00:00:47+00:00",
+        "source": "BBC News"
+      },
+      {
+        "title": "They attended Trump's meme coin dinner.  It didn't go well",
+        "url": "https://www.npr.org/2026/11/24/nx-s1-6051604/trump-crypto-corruption-meme-coin-dinner",
+        "published": "2026-11-24T10:00:00+00:00",
+        "source": "NPR"
+      },
+      {
+        "title": "African rivals fret over Morocco’s growing football dominance",
+        "url": "https://www.aljazeera.com/sports/2026/11/24/african-rivals-fret-over-moroccos-growing-football-dominance?traffic_source=rss",
+        "published": "2026-11-24T16:31:48+00:00",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "Football Daily | The game’s gone: has fantasy football been ruined by AI gafferbots?",
+        "url": "https://www.theguardian.com/football/2026/nov/24/fpl-ruined-ai-football-daily-newsletter",
+        "published": "2026-11-24T16:16:52+00:00",
+        "source": "The Guardian"
+      }
+    ]
+  }
+}

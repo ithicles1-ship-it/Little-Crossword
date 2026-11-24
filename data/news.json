@@ -1,61 +1,79 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "kind": "news",
   "publisher": "multi-source-rss",
   "puzzle": {
     "shape": [
+      "##...",
       "#....",
       ".....",
       ".....",
-      "....#",
-      "...##"
+      "....#"
     ],
     "answers": [
-      "HERO",
-      "HOARD",
-      "EDGED",
-      "RELY",
-      "OLE",
-      "MODEL",
-      "MEGA",
-      "EAGLE",
-      "GREY",
-      "ADD"
+      "NET",
+      "NAVAL",
+      "EMAIL",
+      "TELL",
+      "GAME",
+      "GIVE",
+      "RIVAL",
+      "RAW",
+      "AVAIL",
+      "WELL"
     ],
     "clues": [
-      "The person who saves the day",
-      "A secret stash of supplies",
-      "Moved slowly towards something",
-      "Put your trust in someone",
-      "What a crowd might shout at a flamenco show",
-      "A miniature replica of a plane",
-      "Enormous, in casual speech",
-      "A large bird of prey with sharp talons",
-      "The Guardian headline: ‘Most of the video budget went on Steve Strange’s makeup’: Midge Ure on how Visage made Fade to ____",
-      "Combine two numbers to get a sum"
+      "A goalkeeper might guard one",
+      "Having to do with the fleet",
+      "A message that skips the postbox",
+      "BBC News headline: “Why I don't always _____ potential employers I'm dyslexic”",
+      "The Guardian headline: “Football Daily | The _____’s gone: has fantasy football been ruined by AI gafferbots?”",
+      "Hand something over",
+      "Al Jazeera in the news: The one you want to beat",
+      "The opposite of ready-to-eat steak",
+      "Use to your advantage",
+      "NPR headline: “They attended Trump's meme coin dinner.  It didn't go _____”"
     ],
     "hints": [
-      "A brave protagonist.",
-      "Stockpile, rather than spend or share.",
-      "Also supplied with a border or sharp rim.",
-      "Depend on a person or thing.",
-      "Spanish cheer of encouragement.",
-      "Also someone posing for a photograph.",
-      "A prefix meaning a million.",
-      "The bird whose score in golf is two under par.",
-      "The British spelling of gray.",
-      "A basic operation in arithmetic."
-    ],
-    "sources": [
-      {
-        "title": "‘Most of the video budget went on Steve Strange’s makeup’: Midge Ure on how Visage made Fade to Grey",
-        "url": "https://www.theguardian.com/culture/2026/nov/23/visage-fade-to-grey-midge-ure-steve-strange-millais-ophelia-pre-raphaelite",
-        "published": "2026-11-23T15:08:47+00:00",
-        "source": "The Guardian"
-      }
+      "Mesh used for catching things.",
+      "Related to ships and the navy.",
+      "Electronic mail.",
+      "Say or inform.",
+      "A competition or pastime.",
+      "Opposite of take.",
+      "A competitor.",
+      "Not cooked.",
+      "Often follows 'of no ...'.",
+      "In good health; also a water source."
     ],
     "title": "In the News",
-    "description": "1 verified headline answer built into today’s crossword",
-    "method": "headline-first"
+    "description": "4 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "Why I don't always tell potential employers I'm dyslexic",
+        "url": "https://www.bbc.co.uk/news/articles/c6rmgjynynero?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-24T00:00:47+00:00",
+        "source": "BBC News"
+      },
+      {
+        "title": "They attended Trump's meme coin dinner.  It didn't go well",
+        "url": "https://www.npr.org/2026/11/24/nx-s1-6051604/trump-crypto-corruption-meme-coin-dinner",
+        "published": "2026-11-24T10:00:00+00:00",
+        "source": "NPR"
+      },
+      {
+        "title": "African rivals fret over Morocco’s growing football dominance",
+        "url": "https://www.aljazeera.com/sports/2026/11/24/african-rivals-fret-over-moroccos-growing-football-dominance?traffic_source=rss",
+        "published": "2026-11-24T16:31:48+00:00",
+        "source": "Al Jazeera"
+      },
+      {
+        "title": "Football Daily | The game’s gone: has fantasy football been ruined by AI gafferbots?",
+        "url": "https://www.theguardian.com/football/2026/nov/24/fpl-ruined-ai-football-daily-newsletter",
+        "published": "2026-11-24T16:16:52+00:00",
+        "source": "The Guardian"
+      }
+    ]
   }
 }
