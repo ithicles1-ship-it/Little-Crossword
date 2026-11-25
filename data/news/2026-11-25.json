@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-25",
+  "kind": "news",
+  "publisher": "multi-source-rss",
+  "puzzle": {
+    "shape": [
+      "##...",
+      "#....",
+      ".....",
+      ".....",
+      "....#"
+    ],
+    "answers": [
+      "RAT",
+      "RATES",
+      "AVERT",
+      "TENT",
+      "SAVE",
+      "SALE",
+      "EATEN",
+      "EAR",
+      "ALERT",
+      "REST"
+    ],
+    "clues": [
+      "A small creature with a bad reputation",
+      "The Guardian in the news: Prices that change by the hour",
+      "Keep an unwanted result away",
+      "A bedroom you can pack up",
+      "BBC News headline: “Missed chances to _____ boy, 2, murdered by grandparents despite dad's concerns, review finds”",
+      "The shop's red tags mean this",
+      "Nothing left on the plate",
+      "A musician may have a good one",
+      "Al Jazeera in the news: Wide awake to danger",
+      "What your body wants after a marathon"
+    ],
+    "hints": [
+      "Long-tailed rodent.",
+      "Charges per unit or amount.",
+      "Turn aside or prevent.",
+      "Portable fabric shelter.",
+      "Prevent a goal; also keep for later.",
+      "Goods sold for reduced prices.",
+      "Past participle of 'eat'.",
+      "You listen with this part of your head.",
+      "A warning or being watchful.",
+      "A break from activity."
+    ],
+    "title": "In the News",
+    "description": "3 headline-matched clues; a news-first grid was unavailable",
+    "method": "matched-existing-fallback",
+    "sources": [
+      {
+        "title": "Nationwide unveils 1% deposit mortgage deal for first-time buyers",
+        "url": "https://www.theguardian.com/money/2026/nov/25/nationwide-unveils-1-deposit-mortgage-deal-first-time-buyers-in-uk",
+        "published": "2026-11-25T14:54:17+00:00",
+        "source": "The Guardian"
+      },
+      {
+        "title": "Missed chances to save boy, 2, murdered by grandparents despite dad's concerns, review finds",
+        "url": "https://www.bbc.co.uk/news/articles/c63egnjyy5dno?at_medium=RSS&at_campaign=rss",
+        "published": "2026-11-25T10:00:14+00:00",
+        "source": "BBC News"
+      },
+      {
+        "title": "South Africa court repeals ‘farmgate’ impeachment threat against Ramaphosa",
+        "url": "https://www.aljazeera.com/news/2026/11/25/south-africa-court-repeals-farmgate-impeachment-threat-against-ramaphosa?traffic_source=rss",
+        "published": "2026-11-25T15:35:33+00:00",
+        "source": "Al Jazeera"
+      }
+    ]
+  }
+}
