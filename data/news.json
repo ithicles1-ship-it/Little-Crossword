@@ -1,65 +1,65 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "kind": "news",
   "publisher": "multi-source-rss",
   "puzzle": {
     "shape": [
-      "#...#",
-      "....#",
+      "##...",
+      "#....",
       ".....",
       ".....",
-      "....."
+      "....#"
     ],
     "answers": [
-      "MAN",
-      "MINOR",
-      "ANGLE",
-      "NERVE",
-      "LINE",
-      "LAST",
-      "ANGRY",
-      "YES",
-      "SOLVE",
-      "TREES"
+      "NEW",
+      "NOTES",
+      "ERECT",
+      "WEST",
+      "MORE",
+      "MILE",
+      "BITES",
+      "BET",
+      "ELECT",
+      "TEST"
     ],
     "clues": [
-      "He might be the one of the hour",
-      "Not quite of age",
-      "A fresh way to look at a problem",
-      "What it takes to speak up in a crowd",
-      "An actor shouldn't forget this",
-      "The Guardian headline: “Contraceptive pill usage in Great Britain fell drastically in _____ decade, research finds”",
-      "Al Jazeera headline: “Why is Italy _____ with Ukraine for striking Russian ships off Libya?”",
-      "The little word that gives permission",
-      "Make the mystery stop being a mystery",
-      "What gives a forest its height"
+      "Still has its packaging on",
+      "A melody is made of these",
+      "Standing up straight",
+      "The Guardian headline: “‘Systematic assault’: paramedics blocked and attacked by Israeli settlers and soldiers in _____ Bank”",
+      "Don't stop just yet",
+      "A distance on a road sign",
+      "A mosquito's little souvenirs",
+      "Money placed on a prediction",
+      "Al Jazeera in the news: Put into office by voting",
+      "The paper you'd rather not fail"
     ],
     "hints": [
-      "An adult male person.",
-      "Legally under adult age; also not major.",
-      "It can be measured in degrees.",
-      "Courage; also a body signal carrier.",
-      "A row of text or people.",
-      "Opposite of first.",
-      "Feeling furious.",
-      "Opposite of no.",
-      "Find the answer to a problem.",
-      "Tall plants with woody trunks."
+      "Not old or previously used.",
+      "Musical tones or short written reminders.",
+      "Upright; not leaning over.",
+      "One of the four compass directions.",
+      "An additional amount.",
+      "One thousand seven hundred and sixty yards.",
+      "Nips with teeth; can cause itchy marks.",
+      "A wager.",
+      "Choose through a ballot.",
+      "An exam or trial."
     ],
     "title": "In the News",
     "description": "2 headline-matched clues; a news-first grid was unavailable",
     "method": "matched-existing-fallback",
     "sources": [
       {
-        "title": "Contraceptive pill usage in Great Britain fell drastically in last decade, research finds",
-        "url": "https://www.theguardian.com/society/2026/nov/26/contraceptive-pill-usage-in-great-britain-fell-drastically-in-last-decade-research-finds",
-        "published": "2026-11-26T13:00:51+00:00",
+        "title": "‘Systematic assault’: paramedics blocked and attacked by Israeli settlers and soldiers in West Bank",
+        "url": "https://www.theguardian.com/world/2026/nov/27/paramedics-blocked-attacked-by-settlers-west-bank",
+        "published": "2026-11-27T06:00:57+00:00",
         "source": "The Guardian"
       },
       {
-        "title": "Why is Italy angry with Ukraine for striking Russian ships off Libya?",
-        "url": "https://www.aljazeera.com/news/2026/11/26/why-is-italy-angry-with-ukraine-for-striking-russian-ships-off-libya?traffic_source=rss",
-        "published": "2026-11-26T15:02:50+00:00",
+        "title": "What Spain’s election means for Morocco",
+        "url": "https://www.aljazeera.com/opinions/2026/11/27/what-spains-election-means-for-morocco?traffic_source=rss",
+        "published": "2026-11-27T11:33:17+00:00",
         "source": "Al Jazeera"
       }
     ]
